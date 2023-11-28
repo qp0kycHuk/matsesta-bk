@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web developer</title>
+</head>
+
+<body>
+  <header class="top bg-l2">
+    <div class="header-logo gap-4 flex items-center lg:hidden">
+      <img src="img/logo.svg" alt="" class="h-12">
+      <div class="text-xs xs:text-sm leading-tight">
+        ООО «Бальнеологический курорт <br>
+        «Мацеста» (холдинг) города Сочи»
+      </div>
+    </div>
+
+    <div class="top-nav max-lg:hidden">
+      <a href="javascript:;" class="btn btn-text opacity-60 link-hover text-sm p-5 -m-5">Частным лицам</a>
+      <a href="javascript:;" class="btn btn-text opacity-60 link-hover text-sm p-5 -m-5">Корпоративным клиентам</a>
+      <a href="javascript:;" class="btn btn-text opacity-60 link-hover text-sm p-5 -m-5">Партнерам</a>
+    </div>
+
+    <div class="top-soc flex gap-4 items-center max-sm:hidden">
+      <button class="btn btn-primary btn-whitebg btn-icon btn-xs rounded-full">
+        <div class="absolute -inset-2"></div>
+        <c-icon class="icon text-sm" href="img/icons.svg#telegramm"></c-icon>
+      </button>
+      <button class="btn btn-primary btn-whitebg btn-icon btn-xs rounded-lg">
+        <div class="absolute -inset-2"></div>
+        <c-icon class="icon" href="img/icons.svg#ok"></c-icon>
+      </button>
+      <button class="btn btn-primary btn-whitebg btn-icon btn-xs rounded-lg">
+        <div class="absolute -inset-2"></div>
+        <c-icon class="icon" href="img/icons.svg#vk"></c-icon>
+      </button>
+      <button class="btn btn-primary btn-whitebg btn-icon btn-xs rounded-lg">
+        <div class="absolute -inset-2"></div>
+        <c-icon class="icon text-2.5xl" href="img/icons.svg#dzen"></c-icon>
+      </button>
+      <button class="btn btn-primary btn-whitebg btn-icon btn-xs w-8 h-6 rounded-youtube">
+        <div class="absolute -inset-2"></div>
+        <c-icon class="icon text-xs" href="img/icons.svg#play"></c-icon>
+      </button>
+      <button class="btn btn-primary btn-fill btn-icon btn-xs rounded-lg">
+        <div class="absolute -inset-2"></div>
+        <c-icon class="icon" href="img/icons.svg#uds"></c-icon>
+      </button>
+    </div>
+
+    <button class="btn btn-primary btn-text gap-3 max-xl:hidden">
+      <c-icon class="icon text-2xl" href="img/icons.svg#user"></c-icon>
+      <span class="text-default">Личный кабинет</span>
+    </button>
+  </header>
+
+  <header class="header">
+    <div class="header-logo gap-4 flex items-center max-lg:hidden">
+      <img src="img/logo.svg" alt="">
+      <div class="text-sm leading-tight">
+        ООО «Бальнеологический <br>
+        курорт «Мацеста» (холдинг) <br>
+        города Сочи»
+      </div>
+    </div>
+    <div class="header-contacts flex gap-7">
+      <a href="javascript:;" class="flex btn btn-text items-center gap-4 group max-md:hidden">
+        <button class="btn btn-primary btn-whitebg btn-icon rounded-2xl shadow">
+          <c-icon class="icon text-2xl" href="img/icons.svg#email"></c-icon>
+        </button>
+        <div>
+          <div class="font-medium group-hover:underline underline-offset-4">info@matsesta.info</div>
+          <div class="opacity-40  text-sm ">по всем вопросам</div>
+        </div>
+      </a>
+      <a href="javascript:;" class="flex btn btn-text items-center gap-4 group">
+        <button class="btn btn-primary btn-whitebg btn-icon rounded-2xl shadow max-xs:hidden">
+          <c-icon class="icon text-2xl" href="img/icons.svg#phone"></c-icon>
+        </button>
+        <div>
+          <div class="font-medium group-hover:underline underline-offset-4 max-sm:text-sm">8 (800) 301-04-25</div>
+          <div class="opacity-40 text-xs sm:text-sm ">бесплатно по РФ</div>
+        </div>
+      </a>
+    </div>
+    <button class="btn btn-theme-contur ml-6 xl:ml-12 rounded-full max-xl:text-sm">Консультация врача</button>
+    <div class="header-cart max-xl:hidden">
+      <button class="btn btn-primary btn-text rounded-full gap-3 p-4 -m-4">
+        <c-icon class="icon text-2xl" href="img/icons.svg#cart"></c-icon>
+        <span class="text-default">Корзина</span>
+        <div class="bg-l1 text-xs w-6 h-6 rounded-full flex items-center justify-center text-default">
+          4
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <header class="nav">
+    <div class="nav-list">
+      <button class="btn btn-sm btn-white gap-2 rounded-lg bg-white bg-opacity-10 shadow px-6 sm:px-8" data-toggle-link="menu">
+        <c-icon class="icon text-2xl" href="img/icons.svg#menu"></c-icon>
+        <span class="max-sm:text-sm"> Меню </span>
+      </button>
+      <div class="relative xl:flex-grow max-md:hidden" data-toggle-cover>
+        <button class="btn btn-sm btn-white gap-2 rounded-lg w-full px-5" data-toggle-link>
+          Услуги
+          <c-icon class="icon text-2xl" href="img/icons.svg#to-down"></c-icon>
+        </button>
+        <div class="w-64 p-6 bg-l3 rounded-2xl  nav-submenu" data-toggle-content>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Бальнеология</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Грязелечение</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Нафталановые апликации</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Аппаратная физиотерапия</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Массаж</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Сомнология</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Обзорные туры</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Продукты</button>
+        </div>
+      </div>
+      <div class="relative xl:flex-grow max-md:hidden" data-toggle-cover>
+        <button class="btn btn-sm btn-white gap-2 rounded-lg w-full px-5" data-toggle-link>
+          О Мацесте
+          <c-icon class="icon text-2xl" href="img/icons.svg#to-down"></c-icon>
+        </button>
+        <div class="w-72 p-6 bg-l3 rounded-2xl  nav-submenu" data-toggle-content>
+          <button class="btn btn-text justify-start p-2 -mx-2 link-hover text-left gap-2">
+            <c-icon class="icon text-2xl" href="img/icons.svg#marker-around"></c-icon>
+            <span class="text-lg font-medium">Обзорные туры</span>
+          </button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Уникальная бальнеотерапия</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Мы лечим</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Категории ванн</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Статьи</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Информация об организации</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Карта сайта</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Вакансии</button>
+          <button class="btn btn-text justify-start opacity-80 p-2 -mx-2 link-hover text-left">Документы</button>
+        </div>
+      </div>
+      <button class="btn btn-sm btn-white gap-2 rounded-lg max-xl:hidden flex-grow px-5">
+        Программы лечения
+      </button>
+      <button class="btn btn-sm btn-white gap-2 rounded-lg max-xl:hidden flex-grow px-5">
+        Врачи
+      </button>
+      <button class="btn btn-sm btn-white gap-2 rounded-lg max-xl:hidden flex-grow px-5">
+        Акции
+      </button>
+      <button class="btn btn-sm btn-white gap-2 rounded-lg max-xl:hidden flex-grow px-5">
+        Отзывы
+      </button>
+      <button class="btn btn-sm btn-white gap-2 rounded-lg max-xl:hidden flex-grow px-5">
+        Контакты
+      </button>
+      <button class="btn btn-text px-3 sm:px-4 btn-white gap-2 rounded-lg ml-auto xl:hidden">
+        <c-icon class="icon text-2xl" href="img/icons.svg#user"></c-icon>
+        <span class="max-sm:text-sm"> Войти </span>
+      </button>
+      <button class="btn btn-text px-3 sm:px-4 btn-white gap-2 rounded-lg xl:hidden">
+        <c-icon class="icon text-2xl" href="img/icons.svg#cart"></c-icon>
+        <div class="bg-black bg-opacity-20 text-xs w-6 h-6 rounded-full flex items-center justify-center">
+          4
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu " id="menu">
+    <header class="top items-center bg-l2 lg:hidden">
+      <div class="header-logo gap-4 flex items-center lg:hidden">
+        <img src="img/logo.svg" alt="" class="h-12">
+        <div class="text-xs xs:text-sm leading-tight">
+          ООО «Бальнеологический курорт <br>
+          «Мацеста» (холдинг) города Сочи»
+        </div>
+      </div>
+
+      <button class="btn lg:hidden btn-icon btn-contur btn-black btn-[32px] sm:btn-sm rounded-full" data-toggle-link="menu">
+        <c-icon class="icon max-sm:text-xs" href="img/icons.svg#cross"></c-icon>
+      </button>
+    </header>
+    <div class="menu-content">
+      <div class="search relative max-lg:hidden">
+        <input type="text" class="input rounded-lg w-full" placeholder="Найти...">
+        <div class="absolute right-0 top-1/2 -translate-y-1/2">
+          <button class="btn btn-text p-4">
+            <c-icon class="icon text-2xl" href="img/icons.svg#search"></c-icon>
+          </button>
+        </div>
+      </div>
+      <div class="lg:mt-9 grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-8">
+          <div class="flex gap-12 lg:gap-12 max-lg:flex-col" data-tab-cover>
+            <div class="flex-grow group" data-tab-content="1">
+              <div class="text-2xl lg:text-3.5xl font-medium font-alt leading-none flex items-center" data-tab-link="1">
+                Разделы
+                <c-icon class="icon text-2xl ml-auto" href="img/icons.svg#to-right"></c-icon>
+              </div>
+              <div class="max-lg:hidden group-[.tab-active]:block mt-8 lg:mt-11">
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Программы лечения</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Врачи</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Отдых с Мацестой</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">АПО</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Акции</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Отзывы</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Новости курорта</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Контакты</button>
+              </div>
+            </div>
+            <div class="flex-grow group" data-tab-content="2">
+              <div class="text-2xl lg:text-3.5xl font-medium font-alt leading-none flex items-center" data-tab-link="2">
+                О Мацесте
+                <c-icon class="icon text-2xl ml-auto" href="img/icons.svg#to-right"></c-icon>
+              </div>
+              <div class="max-lg:hidden group-[.tab-active]:block mt-8 lg:mt-11">
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Уникальная бальнеотерапия</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Мы лечим</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Категории ванн</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Статьи</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Информация об организации</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Карта сайта</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Вакансии</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Документы</button>
+              </div>
+            </div>
+            <div class="flex-grow group" data-tab-content="3">
+              <div class="text-2xl lg:text-3.5xl font-medium font-alt leading-none flex items-center" data-tab-link="3">
+                Услуги
+                <c-icon class="icon text-2xl ml-auto" href="img/icons.svg#to-right"></c-icon>
+              </div>
+              <div class="max-lg:hidden group-[.tab-active]:block mt-8 lg:mt-11">
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Бальнеотерапия</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Грязелечение</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Нафталановые апликации</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Аппаратная физиотерапия</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Массаж</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Сомнология</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Обзорные туры</button>
+                <button class="btn btn-text  opacity-80 p-3 -mx-3 link-hover leading-none">Продукция</button>
+              </div>
+            </div>
+          </div>
+          <div class="h-px bg-l1 my-14"></div>
+
+          <div class="flex items-center max-md:hidden">
+            <a href="javascript:;" class="btn btn-text block">
+              <div class="font-alt font-medium text-2.5xl">8 (800) 301-04-25</div>
+              <div class="mt-2 opacity-40">бесплатная линия связи по РФ</div>
+            </a>
+            <button class="btn btn-theme-fill ml-auto gap-2 rounded-full px-9">
+              <c-icon class="icon text-2xl" href="img/icons.svg#marker-around"></c-icon>
+              Обзорные туры
+            </button>
+          </div>
+
+          <div class="flex mt-12 max-md:hidden">
+            <a href="javascript:;" class="btn btn-text font-semibold">info@matsesta.info</a>
+          </div>
+
+
+          <!-- mobile contacts -->
+          <div class="md:hidden">
+            <button class="btn btn-theme-contur rounded-full w-full">Бесплатная консультация врача</button>
+            <button class="btn btn-theme-fill rounded-full w-full gap-2 mt-6">
+              <c-icon class="icon text-2xl" href="img/icons.svg#marker-around"></c-icon>
+              Обзорные туры
+            </button>
+            <div class="mt-8">
+              <div class="text-2xl font-alt font-medium">Контакты</div>
+              <a href="javascript:;" class="btn btn-text gap-4 group mt-8">
+                <div>
+                  <div class="font-medium group-hover:underline underline-offset-4 text-xl">8 (800) 301-04-25</div>
+                  <div class="opacity-40 text-sm">бесплатная линия связи по РФ</div>
+                </div>
+              </a>
+              <a href="javascript:;" class="btn btn-text gap-4 group mt-8">
+                <div>
+                  <div class="font-medium group-hover:underline underline-offset-4 text-xl">info@matsesta.info</div>
+                  <div class="opacity-40 text-sm">Пишите по всем интересующим вопросам</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- /mobile contacts -->
+
+          <!-- soc -->
+          <div class="mt-8 flex gap-4 items-center ">
+            <button class="btn btn-[#33AADE] btn-fill btn-icon md:btn-[32px] rounded-full">
+              <div class="absolute -inset-2"></div>
+              <c-icon class="icon md:text-sm" href="img/icons.svg#telegramm"></c-icon>
+            </button>
+            <button class="btn btn-[#FF8800] btn-fill btn-icon md:btn-[32px] rounded-lg">
+              <div class="absolute -inset-2"></div>
+              <c-icon class="icon max-md:text-xl" href="img/icons.svg#ok"></c-icon>
+            </button>
+            <button class="btn btn-[#0077FF] btn-fill btn-icon md:btn-[32px] rounded-lg">
+              <div class="absolute -inset-2"></div>
+              <c-icon class="icon max-md:text-xl" href="img/icons.svg#vk"></c-icon>
+            </button>
+            <button class="btn btn-[#FF0000] btn-fill btn-icon md:btn-[32px] rounded-lg">
+              <div class="absolute -inset-2"></div>
+              <c-icon class="icon text-lg md:text-xs" href="img/icons.svg#play"></c-icon>
+            </button>
+            <button class="btn btn-[#2C3036] btn-fill btn-icon md:btn-[32px] rounded-lg">
+              <div class="absolute -inset-2"></div>
+              <c-icon class="icon text-5xl md:text-2.5xl" href="img/icons.svg#dzen"></c-icon>
+            </button>
+          </div>
+          <!-- /soc -->
+          <button class="btn btn-theme-contur mt-8 rounded-full max-md:hidden">Бесплатная консультация врача</button>
+          <button class="btn btn-black btn-light mt-6 rounded-full md:hidden w-full gap-2">
+            <div class="text-white w-6 h-6 rounded-md bg-[#A993F6] flex">
+              <c-icon class="icon m-auto" href="img/icons.svg#uds"></c-icon>
+            </div>
+            Система лояльности ЮДС
+          </button>
+
+        </div>
+        <div class="lg:col-span-4 max-md:hidden">
+          <div class="text-2xl lg:text-3.5xl font-medium font-alt leading-none mb-8 lg:mb-11">Наши адреса</div>
+          <div class="grid grid-cols-2 lg:grid-cols-1 gap-12">
+            <div class="">
+              <div class="font-semibold">Административный корпус</div>
+              <div class="opacity-80 text-sm">г. Сочи, Аллея Челтенхэма, 4</div>
+              <div class="mt-3 leading-normal">
+                Пн-Чт с 8:00 до 17:00 <br>
+                Пт с 8:00 до 16:00 <br>
+                Перерыв с 12:00 до 12:48
+              </div>
+            </div>
+            <div class="">
+              <div class="font-semibold">Амбулаторно-поликлиническое отделение</div>
+              <div class="opacity-80 text-sm">г. Сочи, переулок Лечебный, 4/7</div>
+              <div class="mt-3 leading-normal">
+                Пн-Пт с 7:45 до 15:06 <br>
+                Сб с 7:45 до 13:00<br>
+                Вс - выходной
+              </div>
+            </div>
+            <div class="">
+              <div class="font-semibold">Ванное здание №3</div>
+              <div class="opacity-80 text-sm">г. Сочи, переулок Лечебный, 4/3</div>
+              <div class="mt-3 leading-normal">
+                Пн-Пт с 7:45 до 14:27 <br>
+                Сб с 7:45 до 13:15 <br>
+                Вс - выходной
+              </div>
+            </div>
+            <div class="">
+              <div class="font-semibold">Ванное здание №4</div>
+              <div class="opacity-80 text-sm">г. Сочи, Аллея Челтенхэма, 14</div>
+              <div class="mt-3 leading-normal">
+                Пн-Чт с 7:45 до 14:27 <br>
+                Cю-Вс с 7:45 до 14:27 <br>
+                без выходных
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-image">
+      <img src="img/test.gif" alt="">
+      <button class="absolute btn btn-white btn-contur btn-icon right-6 top-6 rounded-full" data-toggle-link="menu">
+        <c-icon class="icon" href="img/icons.svg#cross"></c-icon>
+      </button>
+    </div>
+    <button class="absolute xl:hidden btn max-lg:hidden btn-icon right-0 top-0" data-toggle-link="menu">
+      <c-icon class="icon" href="img/icons.svg#cross"></c-icon>
+    </button>
+
+  </div>

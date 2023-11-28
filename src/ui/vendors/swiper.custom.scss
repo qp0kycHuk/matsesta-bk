@@ -24,3 +24,8 @@ img.swiper-lazy:not(.swiper-lazy-loaded) {
   align-self: stretch;
   height    : auto;
 }
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top   : 100%;
+  bottom: auto;
+}

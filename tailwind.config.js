@@ -1,9 +1,9 @@
 const elementsSizes = {
-  xs: '24px',
-  sm: '32px',
-  base: '50px',
-  lg: '60px',
-  xl: '72px',
+  xs: '28px',
+  sm: '44px',
+  base: '52px',
+  lg: '64px',
+  xl: '76px',
 }
 
 const headingStyles = {
@@ -14,31 +14,35 @@ const headingStyles = {
 module.exports = {
   content: ['./src/**/*.{html,js,ts}'],
   darkMode: ['class', '[data-theme="dark"]'],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     screens: {
       xs: 420 + 29.98 + 'px',
       sm: 580 + 29.98 + 'px',
       md: 720 + 29.98 + 'px',
-      lg: 1170 + 29.98 + 'px',
+      lg: 992 + 29.98 + 'px',
       xl: 1366 + 'px',
     },
     container: {
       xs: 420 + 'px',
       sm: 580 + 'px',
       md: 720 + 'px',
-      lg: 1170 + 'px',
-      xl: 1270 + 'px',
+      lg: 992 + 'px',
+      xl: 1230 + 'px',
     },
     colors: {
-      primary: '#b71540',
-      sec: '#CE9B44',
+      primary: '#658A88',
+      sec: '#003D32',
       blue: '#2980b9',
       red: '#c0392b',
       green: '#27ae60',
       yellow: '#f39c12',
       gray: '#333',
       white: '#fff',
-      black: '#000',
+      black: '#1c1c1c',
+      default: 'var(--text)'
     },
     fontFamily: {
       base: 'var(--font-base)',

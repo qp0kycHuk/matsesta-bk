@@ -1,17 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<%= _.template(require('./html-includes/header.html').default)() %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web developer</title>
-</head>
+<section class="started">
+  <swiper-container class="started-slider" space-between="20" pagination-el=".started-pagination" pagination-clickable pagination-dynamic-bullets>
+    <% for(let i = 0; i < 10; i++) { %>
+    <swiper-slide>
+      <div class="started-slide">
+        <div class="started-slide-image absolute-fit">
+          <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+        </div>
+        <div class="started-slide-content">
+          <div class="font-alt text-4xl font-medium">
+            Крупнейший
+            бальнеологический
+            курорт России
+          </div>
+          <div class="mt-8">
+            Минздравом РФ утверждены методики
+            лечения более 1500 заболеваний
+          </div>
+          <div class="flex mt-14">
+            <a href="javascript:;" class="btn btn-theme-contur rounded-full">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+    <% } %>
+  </swiper-container>
+  <div class="relative mt-4">
+    <div class="started-pagination absolute slider-pagination"></div>
+  </div>
+</section>
 
-<body>
-  <header class="header"></header>
-  <section class="started"></section>
-  <footer class="footer"></footer>
+<footer class="footer"></footer>
+
 </body>
 
 </html>

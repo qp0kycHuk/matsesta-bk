@@ -27,4 +27,19 @@ function loadHandler() {
   ripple.deAttach('.btn-text')
 
   swiper.init()
+
+  document.addEventListener('toggleopen', toggleOpenHandler)
+  document.addEventListener('toggleclose', toggleCloseHandler)
+}
+
+function toggleOpenHandler(event: any) {
+  if (['menu', 'catalog-filter'].includes(event.detail.target.id)) {
+    document.body.classList.add('menu-opened')
+  }
+}
+
+function toggleCloseHandler(event: any) {
+  if (['menu', 'catalog-filter'].includes(event.detail.target.id)) {
+    document.body.classList.remove('menu-opened')
+  }
 }

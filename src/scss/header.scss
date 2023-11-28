@@ -1,0 +1,122 @@
+.top {
+  display        : flex;
+  justify-content: space-between;
+  padding-top    : 10px;
+  padding-bottom : 10px;
+
+  @media(max-width:theme('screens.sm')) {
+    padding-top   : 6px;
+    padding-bottom: 6px;
+  }
+
+  &-nav {
+    display: flex;
+    gap    : 40px;
+  }
+}
+
+.header {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding-top    : 24px;
+  padding-bottom : 24px;
+
+  @media(max-width:theme('screens.sm')) {
+    padding-top   : 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.nav {
+  position: sticky;
+  top     : 2px;
+  z-index : theme('zIndex[3]');
+
+  &-list {
+    display      : flex;
+    padding      : 4px;
+    background   : theme('colors.primary');
+    border-radius: 12px;
+    gap          : 4px;
+  }
+
+  &-submenu {
+    position  : absolute;
+    top       : calc(100% + 8px);
+    left      : 0;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.10);
+    transition: .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &:not(.toggle-active) {
+      opacity       : 0;
+      transform     : translateY(20px);
+      pointer-events: none;
+    }
+  }
+}
+
+.menu {
+  display   : flex;
+  position  : fixed;
+  top       : 0;
+  left      : 0;
+  width     : 100%;
+  height    : 100%;
+  overflow  : auto;
+  background: var(--bg3);
+  transition: .25s;
+  z-index   : theme('zIndex[6]');
+
+  @media(max-width:theme('screens.lg')) {
+    flex-direction: column;
+  }
+
+  &:not(.toggle-active) {
+    opacity       : 0;
+    transform     : translateY(-30px);
+    pointer-events: none;
+
+    @media(max-width:theme('screens.md')) {
+      transform: translateX(-30px);
+
+    }
+  }
+
+  &-content {
+    flex-grow     : 1;
+    height        : max-content;
+    padding       : 70px;
+    padding-bottom: 200px;
+
+    @media(max-width:theme('screens.lg')) {
+      width       : 100%;
+      max-width   : var(--section-width);
+      margin-right: auto;
+      margin-left : auto;
+      padding     : 40px 0;
+    }
+  }
+
+  &-image {
+    flex-shrink: 0;
+    position   : sticky;
+    top        : 0;
+    width      : 590px;
+    height     : 100%;
+
+    @media(max-width:1700px) {
+      width: 300px;
+    }
+
+    @media(max-width:theme('screens.xl')) {
+      display: none;
+    }
+
+    img {
+      width     : 100%;
+      height    : 100%;
+      object-fit: cover;
+    }
+  }
+}
