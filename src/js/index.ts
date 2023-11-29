@@ -9,6 +9,7 @@ import ripple from '@qpokychuk/ripple'
 import swiper from './swiper'
 
 import '../scss/index.scss'
+import animations from './animations'
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
@@ -20,6 +21,7 @@ function loadHandler() {
   ripple.init()
   theme.init()
   fancybox.init()
+  animations.init()
   phonemask.init('[type="tel"]')
 
   ripple.attach('.btn')

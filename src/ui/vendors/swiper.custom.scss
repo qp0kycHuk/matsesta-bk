@@ -29,3 +29,15 @@ img.swiper-lazy:not(.swiper-lazy-loaded) {
   top   : 100%;
   bottom: auto;
 }
+
+@layer components {
+  swiper-container {
+    display : flex;
+    overflow: hidden;
+  }
+
+  swiper-slide {
+    flex-shrink: 0;
+    width      : 100%;
+  }
+}
