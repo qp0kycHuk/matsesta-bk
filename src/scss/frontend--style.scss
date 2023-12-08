@@ -199,6 +199,17 @@ body {
     background: url("../img/locations-bg.png") no-repeat center / cover, theme('colors.primary');
 
   }
+
+  .card-shadow {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.06);
+    transition: .2s ease;
+
+    @media(hover) {
+      &:hover {
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
 }
 
 @import './header';
@@ -386,16 +397,8 @@ body {
   overflow      : hidden;
   background    : var(--bg3);
   border-radius : 32px;
-  box-shadow    : 0 10px 20px 0 rgba(0, 0, 0, 0.06);
   cursor        : pointer;
-  transition    : box-shadow .3s ease;
 
-  @media(hover) {
-    &:hover {
-      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-
-    }
-  }
 }
 
 .tabs {
@@ -496,14 +499,6 @@ body {
 .special-item {
   overflow     : hidden;
   border-radius: 32px;
-  box-shadow   : 0 10px 20px 0 rgba(0, 0, 0, 0.06);
-  transition   : .2s;
-
-  @media(hover) {
-    &:hover {
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
-    }
-  }
 
   &-content {
     display        : flex;
@@ -647,6 +642,31 @@ body {
       &:hover {
         background: radial-gradient(352.91% 141.42% at 0% 100%, rgba(255, 255, 255, 0.47) 0%, rgba(255, 255, 255, 0.24) 100%);
       }
+    }
+  }
+}
+
+.service-item {
+  display      : flex;
+  align-items  : center;
+  padding      : 8px;
+  border-radius: theme('borderRadius.base');
+  gap          : 40px;
+
+  @media(max-width:theme('screens.lg')) {
+    align-items   : flex-start;
+    flex-direction: column;
+    padding       : 16px;
+    gap           : 24px;
+  }
+
+  &-image {
+    flex-shrink: 0;
+    width      : 360px;
+    max-width  : 100%;
+
+    @media(max-width:theme('screens.sm')) {
+      width: 100%;
     }
   }
 }

@@ -98,7 +98,7 @@
   <% for(let j = 0; j < 3; j++) { %>
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-x-7 sm:gap-y-12 is-active-enabled <%= j == 0 ? 'toggle-active' : '' %>" data-tab-content="<%= j %>">
     <% for(let i = 0; i < 8; i++) { %>
-    <div class=" product-item">
+    <a href="service-detail.html" class="product-item card-shadow btn-group">
       <div class="ratio ratio-[286/190] relative">
         <img src="<%= j % 2 == 0 ? 'img/test.gif' : 'img/test0.gif' %>" alt="" class="absolute-fit object-cover">
       </div>
@@ -114,7 +114,7 @@
           В корзину
         </button>
       </div>
-    </div>
+    </a>
     <% } %>
   </div>
   <% } %>
@@ -182,7 +182,7 @@
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
         <div class="swiper-slide px-2 max-lg:w-11/12">
-          <a href="javascript:;" class="interesting-item bg-l2 flex flex-col lg:grid lg:grid-cols-2 h-full btn-group">
+          <a href="javascript:;" class="interesting-item card-shadow bg-l2 flex flex-col lg:grid lg:grid-cols-2 h-full btn-group">
             <div class="interesting-item-content">
               <div class="text-xl sm:text-2xl xl:text-4xl font-medium font-alt">
                 Более 1500 заболеваний
@@ -242,7 +242,7 @@
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
         <div class="swiper-slide px-2 sm:px-3 w-1/2 max-lg:w-11/12">
-          <a href="javascript:;" class="special-item flex flex-col  h-full btn-group bg-l3">
+          <a href="javascript:;" class="special-item card-shadow flex flex-col  h-full btn-group bg-l3">
             <div class="ratio ratio-[600/282] max-lg:-order-1">
               <img src="img/test.gif" alt="" class="absolute-fit object-cover">
             </div>
