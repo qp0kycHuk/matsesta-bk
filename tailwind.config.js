@@ -50,8 +50,14 @@ module.exports = {
     },
     zIndex: [0, 321, 322, 323, 324, 325, 326, 327, 328, 329, 'auto'],
     extend: {
+      spacing: {
+        [15]: '60px'
+      },
       inputSize: elementsSizes,
       btnSize: elementsSizes,
+      borderRadius: {
+        base: '32px'
+      },
       backgroundColor: {
         l1: 'var(--bg1)',
         l2: 'var(--bg2)',
@@ -63,6 +69,7 @@ module.exports = {
         '2.5xl': ['1.75rem', '1.35'],
         '3.5xl': ['2rem', '1.35'],
         '4.5xl': ['2.5rem', '1.35'],
+        '5.5xl': ['3.5rem', '1.35'],
       },
     },
   },

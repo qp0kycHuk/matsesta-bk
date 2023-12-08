@@ -82,8 +82,9 @@
   </div>
 </section>
 
+<!-- Бронирование лечебных программ -->
 <section class="bg-l2 section-padding" data-tab-cover>
-  <div class="title text-center mb-12">
+  <div class="title sm:text-center section-title">
     Бронирование лечебных программ
   </div>
 
@@ -95,11 +96,11 @@
     </div>
   </div>
   <% for(let j = 0; j < 3; j++) { %>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-x-7 sm:gap-y-12 is-active-enabled" data-tab-content="<%= j %>">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-x-7 sm:gap-y-12 is-active-enabled <%= j == 0 ? 'toggle-active' : '' %>" data-tab-content="<%= j %>">
     <% for(let i = 0; i < 8; i++) { %>
     <div class=" product-item">
       <div class="ratio ratio-[286/190] relative">
-        <img src="img/test.gif" alt="" class="absolute-fit">
+        <img src="<%= j % 2 == 0 ? 'img/test.gif' : 'img/test0.gif' %>" alt="" class="absolute-fit object-cover">
       </div>
       <div class="px-2 sm:px-4 pb-4 sm:pb-6 flex-grow">
         <div class="h-20 sm:h-28 flex items-center flex-col justify-center">
@@ -117,12 +118,492 @@
     <% } %>
   </div>
   <% } %>
-  <div class="flex mt-14">
+  <div class=" flex mt-14">
     <a href="javascript:;" class="btn btn-theme-contur rounded-full  mx-auto">
       Показать всё
     </a>
   </div>
 </section>
+
+<!-- Категории ванн -->
+<section class="section-padding">
+  <div class="title sm:text-center section-title">
+    Категории ванн
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-7">
+    <div class="category-item">
+      <div class="category-item-image mb-6 xl:mb-10">
+        <c-icon class="icon" href="img/icons.svg#bath"></c-icon>
+      </div>
+      <div class="max-sm:text-sm opacity-50">Категория</div>
+      <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold sm:mt-2 font-alt">Стандарт</div>
+    </div>
+    <div class="category-item">
+      <div class="category-item-image mb-6 xl:mb-10">
+        <c-icon class="icon" href="img/icons.svg#crown"></c-icon>
+      </div>
+      <div class="max-sm:text-sm opacity-50">Категория</div>
+      <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold sm:mt-2 font-alt">Люкс</div>
+    </div>
+    <div class="category-item">
+      <div class="category-item-image mb-6 xl:mb-10">
+        <c-icon class="icon" href="img/icons.svg#diamond"></c-icon>
+      </div>
+      <div class="max-sm:text-sm opacity-50">Категория</div>
+      <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold sm:mt-2 font-alt">Премиум</div>
+    </div>
+    <div class="category-item">
+      <div class="category-item-image mb-6 xl:mb-10">
+        <c-icon class="icon" href="img/icons.svg#vip"></c-icon>
+      </div>
+      <div class="max-sm:text-sm opacity-50">Категория</div>
+      <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold sm:mt-2 font-alt">VIP</div>
+    </div>
+  </div>
+</section>
+
+<section class="video relative">
+  <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+  <a href="https://youtu.be/rSDoXnslLsg" data-fancybox class="btn-peer absolute-fit z-[2]"></a>
+  <button class="btn btn-icon video-button relative">
+    <c-icon class="icon" href="img/icons.svg#play"></c-icon>
+  </button>
+  <div class="title relative text-center">Смотреть видео о нашем курорте</div>
+  <div class="mt-3 opacity-60 relative max-sm:text-sm text-center">«Мацеста» - крупнейшая здравница России</div>
+</section>
+
+<!-- Может быть вам интересно -->
+<section class="section-padding overflow-hidden">
+  <div class="title sm:text-center section-title">
+    Может быть вам интересно
+  </div>
+  <div class="relative">
+    <div class="swiper interesting-slider -mx-4 px-2 py-5 -my-5 max-lg:overflow-visible">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide px-2 max-lg:w-11/12">
+          <a href="javascript:;" class="interesting-item bg-l2 flex flex-col lg:grid lg:grid-cols-2 h-full btn-group">
+            <div class="interesting-item-content">
+              <div class="text-xl sm:text-2xl xl:text-4xl font-medium font-alt">
+                Более 1500 заболеваний
+                лечится!
+              </div>
+              <div class="mt-4 xl:mt-8 leading-normal opacity-80 max-xl:text-sm max-lg:mb-auto">
+                Главным природным лечебным фактором курорта Сочи и нашей бальнеолечебницы является знаменитая мацеста - уникальная сероводородная вода, легенды о целебных свойствах которой слагались веками
+              </div>
+              <button class="btn btn-theme-contur mt-8 sm:mt-12 rounded-full">
+                Подробнее
+              </button>
+            </div>
+            <div class="ratio ratio-[5/4] max-lg:-order-1">
+              <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <button class="slider-arrow slider-arrow-prev btn btn-text mr-5 interesting-slider-prev">
+      <c-icon class="icon text-5.5xl opacity-40" href="img/icons.svg#arrow-left"></c-icon>
+    </button>
+
+    <button class="slider-arrow slider-arrow-next btn btn-text ml-5 interesting-slider-next">
+      <c-icon class="icon text-5.5xl opacity-40" href="img/icons.svg#arrow-right"></c-icon>
+    </button>
+
+  </div>
+  <div class="relative mt-6">
+    <div class="interesting-pagination absolute slider-pagination"></div>
+  </div>
+</section>
+<script>
+  new Swiper('.interesting-slider', {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".interesting-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+    navigation: {
+      prevEl: ".interesting-slider-prev",
+      nextEl: ".interesting-slider-next",
+    }
+  })
+</script>
+
+<!-- Специальные предложения и акции -->
+<section class="section-padding overflow-hidden bg-l2">
+  <div class="title sm:text-center section-title">
+    Специальные предложения и акции
+  </div>
+  <div class="relative">
+    <div class="swiper special-slider -mx-5 px-3 sm:px-2 py-6 -my-6 max-lg:overflow-visible">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide px-2 sm:px-3 w-1/2 max-lg:w-11/12">
+          <a href="javascript:;" class="special-item flex flex-col  h-full btn-group bg-l3">
+            <div class="ratio ratio-[600/282] max-lg:-order-1">
+              <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="special-item-content">
+              <div class="text-xl font-semibold font-alt">
+                Скидка до 15% при оплате онлайн
+              </div>
+              <div class="mt-3 leading-normal opacity-80 max-xl:text-sm mb-auto">
+                Выберете подходящую лечебную программу забронируйте лечебную программу на удобные даты оплатите бронь онлайн
+              </div>
+              <button class="btn btn-theme-contur mt-5 rounded-full">
+                Подробнее
+              </button>
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <button class="slider-arrow slider-arrow-prev btn btn-text mr-5 special-slider-prev">
+      <c-icon class="icon text-5.5xl opacity-40" href="img/icons.svg#arrow-left"></c-icon>
+    </button>
+
+    <button class="slider-arrow slider-arrow-next btn btn-text ml-5 special-slider-next">
+      <c-icon class="icon text-5.5xl opacity-40" href="img/icons.svg#arrow-right"></c-icon>
+    </button>
+
+  </div>
+  <div class="relative mt-10">
+    <div class="special-pagination absolute slider-pagination"></div>
+  </div>
+</section>
+<script>
+  new Swiper('.special-slider', {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".special-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+    navigation: {
+      prevEl: ".special-slider-prev",
+      nextEl: ".special-slider-next",
+    }
+  })
+</script>
+
+<!-- Зарегистрируйтесь -->
+<section class="py-5 sm:py-12 section-green">
+  <div class="grid lg:grid-cols-2 items-center rounded-base bg-l3">
+    <div class="py-8 px-6 sm:px-12">
+      <div class="title">
+        Зарегистрируйтесь
+        в личном кабинете!
+      </div>
+      <div class="mt-4 xl:mt-6 text-sm opacity-60">После регистрации вас ждут:</div>
+
+      <div class="mt-5 xl:mt-8">
+        <div class="flex items-center gap-2 xs:gap-4">
+          <div class="w-9 h-9 xs:w-15 xs:h-15 flex rounded-xl xs:rounded-2xl bg-primary bg-opacity-20 shrink-0">
+            <c-icon class="icon text-primary m-auto text-lg xs:text-3xl" href="img/icons.svg#bill-check"></c-icon>
+          </div>
+          <div class="">
+            <div class="xs:text-lg font-alt font-semibold">Кешбэк</div>
+            <div class="mt-1 text-sm opacity-60 max-xs:hidden">
+              Получайте часть стоимости покупки обратно <br>
+              в баллах и оплачивайте ими программы лечения!
+            </div>
+          </div>
+        </div>
+        <div class="mt-1 text-xs opacity-60 xs:hidden">
+          Получайте часть стоимости покупки обратно <br>
+          в баллах и оплачивайте ими программы лечения!
+        </div>
+      </div>
+      <div class="mt-3 xl:mt-6">
+        <div class="flex items-center gap-2 xs:gap-4">
+          <div class="w-9 h-9 xs:w-15 xs:h-15 flex rounded-xl xs:rounded-2xl bg-primary bg-opacity-20 shrink-0">
+            <c-icon class="icon text-primary m-auto text-lg xs:text-3xl" href="img/icons.svg#sale"></c-icon>
+          </div>
+          <div class="">
+            <div class="xs:text-lg font-alt font-semibold">Скидки</div>
+            <div class="mt-1 text-sm opacity-60 max-xs:hidden">
+              Выбирайте понравившиеся акции и оплачивайте <br>
+              программы сразу со скидкой!
+            </div>
+          </div>
+        </div>
+        <div class="mt-1 text-xs opacity-60 xs:hidden">
+          Выбирайте понравившиеся акции и оплачивайте <br>
+          программы сразу со скидкой!
+        </div>
+      </div>
+      <div class="mt-3 xl:mt-6">
+        <div class="flex items-center gap-2 xs:gap-4">
+          <div class="w-9 h-9 xs:w-15 xs:h-15 flex rounded-xl xs:rounded-2xl bg-primary bg-opacity-20 shrink-0">
+            <c-icon class="icon text-primary m-auto text-lg xs:text-3xl" href="img/icons.svg#gift"></c-icon>
+          </div>
+          <div class="">
+            <div class="xs:text-lg font-alt font-semibold">Промокоды</div>
+            <div class="mt-1 text-sm opacity-60 max-xs:hidden">
+              Забирайте промокоды на скидки и бонусы <br>
+              бесплатно!
+            </div>
+          </div>
+        </div>
+        <div class="mt-1 text-xs opacity-60 xs:hidden">
+          Забирайте промокоды на скидки и бонусы <br>
+          бесплатно!
+        </div>
+      </div>
+
+      <button class="btn btn-theme-fill mt-6 xl:mt-12 rounded-full">Зарегистрироваться</button>
+    </div>
+    <div class="p-2 pt-0 lg:p-4 lg:pl-0">
+      <div class="ratio ratio-[327/270] lg:ratio-1/1 rounded-base overflow-hidden">
+        <img src="img/registration-pray.jpg" alt="" class="absolute-fit object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы о нас -->
+<section class="section-padding overflow-hidden bg-l2">
+  <div class="title sm:text-center section-title">
+    Отзывы о нас
+  </div>
+  <div class="reviews-slider swiper max-lg:overflow-visible max-xl:px-3 -mx-5 py-5 -my-5">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide px-2 xl:px-5 w-11/12 md:w-1/2 lg:w-1/3">
+        <div class="reviews-item">
+          <div class="reviews-item-score">
+            5.0
+          </div>
+          <div class="reviews-item-logo">
+            <img src="img/reviews-yandex.svg" alt="">
+          </div>
+          <div class="reviews-item-list">
+            <div class="sm:pl-3 pt-6 pb-5 border-t border-black dark:border-white border-opacity-10">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 relative rounded-full overflow-hidden">
+                  <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Ирина Калинкова</div>
+                  <div class="flex gap-0.5 mt-1">
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm mt-4 opacity-70 leading-snug">
+                Мы впервые посетили данный санаторий. Впечатления только самые наилучшие. Огорженная территория, въезд под шлагбаум, достаточно места для парковки, красиво оформленная...
+              </div>
+            </div>
+            <div class="sm:pl-3 pt-6 pb-5 border-t border-black dark:border-white border-opacity-10">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 relative rounded-full overflow-hidden flex" style="background: #5B5656;">
+                  <div class="m-auto text-sm text-white">N</div>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Ирина Калинкова</div>
+                  <div class="flex gap-0.5 mt-1">
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm mt-4 opacity-70 leading-snug">
+                Мы впервые посетили данный санаторий. Впечатления только самые наилучшие. Огорженная территория, въезд под шлагбаум, достаточно места для парковки, красиво оформленная...
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="swiper-slide px-2 xl:px-5 w-11/12 md:w-1/2 lg:w-1/3">
+        <div class="reviews-item">
+          <div class="reviews-item-score">
+            9.9
+          </div>
+          <div class="reviews-item-logo">
+            <img src="img/reviews-profcurort.png" alt="">
+          </div>
+          <div class="reviews-item-list">
+            <div class="sm:pl-3 pt-6 pb-5 border-t border-black dark:border-white border-opacity-10">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 relative rounded-full overflow-hidden">
+                  <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Ирина Калинкова</div>
+                  <div class="flex items-center gap-1 mt-1">
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <div class="text-xs ml-1">10/10</div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm mt-4 opacity-70 leading-snug">
+                Мы впервые посетили данный санаторий. Впечатления только самые наилучшие. Огорженная территория, въезд под шлагбаум, достаточно места для парковки, красиво оформленная...
+              </div>
+            </div>
+            <div class="sm:pl-3 pt-6 pb-5 border-t border-black dark:border-white border-opacity-10">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 relative rounded-full overflow-hidden flex" style="background: #5B5656;">
+                  <div class="m-auto text-sm text-white">N</div>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Ирина Калинкова</div>
+                  <div class="flex items-center gap-1 mt-1">
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <c-icon class="icon text-xs text-[#98CE44]" href="img/icons.svg#circle"></c-icon>
+                    <div class="text-xs ml-1">10/10</div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm mt-4 opacity-70 leading-snug">
+                Мы впервые посетили данный санаторий. Впечатления только самые наилучшие. Огорженная территория, въезд под шлагбаум, достаточно места для парковки, красиво оформленная...
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="swiper-slide px-2 xl:px-5 w-11/12 md:w-1/2 lg:w-1/3">
+        <div class="reviews-item">
+          <div class="reviews-item-score">
+            4.4
+          </div>
+          <div class="reviews-item-logo">
+            <img src="img/reviews-2gis.svg" alt="">
+          </div>
+          <div class="reviews-item-list">
+            <div class="sm:pl-3 pt-6 pb-5 border-t border-black dark:border-white border-opacity-10">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 relative rounded-full overflow-hidden">
+                  <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Ирина Калинкова</div>
+                  <div class="flex gap-0.5 mt-1">
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm mt-4 opacity-70 leading-snug">
+                Мы впервые посетили данный санаторий. Впечатления только самые наилучшие. Огорженная территория, въезд под шлагбаум, достаточно места для парковки, красиво оформленная...
+              </div>
+            </div>
+            <div class="sm:pl-3 pt-6 pb-5 border-t border-black dark:border-white border-opacity-10">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 relative rounded-full overflow-hidden flex" style="background: #5B5656;">
+                  <div class="m-auto text-sm text-white">N</div>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Ирина Калинкова</div>
+                  <div class="flex gap-0.5 mt-1">
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                    <c-icon class="icon text-yellow" href="img/icons.svg#star"></c-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm mt-4 opacity-70 leading-snug">
+                Мы впервые посетили данный санаторий. Впечатления только самые наилучшие. Огорженная территория, въезд под шлагбаум, достаточно места для парковки, красиво оформленная...
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  new Swiper('.reviews-slider', {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".reviews-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+    navigation: {
+      prevEl: ".reviews-slider-prev",
+      nextEl: ".reviews-slider-next",
+    }
+  })
+</script>
+
+<!-- Наши партнеры -->
+<section class="section-padding overflow-hidden">
+  <div class="title sm:text-center section-title">
+    Наши партнеры
+  </div>
+  <div class="relative">
+    <div class="partners-slider swiper -mx-2 md:-mx-3 py-5 -my-5">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide px-2 md:px-3 w-72 md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <div class="partners-item">
+            <div class="partners-item-image">
+              <img src="img/logo.svg" alt="">
+            </div>
+            <div class="text-center mt-6">
+              <div class="text-lg font-alt font-semibold">Адлеркурорт</div>
+              <div class="mt-1 opacity-50">Санаторий</div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <button class="slider-arrow slider-arrow-prev btn btn-text mr-5 partners-slider-prev">
+      <c-icon class="icon text-5.5xl opacity-40" href="img/icons.svg#arrow-left"></c-icon>
+    </button>
+
+    <button class="slider-arrow slider-arrow-next btn btn-text ml-5 partners-slider-next">
+      <c-icon class="icon text-5.5xl opacity-40" href="img/icons.svg#arrow-right"></c-icon>
+    </button>
+  </div>
+  <div class="relative mt-10">
+    <div class="partners-pagination absolute slider-pagination"></div>
+  </div>
+</section>
+<script>
+  new Swiper('.partners-slider', {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".partners-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+    navigation: {
+      prevEl: ".partners-slider-prev",
+      nextEl: ".partners-slider-next",
+    }
+  })
+</script>
+
+<div class="map" id="map"></div>
 
 
 <%= _.template(require('./html-includes/footer.html').default)() %>

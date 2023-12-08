@@ -7,9 +7,10 @@ import tab from 'npm-kit-tab'
 import toggle from 'npm-kit-toggle'
 import ripple from '@qpokychuk/ripple'
 import swiper from './swiper'
+import animations from './animations'
+import ymaps from './ymaps'
 
 import '../scss/index.scss'
-import animations from './animations'
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
@@ -22,6 +23,7 @@ function loadHandler() {
   theme.init()
   fancybox.init()
   animations.init()
+  ymaps.init()
   phonemask.init('[type="tel"]')
 
   ripple.attach('.btn')
