@@ -3,13 +3,39 @@
 
 <section class="section-padding relative">
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <% for(let i = 0; i < 10; i++) { %>
+  <div class="p-8 card-shadow rounded-base">
+    <div class="flex items-center">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 flex rounded-full" style="background-color: #01A98C;">
+          <c-icon class="icon text-2xl m-auto text-white" href="img/icons.svg#user"></c-icon>
+        </div>
+        <div>
+          <div class="text-lg font-medium">Елена</div>
+          <div class="opacity-60">г. Краснодар</div>
+        </div>
+      </div>
+      <div class="ml-auto opacity-60">11.09.2023</div>
+      <div class="ml-8 gap-2 flex">
+        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+      </div>
+    </div>
+    <div class="my-4 h-px bg-l1"></div>
+    <div class="opacity-80 leading-normal">
+      Мы первый раз принимали процедуры ,хочу поблагодарить весь персонал бальнеологического курорта"Мацеста" за доброжелательность
+      и чуткое отношение,спасибо большое медсестрам из ванного отделения,отдельное СПАСИБО медсестричкам Ирине и Галине из грязелечения,
+      за их руки,теплоту души,море улыбок.Супруги Шепелевы.
+    </div>
+  </div>
+  <% } %>
 
   <div class="title section-title">Бальнеология</div>
-  <div class="mt-11 flex gap-4">
-    <button class="btn btn-icon btn-sm rounded-xl btn-theme-fill">1</button>
-    <button class="btn btn-icon btn-sm rounded-xl btn-theme-contur-2">2</button>
-    <button class="btn btn-icon btn-sm rounded-xl btn-theme-contur-2">3</button>
-  </div>
+
+  <%= _.template(require('./html-includes/pagination.html').default)() %>
 </section>
 
 <%= _.template(require('./html-includes/footer.html').default)() %>
