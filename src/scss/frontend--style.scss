@@ -705,6 +705,30 @@ body {
   }
 }
 
+.doctor-item {
+  display      : flex;
+  align-items  : center;
+  padding      : 8px;
+  border-radius: theme('borderRadius.base');
+  gap          : 40px;
+
+  @media(max-width:theme('screens.sm')) {
+    gap: 16px;
+  }
+
+
+  &-image {
+    flex-shrink: 0;
+    width      : 238px;
+    max-width  : 100%;
+
+    @media(max-width:theme('screens.sm')) {
+      width        : 116px;
+      border-radius: 24px;
+    }
+  }
+}
+
 .detail-nav {
   display              : grid;
   align-items          : center;
