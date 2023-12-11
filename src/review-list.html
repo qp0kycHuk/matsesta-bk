@@ -1,0 +1,15 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Бальнеология</div>
+  <div class="mt-11 flex gap-4">
+    <button class="btn btn-icon btn-sm rounded-xl btn-theme-fill">1</button>
+    <button class="btn btn-icon btn-sm rounded-xl btn-theme-contur-2">2</button>
+    <button class="btn btn-icon btn-sm rounded-xl btn-theme-contur-2">3</button>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
