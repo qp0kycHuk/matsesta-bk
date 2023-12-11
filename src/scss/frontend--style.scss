@@ -181,6 +181,14 @@ body {
   .slider-arrow {
     position: absolute;
     top     : calc(50% - var(--size) / 2);
+    opacity : 0.4;
+
+    @media(hover) {
+      &:hover {
+        color  : theme('colors.sec');
+        opacity: 1;
+      }
+    }
 
     @media(max-width:1520px) {
       display: none;

@@ -26,8 +26,27 @@ img.swiper-lazy:not(.swiper-lazy-loaded) {
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  top   : 100%;
-  bottom: auto;
+  top    : 100%;
+  bottom : auto;
+  margin : calc(-1 * var(--swiper-pagination-bullet-horizontal-gap, 4px)) 0;
+  padding: var(--swiper-pagination-bullet-horizontal-gap, 4px) 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  position: relative;
+
+  &::before {
+    content : '';
+    position: absolute;
+    inset   : calc(-1 * var(--swiper-pagination-bullet-horizontal-gap, 4px));
+  }
+
+  @media(hover) {
+    &:hover {
+      background: var(--swiper-pagination-color, var(--swiper-theme-color));
+      opacity   : 0.6;
+    }
+  }
 }
 
 @layer components {
