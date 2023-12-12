@@ -1,0 +1,244 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative overflow-hidden">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Контакты</div>
+
+  <div class="contacts rounded-base bg-l2 p-4 sm:p-8">
+    <div class="contacts-info">
+      <a href="javascript:;" class="btn btn-text gap-4 group">
+        <c-icon class="icon text-primary text-2xl" href="img/icons.svg#phone"></c-icon>
+        <div>
+          <div class="text-sm opacity-40">Бесплатная линия связи по РФ</div>
+          <div class="text-sm sm:text-lg font-semibold group-hover:underline">8 (800) 301-04-25</div>
+        </div>
+      </a>
+      <a href="javascript:;" class="btn btn-text gap-4 group mt-5 sm:mt-8">
+        <c-icon class="icon text-primary text-2xl" href="img/icons.svg#email"></c-icon>
+        <div>
+          <div class="text-sm opacity-40">Электронная почта</div>
+          <div class="text-sm sm:text-lg font-semibold group-hover:underline">info@matsesta.info</div>
+        </div>
+      </a>
+      <div class="mt-6 sm:mt-8 opacity-60 text-xs sm:text-sm leading-normal">
+        Общество с ограниченной ответственностью
+        «Бальнеологический курорт «Мацеста»
+        (холдинг) города Сочи»
+      </div>
+      <div class="flex gap-4 items-center mt-6 sm:mt-8">
+        <button class="btn btn-primary btn-fill btn-icon btn-xs sm:btn-[36px] rounded-full">
+          <div class="absolute -inset-2"></div>
+          <c-icon class="icon" href="img/icons.svg#telegramm"></c-icon>
+        </button>
+        <button class="btn btn-primary btn-fill btn-icon btn-xs sm:btn-[36px] rounded-lg">
+          <div class="absolute -inset-2"></div>
+          <c-icon class="icon sm:text-xl" href="img/icons.svg#ok"></c-icon>
+        </button>
+        <button class="btn btn-primary btn-fill btn-icon btn-xs sm:btn-[36px] rounded-lg">
+          <div class="absolute -inset-2"></div>
+          <c-icon class="icon sm:text-xl" href="img/icons.svg#vk"></c-icon>
+        </button>
+        <button class="btn btn-primary btn-fill btn-icon btn-xs sm:btn-[36px] rounded-lg">
+          <div class="absolute -inset-2"></div>
+          <c-icon class="icon text-3.5xl" href="img/icons.svg#dzen"></c-icon>
+        </button>
+        <button class="btn btn-primary btn-fill btn-icon btn-xs sm:btn-[36px] w-8 sm:w-11 sm:h-8 rounded-youtube">
+          <div class="absolute -inset-2"></div>
+          <c-icon class="icon text-xs" href="img/icons.svg#play"></c-icon>
+        </button>
+      </div>
+    </div>
+    <form class="contacts-form flex-grow">
+      <div class="text-lg sm:text-xl font-semibold">Ждём ваших, предложений, сотрудничества, партнёрства!</div>
+      <div class="opacity-60 leading-normal mt-1 max-sm:text-sm">
+        Мы уделяем внимание каждому комментарию, которое вы нам отправляете, <br class="max-xl:hidden">
+        и обещаем ответить на все ваши вопросы
+      </div>
+
+      <div class="grid xl:grid-cols-2 gap-4 grid-flow-dense mt-8">
+        <label class="relative">
+          <div class="text-sm mb-2 font-semibold">Ваше имя</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя...">
+          </div>
+        </label>
+
+        <label class="relative row-span-2 flex flex-col max-xl:order-1">
+          <div class="text-sm mb-2 font-semibold">Комментарий</div>
+          <textarea class="input rounded-xl w-full h-32 flex-grow resize-none" placeholder="Напишите комментарий"></textarea>
+        </label>
+
+        <label class="relative ">
+          <div class="text-sm mb-2 font-semibold">Ваш e-mail</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
+          </div>
+        </label>
+      </div>
+
+      <div class="grid xl:grid-cols-2 gap-4 mt-7">
+        <div class="flex items-center max-xl:order-1">
+          <button class="btn btn-theme-fill rounded-full max-sm:w-full">Отправить</button>
+        </div>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked>
+          <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="mt-14">
+    <div class="font-alt text-xl sm:text-2.5xl mb-7 font-medium">Адреса наших корпусов</div>
+    <div class="address-slider swiper -mx-2 sm:mx-0">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide px-2 w-10/12 sm:w-auto sm:p-0">
+          <div class="address-item  bg-l3 card-shadow h-full">
+            <div class="address-item-image ratio ratio-1/1 rounded-base overflow-hidden">
+              <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="address-item-content">
+              <div class="font-semibold ">Административный корпус</div>
+              <div class="text-sm mt-1">
+                <span class="opacity-80">г. Сочи, Аллея Челтенхэма, 4</span>
+                <button data-scroll="#map" class="btn btn-text underline inline-flex text-primary">На карте</button>
+              </div>
+              <div class="mt-3 lg:mt-6">Режим работы:</div>
+              <div class="mt-1 lg:mt-4 leading-normal max-sm:text-sm">
+                Пн-Чт с 8:00 до 17:00 <br>
+                Пт с 8:00 до 16:00
+              </div>
+              <div class="mt-3 lg:mt-6">
+                <span class="font-semibold">Перерыв</span> с 12:00 до 12:48
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-2 w-10/12 sm:w-auto sm:p-0">
+          <div class="address-item  bg-l3 card-shadow h-full">
+            <div class="address-item-image ratio ratio-1/1 rounded-base overflow-hidden">
+              <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="address-item-content">
+              <div class="font-semibold ">Ванное здание №3</div>
+              <div class="text-sm mt-1">
+                <span class="opacity-80">г. Сочи, переулок Лечебный, 4/3</span>
+                <button data-scroll="#map" class="btn btn-text underline inline-flex text-primary">На карте</button>
+              </div>
+              <div class="mt-3 lg:mt-6">Режим работы:</div>
+              <div class="mt-1 lg:mt-4 leading-normal max-sm:text-sm">
+                Пн-Пт с 7:45 до 14:27 <br>
+                Сб с 7:45 до 13:15
+              </div>
+              <div class="mt-3 lg:mt-6">
+                <span class="font-semibold">Вс</span> - выходной
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-2 w-10/12 sm:w-auto sm:p-0">
+          <div class="address-item  bg-l3 card-shadow h-full">
+            <div class="address-item-image ratio ratio-1/1 rounded-base overflow-hidden">
+              <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="address-item-content">
+              <div class="font-semibold ">Ванное здание №4</div>
+              <div class="text-sm mt-1">
+                <span class="opacity-80">г. Сочи, Аллея Челтенхэма, 14</span>
+                <button data-scroll="#map" class="btn btn-text underline inline-flex text-primary">На карте</button>
+              </div>
+              <div class="mt-3 lg:mt-6">Режим работы:</div>
+              <div class="mt-1 lg:mt-4 leading-normal max-sm:text-sm">
+                Пн-Чт с 7:45 до 14:27 <br>
+                Cю-Вс с 7:45 до 14:27
+              </div>
+              <div class="mt-6 opacity-80">
+                без выходных
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-2 w-10/12 sm:w-auto sm:p-0">
+          <div class="address-item  bg-l3 card-shadow h-full">
+            <div class="address-item-image ratio ratio-1/1 rounded-base overflow-hidden">
+              <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="address-item-content">
+              <div class="font-semibold ">
+                Амбулаторно-поликлиническое
+                отделение
+              </div>
+              <div class="text-sm mt-1">
+                <span class="opacity-80">г. Сочи, переулок Лечебный, 4/7</span>
+                <button data-scroll="#map" class="btn btn-text underline inline-flex text-primary">На карте</button>
+              </div>
+              <div class="mt-3 lg:mt-6">Режим работы:</div>
+              <div class="mt-1 lg:mt-4 leading-normal max-sm:text-sm">
+                Пн-Пт с 7:45 до 15:06 <br>
+                Сб с 7:45 до 13:00
+              </div>
+              <div class="mt-3 lg:mt-6">
+                <span class="font-semibold">Вс</span> - выходной
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.locations = [{
+    coords: [43.548541, 39.793481],
+    title: 'Административный корпус',
+    shedule: [
+      'Пн-Чт с 8:00 до 17:00',
+      'Пт с 8:00 до 16:00'
+    ],
+    weekend: `<span class="font-semibold">Перерыв</span> с 12:00 до 12:48`
+  }, {
+    coords: [43.565698, 39.803640],
+    title: 'Ванное здание №3',
+    shedule: [
+      'Пн-Пт с 7:45 до 14:27',
+      'Сб с 7:45 до 13:15'
+    ],
+    weekend: `<span class="font-semibold">Вс</span> - выходной`
+  }, {
+    coords: [43.568401, 39.804629],
+    title: 'Ванное здание №4',
+    shedule: [
+      'Пн-Чт с 7:45 до 14:27',
+      'Cю-Вс с 7:45 до 14:27'
+    ],
+    weekend: `без выходных`
+  }, {
+    coords: [43.565964, 39.803910],
+    title: 'Амбулаторно-поликлиническое отделение',
+    shedule: [
+      'Пн-Пт с 7:45 до 15:06',
+      'Сб с 7:45 до 13:00'
+    ],
+    weekend: `<span class="font-semibold">Вс</span> - выходной`
+  }]
+</script>
+<div class="map" id="map"></div>
+
+<script>
+  new Swiper('.address-slider', {
+    slidesPerView: "auto",
+  })
+</script>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

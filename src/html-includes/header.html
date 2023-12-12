@@ -7,8 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web developer</title>
 
+  <!-- Для карты, но для страницы контакты там своя карта и объект другой -->
   <script>
-    window.coords = [43.352470, 42.437887]
+    window.locations = [{
+      coords: [43.352470, 42.437887],
+      title: 'Название здания',
+      shedule: [
+        'Пн-Пт с 7:45 до 14:27',
+        'Сб с 7:45 до 13:15'
+      ],
+      weekend: `<span class="font-semibold">Перерыв</span> с 12:00 до 12:48`
+    }]
   </script>
 </head>
 
