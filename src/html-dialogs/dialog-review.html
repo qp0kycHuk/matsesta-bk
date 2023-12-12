@@ -1,0 +1,57 @@
+<div class="dialog-review">
+  <div class="p-7 px-4 bg-l2">
+    <div class="title text-center">Оставьте отзыв</div>
+  </div>
+  <div class="py-6 px-4 sm:p-10">
+    <label class="relative">
+      <div class="text-sm mb-2 font-semibold">Ваше имя</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+        </div>
+        <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя...">
+      </div>
+    </label>
+    <label class="relative mt-4">
+      <div class="text-sm mb-2 font-semibold">Ваш город </div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#location-contur"></c-icon>
+        </div>
+        <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите город...">
+      </div>
+    </label>
+    <div class="rating-field mt-6">
+      <div class="text-xl mb-2 font-semibold">Оцените нас</div>
+      <div class="flex">
+        <label class="rating-field-item flex-grow">
+          <input type="radio" name="rating" hidden value="1">
+          <c-icon class="icon text-5xl mx-auto" href="img/icons.svg#rating-star"></c-icon>
+        </label>
+        <label class="rating-field-item flex-grow">
+          <input type="radio" name="rating" hidden value="2">
+          <c-icon class="icon text-5xl mx-auto" href="img/icons.svg#rating-star"></c-icon>
+        </label>
+        <label class="rating-field-item flex-grow">
+          <input type="radio" name="rating" hidden value="3">
+          <c-icon class="icon text-5xl mx-auto" href="img/icons.svg#rating-star"></c-icon>
+        </label>
+        <label class="rating-field-item flex-grow">
+          <input type="radio" name="rating" hidden value="4">
+          <c-icon class="icon text-5xl mx-auto" href="img/icons.svg#rating-star"></c-icon>
+        </label>
+        <label class="rating-field-item flex-grow">
+          <input type="radio" name="rating" hidden checked value="5">
+          <c-icon class="icon text-5xl mx-auto" href="img/icons.svg#rating-star"></c-icon>
+        </label>
+      </div>
+    </div>
+    <label class="relative mt-8">
+      <div class="text-sm mb-2 font-semibold">Ваш отзыв</div>
+      <div class="relative">
+        <textarea class="input rounded-xl w-full h-48 resize-none" placeholder="Напишите отзыв"></textarea>
+      </div>
+    </label>
+    <button class="btn btn-theme-fill mt-6 rounded-full">Отправить</button>
+  </div>
+</div>

@@ -3,37 +3,52 @@
 
 <section class="section-padding relative">
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
-  <% for(let i = 0; i < 10; i++) { %>
-  <div class="p-8 card-shadow rounded-base">
-    <div class="flex items-center">
-      <div class="flex items-center gap-4">
-        <div class="w-14 h-14 flex rounded-full" style="background-color: #01A98C;">
-          <c-icon class="icon text-2xl m-auto text-white" href="img/icons.svg#user"></c-icon>
-        </div>
-        <div>
-          <div class="text-lg font-medium">Елена</div>
-          <div class="opacity-60">г. Краснодар</div>
-        </div>
-      </div>
-      <div class="ml-auto opacity-60">11.09.2023</div>
-      <div class="ml-8 gap-2 flex">
-        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
-        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
-        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
-        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
-        <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
-      </div>
-    </div>
-    <div class="my-4 h-px bg-l1"></div>
-    <div class="opacity-80 leading-normal">
-      Мы первый раз принимали процедуры ,хочу поблагодарить весь персонал бальнеологического курорта"Мацеста" за доброжелательность
-      и чуткое отношение,спасибо большое медсестрам из ванного отделения,отдельное СПАСИБО медсестричкам Ирине и Галине из грязелечения,
-      за их руки,теплоту души,море улыбок.Супруги Шепелевы.
-    </div>
-  </div>
-  <% } %>
+  <div class="title section-title">Отзывы</div>
 
-  <div class="title section-title">Бальнеология</div>
+
+  <div class="flex max-sm:flex-col items-center mb-6 bg-primary bg-opacity-10 rounded-base sm:rounded-full p-4 sm:pl-8 gap-4">
+    <div class="flex items-center gap-4 sm:gap-6">
+      <c-icon class="icon text-primary text-4.5xl" href="img/icons.svg#chat"></c-icon>
+      <div class="text-xl font-medium">Хотите оставить отзыв?</div>
+    </div>
+    <button class="btn btn-theme-fill ml-auto max-sm:w-full rounded-full" data-fancybox-modal data-src="dialog-review.html">Оставить отзыв</button>
+  </div>
+
+  <div class="flex flex-col gap-4">
+    <% for(let i = 0; i < 10; i++) { %>
+    <div class="p-4 sm:p-8 card-shadow rounded-base">
+      <div class="sm:flex items-center">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 flex rounded-full" style="background-color: #01A98C;">
+            <!-- #658B1B #EEB8AC #9AC4EE -->
+            <c-icon class="icon text-2xl m-auto text-white" href="img/icons.svg#user"></c-icon>
+          </div>
+          <div>
+            <div class="sm:text-lg font-medium">Елена</div>
+            <div class="opacity-60 max-sm:text-sm">г. Краснодар</div>
+          </div>
+        </div>
+        <div class="ml-auto flex items-center gap-8 max-sm:mt-4">
+          <div class="opacity-60">11.09.2023</div>
+          <div class="gap-2 flex max-sm:ml-auto">
+            <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+            <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+            <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+            <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+            <c-icon class="icon text-2xl text-yellow" href="img/icons.svg#rating-star"></c-icon>
+          </div>
+        </div>
+      </div>
+      <div class="my-4 h-px bg-l1"></div>
+      <div class="opacity-80 leading-normal max-sm:text-sm">
+        Мы первый раз принимали процедуры ,хочу поблагодарить весь персонал бальнеологического курорта"Мацеста" за доброжелательность
+        и чуткое отношение,спасибо большое медсестрам из ванного отделения,отдельное СПАСИБО медсестричкам Ирине и Галине из грязелечения,
+        за их руки,теплоту души,море улыбок.Супруги Шепелевы.
+      </div>
+    </div>
+    <% } %>
+  </div>
+
 
   <%= _.template(require('./html-includes/pagination.html').default)() %>
 </section>
