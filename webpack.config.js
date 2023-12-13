@@ -12,6 +12,7 @@ const PUBLIC_PATH = path.resolve(__dirname, 'dist')
 const htmlWebpackPluginDefaults = {
   scriptLoading: 'blocking',
   inject: 'head',
+  minify: false
 }
 
 module.exports = {
@@ -76,6 +77,7 @@ module.exports = {
     new Dotenv(),
     new MiniCssExtractPlugin({ filename: 'css/style.css' }),
     ...generateHtmlPlugins('./src'),
+    ...generateHtmlPlugins('./src/pages-auth'),
     new CopyPlugin({
       patterns: [{ from: './src/img/', to: './img/' }, ...generateCopyPlugins('./src/html-dialogs')],
     }),

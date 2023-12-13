@@ -1,3 +1,12 @@
+@mixin dark() {
+  // temp
+
+  &:is([data-theme="dark"]),
+  &:is([data-theme="dark"] &) {
+    @content;
+  }
+}
+
 body {
   --bg1      : #E7E7E7;
   --bg2      : #F4F4F4;
@@ -14,6 +23,14 @@ body {
   background    : var(--bg3);
   color         : var(--text);
 
+  @include dark() {
+    --bg1 : #181818;
+    --bg2 : #282828;
+    --bg3 : #323232;
+    --text: #fff;
+
+  }
+
   * {
     font-family                : var(--font-base);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -24,13 +41,6 @@ body {
   }
 }
 
-[data-theme="dark"] {
-  --bg1 : #181818;
-  --bg2 : #282828;
-  --bg3 : #323232;
-  --text: #fff;
-
-}
 
 /* stylelint-disable-next-line selector-no-vendor-prefix */
 a:-webkit-any-link:focus-visible {
@@ -84,6 +94,10 @@ label {
   .btn-theme-contur-1 {
     @apply btn-contur btn-black;
 
+    @include dark() {
+      @apply btn-white;
+    }
+
     @media(hover) {
       // temp
 
@@ -108,6 +122,11 @@ label {
     @apply btn-contur btn-black;
 
 
+    @include dark() {
+      border: 1px solid theme('colors.white / 40%') !important;
+
+      @apply btn-black;
+    }
 
     @media(hover) {
       // temp
@@ -269,6 +288,16 @@ label {
       }
     }
 
+  }
+
+  .checkbox,
+  .input {
+    background: var(--bg3);
+    border    : 1px solid theme('colors.black / 30%');
+
+    @include dark() {
+      border-color: theme('colors.white / 30%');
+    }
   }
 }
 
@@ -887,4 +916,49 @@ label {
 .ymaps-2-1-79-balloon__content,
 .ymaps-2-1-79-balloon__layout {
   border-radius: 16px;
+}
+
+.auth {
+  @media(min-width:theme('screens.sm')) {
+    padding-top: 24px;
+  }
+
+  &-background {
+    @media(min-width:theme('screens.sm')) {
+      background   : linear-gradient(180deg, var(--bg2) 0%, rgba(244, 244, 244, 0.00) 100%);
+      border-radius: theme('borderRadius.base');
+      padding      : 32px;
+    }
+  }
+
+  &-form {
+    @media(min-width:theme('screens.sm')) {
+      border-radius: theme('borderRadius.base');
+      margin-left  : auto;
+      margin-right : auto;
+      background   : var(--bg3);
+      width        : 478px;
+      max-width    : 100%;
+      padding      : 56px 48px;
+    }
+  }
+}
+
+.auth-message {
+  padding-top   : 64px;
+  padding-bottom: 64px;
+
+  &-image {
+    width          : 98px;
+    height         : 98px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    font-size      : 50px;
+    background     : var(--bg3);
+    border-radius  : theme('borderRadius.base');
+    box-shadow     :
+      0 8px 20px 0 rgba(32, 41, 76, 0.06),
+      0 1px 3px 0 rgba(32, 41, 76, 0.10);
+  }
 }

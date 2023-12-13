@@ -1,0 +1,57 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="section-padding">
+  <div class="section-title title text-center">Зарегистрироваться как</div>
+  <div class="flex flex-wrap justify-center -m-4">
+    <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+      <a href="registration-pacient.html" class="category-item btn-group">
+        <div class="category-item-image">
+          <c-icon class="icon" href="img/icons.svg#user-heart"></c-icon>
+        </div>
+        <div class="text-xl font-semibold text-center mt-9">
+          Частный клиент
+        </div>
+        <div class="opacity-50 mt-3 text-center max-xl:text-sm">
+          Если вы являетесь пациентом <br>
+          и хотите участвовать в выгодных <br>
+          акциях, программах и так далее
+        </div>
+        <button class="btn btn-white btn-contur mt-8 px-9 mx-auto rounded-full">Зарегистрироваться</button>
+      </a>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+      <a href="registration-corporate.html" class="category-item btn-group">
+        <div class="category-item-image">
+          <c-icon class="icon" href="img/icons.svg#buildings"></c-icon>
+        </div>
+        <div class="text-xl font-semibold text-center mt-9">
+          Корпоративный клиент
+        </div>
+        <div class="opacity-50 mt-3 text-center max-xl:text-sm">
+          Если вы являетесь представителем <br>
+          санатория, отеля и гостиницы и хотите <br>
+          сотрудничать с нами
+        </div>
+        <button class="btn btn-white btn-contur mt-8 px-9 mx-auto rounded-full">Зарегистрироваться</button>
+      </a>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+      <a href="registration-partner.html" class="category-item btn-group">
+        <div class="category-item-image">
+          <c-icon class="icon" href="img/icons.svg#case"></c-icon>
+        </div>
+        <div class="text-xl font-semibold text-center mt-9">
+          Партнер
+        </div>
+        <div class="opacity-50 mt-3 text-center max-xl:text-sm">
+          Если вы являетесь медицинским <br>
+          агентом и хотите выгодно <br>
+          сотрудничать с нами
+        </div>
+        <button class="btn btn-white btn-contur mt-8 px-9 mx-auto rounded-full">Зарегистрироваться</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

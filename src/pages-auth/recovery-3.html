@@ -1,0 +1,71 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="auth section-padding">
+  <div class="auth-background">
+    <div class="auth-form flex flex-col items-center">
+      <div class="title text-center mb-2">
+        Восстановление
+        пароля
+      </div>
+      <div class="text-center text-sm opacity-60 mb-6 sm:mb-9">
+        Остался последний шаг - придумайте новый пароль!
+      </div>
+      <label class="relative w-full">
+        <div class="text-sm mb-2 font-semibold">Новый пароль</div>
+        <div class="relative">
+          <div class="absolute top-0 left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#lock"></c-icon>
+          </div>
+          <input type="password" class="input rounded-xl w-full pl-12" placeholder="Введите пароль..." id="password-1">
+          <div class="absolute top-0 right-0 h-full  flex items-center pr-1">
+            <button class="btn btn-sm rounded-md btn-icon" data-show-pass="password-1">
+              <c-icon class="icon text-2xl opacity-40 active-enabled" href="img/icons.svg#eye-close"></c-icon>
+              <c-icon class="icon text-2xl opacity-40 active-disabled" href="img/icons.svg#eye-open"></c-icon>
+            </button>
+          </div>
+        </div>
+      </label>
+      <label class="relative mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Повторите новый пароль</div>
+        <div class="relative">
+          <div class="absolute top-0 left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#lock"></c-icon>
+          </div>
+          <input type="password" class="input rounded-xl w-full pl-12" placeholder="Введите пароль..." id="password-2">
+          <div class="absolute top-0 right-0 h-full  flex items-center pr-1">
+            <button class="btn btn-sm rounded-md btn-icon" data-show-pass="password-2">
+              <c-icon class="icon text-2xl opacity-40 active-enabled" href="img/icons.svg#eye-close"></c-icon>
+              <c-icon class="icon text-2xl opacity-40 active-disabled" href="img/icons.svg#eye-open"></c-icon>
+            </button>
+          </div>
+        </div>
+      </label>
+
+
+      <button class="btn btn-theme-fill px-9 mx-auto mt-8 rounded-full">Сохранить пароль</button>
+
+      <div class="mt-6 rounded-xl p-4 bg-primary bg-opacity-20 w-full flex items-center">
+        <div class="text-sm">
+          Минимум 8 символов с прописными <br>
+          или строчными буквами и цифрами
+        </div>
+        <c-icon class="icon text-2xl text-sec dark:text-white ml-auto" href="img/icons.svg#information"></c-icon>
+      </div>
+
+      <div class="mt-6 text-red text-sm leading-none">
+        Пароль должен быть не менее <span class="font-semibold">8 символов длиной</span>
+        <br><br>
+        Пароль должен содержать
+        <span class="font-semibold">
+          латинские символы
+          нижнего регистра (a-z)
+        </span>
+        <br><br>
+        Пароль должен содержать <span class="font-semibold">цифры (0-9)</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

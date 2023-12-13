@@ -1,0 +1,32 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="auth section-padding">
+  <div class="auth-background">
+    <div class="auth-form flex flex-col items-center">
+      <div class="title text-center mb-2">
+        Восстановление
+        пароля
+      </div>
+      <div class="text-center text-sm opacity-60 mb-6 sm:mb-9">
+        Мы отправили на указанный почтовый адрес письмо
+        с кодом, необходимым для восстановления пароля
+      </div>
+      <label class="relative  w-full">
+        <div class="text-sm mb-2 font-semibold">Код</div>
+        <div class="relative">
+          <input type="text" class="input rounded-xl w-full" placeholder="Введите код...">
+        </div>
+      </label>
+
+
+      <button class="btn btn-theme-fill px-9 mx-auto mt-8 rounded-full">Восстановить пароль</button>
+
+      <div class="mt-8">
+        Не пришел код?
+        <a href="javascript:;" class="btn btn-primary btn-text inline-flex">Отправить повторно</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

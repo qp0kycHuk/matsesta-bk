@@ -30,7 +30,6 @@ module.exports = plugin.withOptions(
         [`.${options.className}`]: {
           display: 'block',
           height: sizeVar,
-          border: "1px solid theme('colors.black / 40%')",
           outline: 'none !important',
           lineHeight: '1',
           padding: 'calc((var(--tw-input-size) - 1.2em) / 2) 15px',

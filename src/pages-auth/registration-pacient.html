@@ -1,0 +1,102 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="auth section-padding">
+  <div class="auth-background">
+    <div class="auth-form flex flex-col items-center">
+      <div class="title text-center ">Регистрация</div>
+      <div class="sm:text-xl opacity-60 mb-6 sm:mb-9">пациента</div>
+      <label class="relative  w-full">
+        <div class="text-sm mb-2 font-semibold">Ваше имя</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+          </div>
+          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя...">
+        </div>
+      </label>
+      <label class="relative  mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Ваша фамилия</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+          </div>
+          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите фамилию...">
+        </div>
+      </label>
+      <label class="relative  mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Ваше отчество</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+          </div>
+          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите отчество...">
+        </div>
+      </label>
+      <label class="relative  mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Ваш телефон</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+          </div>
+          <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ ">
+        </div>
+      </label>
+      <label class="relative mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Ваш e-mail</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+          </div>
+          <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
+        </div>
+      </label>
+      <label class="relative mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Город проживания</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#location-contur"></c-icon>
+          </div>
+          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите название...">
+        </div>
+      </label>
+      <label class="relative mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Пароль для входа</div>
+        <div class="relative">
+          <div class="absolute top-0 left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#lock"></c-icon>
+          </div>
+          <input type="password" class="input rounded-xl w-full pl-12" placeholder="Введите пароль..." id="password-id">
+          <div class="absolute top-0 right-0 h-full  flex items-center pr-1">
+            <button class="btn btn-sm rounded-md btn-icon" data-show-pass="password-id">
+              <c-icon class="icon text-2xl opacity-40 active-enabled" href="img/icons.svg#eye-close"></c-icon>
+              <c-icon class="icon text-2xl opacity-40 active-disabled" href="img/icons.svg#eye-open"></c-icon>
+            </button>
+          </div>
+        </div>
+        <div class="mt-2 text-xs text-sec dark:text-white">
+          Пароль должен содержать минимум 8 символов с прописными
+          или строчными буквами и цифрами
+        </div>
+      </label>
+
+      <button class="btn btn-theme-fill px-9 mx-auto mt-8 rounded-full">Зарегистрироваться</button>
+
+      <div class="mt-8">
+        Уже есть аккаунт?
+        <a href="login.html" class="btn btn-primary btn-text inline-flex">Войти</a>
+      </div>
+
+      <label class="flex items-center gap-2 cursor-pointer mt-7 w-full">
+        <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked>
+        <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
+      </label>
+
+      <label class="flex items-center gap-2 cursor-pointer mt-2 w-full">
+        <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0">
+        <div class="opacity-60 text-xs sm:text-sm">Согласие на получение рекламной продукции</div>
+      </label>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

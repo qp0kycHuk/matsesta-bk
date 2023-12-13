@@ -1,0 +1,38 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="auth section-padding">
+  <div class="auth-background">
+    <div class="auth-form flex flex-col items-center">
+      <div class="title text-center mb-6 sm:mb-9">Войти</div>
+      <label class="relative  w-full">
+        <div class="text-sm mb-2 font-semibold">Ваш e-mail</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+          </div>
+          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
+        </div>
+      </label>
+      <label class="relative mt-6 w-full">
+        <div class="text-sm mb-2 font-semibold">Пароль для входа</div>
+        <div class="relative">
+          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#lock"></c-icon>
+          </div>
+          <input type="password" class="input rounded-xl w-full pl-12" placeholder="Введите пароль...">
+        </div>
+      </label>
+
+      <a href="recovery-1.html" class="btn btn-primary btn-text mt-8">Забыли пароль? Нажмите сюда!</a>
+
+      <button class="btn btn-theme-fill px-9 mx-auto mt-8 rounded-full">Войти в личный кабинет</button>
+
+      <div class="mt-8">
+        Нет аккаунта?
+        <a href="registration-pacient.html" class="btn btn-primary btn-text inline-flex">Зарегистрируйтесь</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

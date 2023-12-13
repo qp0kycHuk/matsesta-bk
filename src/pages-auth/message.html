@@ -1,0 +1,18 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="auth section-padding">
+  <div class="auth-background">
+    <div class="auth-message">
+      <div class="auth-message-image mx-auto">
+        <c-icon class="icon text-primary" href="img/icons.svg#email-contur"></c-icon>
+      </div>
+      <div class="mt-7 title text-center">Проверьте почту</div>
+      <div class="mt-7 text-center opacity-80 max-sm:text-sm">
+        На ваше почту пришло письмо - для того, чтобы завершить <br class="max-sm:hidden">
+        регистрацию перейдите по ссылке, расположенной в этом письме
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
