@@ -45,8 +45,12 @@
     <symbol id="play" width="100%" height="100%" viewBox="0 0 32 38">
       <path d="M5.27275 38C4.93519 38 4.61146 37.8332 4.37278 37.5363C4.13409 37.2393 4 36.8366 4 36.4167V1.58307C4.00004 1.30794 4.05771 1.03756 4.16732 0.79859C4.27694 0.559623 4.43472 0.360315 4.62511 0.220312C4.81551 0.0803081 5.03194 0.00444103 5.25308 0.000189119C5.47422 -0.00406279 5.69243 0.0634472 5.88621 0.196064L31.3411 17.6129C31.5407 17.7495 31.7071 17.9503 31.823 18.1943C31.9389 18.4383 32 18.7165 32 18.9999C32 19.2833 31.9389 19.5615 31.823 19.8054C31.7071 20.0494 31.5407 20.2502 31.3411 20.3869L5.88621 37.8037C5.69829 37.9324 5.48727 37.9999 5.27275 38Z" fill="currentColor" />
     </symbol>
-    <symbol id="cross" width="100%" height="100%" viewBox="0 0 16 16">
+    <symbol id="cross" width="100%" height="100%" viewBox="0 0 16 16" fill="none">
       <path d="M1 15L15 1M1 1L15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="cross-circle" width="100%" height="100%" viewBox="0 0 36 36" fill="none">
+      <circle cx="18" cy="18" r="15" stroke="currentColor" stroke-width="2" />
+      <path d="M21.75 14.25L14.25 21.75M14.25 14.25L21.7499 21.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
     </symbol>
     <symbol id="user" width="100%" height="100%" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="6" r="4" fill="currentColor" />
@@ -234,6 +238,18 @@
     </symbol>
     <symbol id="information" width="100%" height="100%" viewBox="0 0 24 24" fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12ZM12 6.25C12.4142 6.25 12.75 6.58579 12.75 7V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V7C11.25 6.58579 11.5858 6.25 12 6.25ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="currentColor" />
+    </symbol>
+    <symbol id="plus" width="100%" height="100%" viewBox="0 0 14 14" fill="none">
+      <path d="M13 7.00005L7 7.00005M7 7.00005L1 7.00005M7 7.00005L7 1M7 7.00005L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    </symbol>
+    <symbol id="minus" width="100%" height="100%" viewBox="0 0 14 2" fill="none">
+      <path d="M13 1L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    </symbol>
+    <symbol id="coin-stack" width="100%" height="100%" viewBox="0 0 24 24" fill="none">
+      <path d="M12 10C15.976 10 20 8.626 20 6C20 3.374 15.976 2 12 2C8.024 2 4 3.374 4 6C4 8.626 8.024 10 12 10Z" fill="currentColor" />
+      <path opacity="0.5" d="M4 10C4 12.626 8.024 14 12 14C15.976 14 20 12.626 20 10V8C20 10.626 15.976 12 12 12C8.024 12 4 10.626 4 8V10Z" fill="currentColor" />
+      <path d="M4 14C4 16.626 8.024 18 12 18C15.976 18 20 16.626 20 14V12C20 14.626 15.976 16 12 16C8.024 16 4 14.626 4 12V14Z" fill="currentColor" />
+      <path d="M4 18C4 20.626 8.024 22 12 22C15.976 22 20 20.626 20 18V16C20 18.626 15.976 20 12 20C8.024 20 4 18.626 4 16V18Z" fill="currentColor" />
     </symbol>
     <!--  -->
     <!--  -->

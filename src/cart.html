@@ -1,0 +1,95 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Корзина</div>
+  <div class="cart">
+    <div class="cart-content">
+      <div class="cart-header mb-2 rounded-xl text-sm bg-l2 px-4 py-3 max-lg:hidden">
+        <div class="opacity-80">Товар</div>
+        <div class="opacity-80">Цена</div>
+        <div class="opacity-80">Количество</div>
+        <div class="opacity-80">Итого</div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <% for(let i = 0; i < 3; i++) { %>
+        <div class="cart-item">
+          <div class="cart-item-content">
+            <div class="flex items-center gap-[inherit]">
+              <div class="cart-item-image">
+                <div class="ratio ratio-[142/98] rounded-2xl overflow-hidden">
+                  <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+                </div>
+              </div>
+              <div class="cart-item-info">
+                <div class="text-lg font-semibold">Мужская сила</div>
+              </div>
+            </div>
+            <div class="flex sm:items-center gap-[inherit] max-sm:flex-col">
+              <div class="cart-item-cost">
+                <div>
+                  <span class="lg:hidden opacity-60">Цена: </span>
+                  <span class="font-semibold">20000 ₽</span>
+                </div>
+              </div>
+              <div class="cart-item-counter sm:max-lg:mx-auto">
+                <c-counter min="1" max="100" value="5"></c-counter>
+              </div>
+              <div class="cart-item-cost">
+                <div>
+                  <span class="lg:hidden opacity-60">Итого: </span>
+                  <span class="font-semibold">20000 ₽</span>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item-close ml-auto">
+              <button class="btn btn-text">
+                <c-icon class="icon text-4xl opacity-50" href="img/icons.svg#cross-circle"></c-icon>
+              </button>
+            </div>
+          </div>
+          <div class="cart-item-bonus mt-3">
+            <div class="flex items-center gap-2">
+              <c-icon class="icon text-2xl text-primary" href="img/icons.svg#coin-stack"></c-icon>
+              <div class="text-sm">
+                Вы можете списать <span class="font-semibold">1000 баллов</span>
+              </div>
+            </div>
+            <button class="btn btn-theme-contur-2 ml-auto rounded-full max-xs:w-full">Списать</button>
+          </div>
+        </div>
+        <% } %>
+      </div>
+
+      <div class="cart-promo gap-5 flex sm:items-end mt-6 max-sm:flex-col">
+        <label class="flex-grow block">
+          <div class="text-sm font-semibold mb-2">Введите промокод для скидки</div>
+          <input type="text" class="input w-full rounded-lg" placeholder="Введите промокод...">
+        </label>
+        <button class="btn btn-theme-fill rounded-full">
+          Добавить
+        </button>
+      </div>
+    </div>
+    <div class="cart-aside">
+      <div class="cart-result">
+        <div class="text-lg font-alt font-semibold mb-7">Детали заказа</div>
+        <div class="border-t border-dashed border-default opacity-50"></div>
+        <div class="flex items-center py-3">
+          К оплате
+          <div class="text-lg font-semibold ml-auto">20000 ₽</div>
+        </div>
+        <div class="border-t border-dashed border-default opacity-50"></div>
+        <button class="mt-8 btn btn-theme-fill w-full rounded-full">Оформить заказ</button>
+        <div class="flex mt-7">
+          <a href="javascript:;" class="btn btn-text  btn-primary link-hover mx-auto">Читать условия оплаты</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

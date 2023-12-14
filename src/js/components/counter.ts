@@ -2,26 +2,24 @@ class Counter extends HTMLElement {
   min = 0
   max = 0
   value = 0
-  inputEl: HTMLInputElement
-  minusButton: HTMLButtonElement
-  plusButton: HTMLButtonElement
+  wrapEl = document.createElement('div')
+  inputEl = document.createElement('input')
+  minusButton = document.createElement('button')
+  plusButton = document.createElement('button')
+
+  timeout?: NodeJS.Timeout
+  timeoutIteration = 0
+  defaultInterval = 320
+
+  wrapperClassName = 'bg-l2 p-2 gap-2.5 flex items-center justify-between rounded-xl relative '
+  inputClassName = 'w-7 h-7 bg-l1 text-center rounded-lg'
+  minusClassName = 'btn btn-xs btn-icon rounded-md'
+  plusClassName = 'btn btn-xs btn-icon rounded-md'
 
   constructor() {
     super()
 
-    this.inputEl = document.createElement('input')
-    this.inputEl.className = 'bg-light absolute inset-0 w-full h-full text-center'
-    this.inputEl.addEventListener('input', this.changeHandler.bind(this))
-
-    this.minusButton = document.createElement('button')
-    this.minusButton.className = 'btn btn-sm btn-icon'
-    this.minusButton.innerHTML = '-'
-    this.minusButton.addEventListener('click', this.decrement.bind(this))
-
-    this.plusButton = document.createElement('button')
-    this.plusButton.className = 'btn btn-sm btn-icon ml-auto'
-    this.plusButton.innerHTML = '+'
-    this.plusButton.addEventListener('click', this.increment.bind(this))
+    this.addListeners()
   }
 
   setValue(value: number | string) {
@@ -29,7 +27,7 @@ class Counter extends HTMLElement {
       this.min,
       Math.min(this.max, isNaN(parseInt(value as string)) ? 0 : parseInt(value as string))
     )
-    this.inputEl.value = this.value.toString()
+    this.inputEl && (this.inputEl.value = this.value.toString())
   }
 
   decrement() {
@@ -45,19 +43,75 @@ class Counter extends HTMLElement {
   }
 
   connectedCallback() {
-    this.classList.add(...'bg-light flex p-2 relative gap-7'.split(' '))
-
     const min = parseInt(this.getAttribute('min') || '')
     const max = parseInt(this.getAttribute('max') || '')
     const value = parseInt(this.getAttribute('value') || '')
+    const name = this.getAttribute('name') || ''
 
     this.min = isNaN(min) ? -Infinity : min
     this.max = isNaN(max) ? Infinity : max
     this.setValue(value)
 
-    this.appendChild(this.inputEl)
+    this.inputEl.setAttribute('name', name)
+    this.initElements()
+  }
+
+  initElements() {
+    this.classList.add(...this.wrapperClassName.trim().split(' '))
+
+    this.inputEl.className = this.inputClassName
+
+    this.minusButton.type = 'button'
+    this.minusButton.className = this.minusClassName
+    this.minusButton.innerHTML = `
+      <div class="absolute -inset-2"></div>
+      <span class="opacity-50 text-2xl">-</span>
+    `
+
+    this.plusButton.type = 'button'
+    this.plusButton.className = this.plusClassName
+    this.plusButton.innerHTML = `
+      <div class="absolute -inset-2"></div>
+      <span class="opacity-50 text-2xl">+</span>
+    `
+
     this.appendChild(this.minusButton)
+    this.appendChild(this.inputEl)
     this.appendChild(this.plusButton)
+  }
+
+  addListeners() {
+    this.inputEl?.addEventListener('input', this.changeHandler.bind(this))
+
+    this.minusButton?.addEventListener('click', this.decrement.bind(this))
+    this.minusButton?.addEventListener('pointerdown', this.touchStartHandler.bind(this, this.decrement.bind(this)))
+    this.minusButton?.addEventListener('pointercancel', this.touchEndHandler.bind(this))
+
+    this.plusButton?.addEventListener('click', this.increment.bind(this))
+    this.plusButton?.addEventListener('pointerdown', this.touchStartHandler.bind(this, this.increment.bind(this)))
+    this.plusButton?.addEventListener('pointercancel', this.touchEndHandler.bind(this))
+  }
+
+  timeOut(callback: () => void) {
+    this.timeout = setTimeout(() => {
+      callback()
+      this.timeoutIteration++
+      this.timeOut(callback)
+    }, Math.max(60, this.defaultInterval - this.timeoutIteration * 20))
+  }
+
+  touchStartHandler(callback: () => void) {
+    this.timeoutIteration = 0
+    this.timeOut(callback)
+
+    document.body.addEventListener('pointerleave', this.touchEndHandler.bind(this), { once: true })
+    document.body.addEventListener('pointerup', this.touchEndHandler.bind(this), { once: true })
+  }
+
+  touchEndHandler(event: Event) {
+    event.preventDefault()
+    this.timeoutIteration = 0
+    clearTimeout(this.timeout)
   }
 
   static get observedAttributes() {

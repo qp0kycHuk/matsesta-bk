@@ -962,3 +962,138 @@ label {
       0 1px 3px 0 rgba(32, 41, 76, 0.10);
   }
 }
+
+.not-found {
+  &-title {
+    font-size  : 228px;
+    line-height: 1;
+    font-family: var(--font-alt);
+    color      : theme('colors.primary');
+    font-weight: 500;
+    text-align : center;
+
+    @media(max-width:theme('screens.sm')) {
+      font-size: 128px;
+    }
+  }
+}
+
+.cart {
+  display    : flex;
+  align-items: flex-start;
+  gap        : 32px;
+
+  @media(max-width:theme('screens.xl')) {
+    flex-direction: column;
+  }
+
+  &-content {
+    flex-grow: 1;
+
+    @media(max-width:theme('screens.xl')) {
+      width: 100%;
+    }
+  }
+
+  &-aside {
+    width      : 316px;
+    flex-shrink: 0;
+    position   : sticky;
+    top        : 60px;
+
+    @media(max-width:theme('screens.xl')) {
+      width   : 100%;
+      position: relative;
+      top     : 0;
+    }
+  }
+
+  &-result {
+    padding      : 40px 24px;
+    background   : var(--bg3);
+    border-radius: theme('borderRadius.base');
+    box-shadow   : 0 8px 20px 0 rgba(32, 41, 76, 0.06), 0 1px 3px 0 rgba(32, 41, 76, 0.10);
+  }
+
+  &-promo {
+    border-radius: 16px;
+    padding      : 32px;
+    background   : #FFE9D2;
+
+    @media(max-width:theme('screens.sm')) {
+      padding-left : 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &-header {
+    display              : grid;
+    grid-template-columns: 430px 124px 152px 124px auto;
+
+
+  }
+}
+
+.cart-item {
+  padding      : 16px;
+  border-radius: 16px;
+  box-shadow   : 0 10px 20px 0 rgba(0, 0, 0, 0.06);
+  position     : relative;
+
+  &-content {
+    display    : flex;
+    align-items: center;
+    gap        : 32px;
+
+    @media(max-width:theme('screens.lg')) {
+      flex-direction: column;
+      gap           : 16px;
+      align-items   : stretch;
+    }
+  }
+
+  &-image {
+    width      : 142px;
+    flex-shrink: 0;
+
+    @media(max-width:theme('screens.xs')) {
+      width: 100px;
+    }
+  }
+
+  &-info {
+    width      : 224px;
+    flex-shrink: 0;
+  }
+
+  &-cost {
+    width      : 92px;
+    flex-shrink: 0;
+
+    @media(max-width:theme('screens.lg')) {
+      width: auto;
+    }
+  }
+
+  &-bonus {
+    display      : flex;
+    align-items  : center;
+    border       : 1px dashed rgba(28, 28, 28, 0.30);
+    border-radius: 12px;
+    padding      : 12px;
+    gap          : 16px;
+
+    @media(max-width:theme('screens.xs')) {
+      flex-direction: column;
+      align-items   : stretch;
+    }
+  }
+
+  &-close {
+    @media(max-width:theme('screens.lg')) {
+      position: absolute;
+      right   : 10px;
+      top     : 10px;
+    }
+  }
+}
