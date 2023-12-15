@@ -2,10 +2,11 @@
 
 <section class="started">
   <div class="relative">
-    <swiper-container class="started-slider" space-between="20" pagination-el=".started-pagination" pagination-clickable pagination-dynamic-bullets>
-      <% for(let i = 0; i < 10; i++) { %>
-      <swiper-slide>
-        <div class="started-slide">
+    <div class="started-slider swiper">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+
+        <div class="started-slide swiper-slide">
           <div class="started-slide-image ratio ratio-[36/20]">
             <img src="img/test.gif" alt="" class="absolute-fit object-cover">
           </div>
@@ -24,15 +25,25 @@
             </div>
           </div>
         </div>
-      </swiper-slide>
-      <% } %>
-    </swiper-container>
+
+        <% } %>
+      </div>
+    </div>
     <div class="relative lg:mt-4 started-pagination-wrapper">
       <div class="started-pagination absolute slider-pagination"></div>
     </div>
   </div>
 </section>
-
+<script>
+  new Swiper('.started-slider', {
+    spaceBetween: 20,
+    pagination: {
+      el: '.started-pagination',
+      clickable: true,
+      dynamicBullets: true
+    }
+  })
+</script>
 
 <section class="index-about section-padding">
   <div class="index-about-content">
