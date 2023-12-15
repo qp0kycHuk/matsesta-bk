@@ -78,6 +78,7 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: 'css/style.css' }),
     ...generateHtmlPlugins('./src'),
     ...generateHtmlPlugins('./src/pages-auth'),
+    ...generateHtmlPlugins('./src/pages-about'),
     new CopyPlugin({
       patterns: [{ from: './src/img/', to: './img/' }, ...generateCopyPlugins('./src/html-dialogs')],
     }),
