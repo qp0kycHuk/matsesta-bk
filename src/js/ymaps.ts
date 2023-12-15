@@ -30,9 +30,15 @@ function mapsInit() {
         ]
       )
 
-      const map = new maps.Map('map', {
-        bounds: bounds,
-      })
+      const options =
+        window.locations.length > 1
+          ? { bounds }
+          : {
+            center: window.locations[0]?.coords,
+            zoom: 17,
+          }
+
+      const map = new maps.Map('map', options)
 
       const colors = ['005142', '658B1B', '5B5656', 'E28570']
 
