@@ -1,0 +1,59 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Медицинская сестра по физиотерапии</div>
+
+
+  <div class="max-sm:text-sm">
+    <div class="font-alt text-xl leading-none mb-3">Условия работы:</div>
+    <ul class="pl-4 list-disc leading-relaxed">
+      <li>Заработная плата: 28 750 руб. в месяц + надбавка за категорию до 30%;</li>
+      <li>Премирование согласно коллективному договору;</li>
+      <li>Официальное оформление, полный социальный пакет, постоянная работа, своевременная выплата заработной платы.</li>
+      <li>График работы: 6-дневная рабочая неделя.</li>
+    </ul>
+
+    <div class="h-px bg-default opacity-10 my-8"></div>
+
+    <div class="font-alt text-xl leading-none mb-3">Требования:</div>
+    <ul class="pl-4 list-disc leading-relaxed">
+      <li>Среднее медицинское образование по специальности «Медицинская сестра»;</li>
+      <li>Cпециальная подготовка по специальности «Физиотерапия».</li>
+      <li>Основные обязанности:</li>
+      <li>Прием пациента после осмотра врачом, внесение отметок о выполнении процедур;</li>
+      <li>Контроль за состоянием пациента во время проведения процедур;</li>
+      <li>Контроль за работой аппарата, показаниями измерительных приборов, сигнальных часов;</li>
+      <li>Помощь при врачебных манипуляциях;</li>
+      <li>Соблюдение правил асептики и антисептики;</li>
+      <li>Ведение учетно-отчетной документации.</li>
+    </ul>
+
+    <div class="h-px bg-default opacity-10 my-8"></div>
+
+    <div class="font-alt text-xl leading-none mb-3">Контакты:</div>
+
+    <div class="flex items-center gap-2">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#user"></c-icon>
+      Инспектор отдела кадров <br class="sm:hidden">
+      Теряева Надежда Юрьевна
+    </div>
+    <div class="flex items-center gap-2 mt-3">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#phone"></c-icon>
+      <div>
+        Телефон: <a href="tel:+7 (862) 267-77-04" class="link-hover hover:text-primary">+7 (862) 267-77-04</a> <br class="sm:hidden">
+        мобильный <a href="tel:+7 (938) 520-09-70" class="link-hover hover:text-primary">+7 (938) 520-09-70</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 mt-3">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#email"></c-icon>
+      <div>
+        E-mail: <a href="mailto:teryaeva_nj@matsesta.info" class="link-hover hover:text-primary">teryaeva_nj@matsesta.info</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

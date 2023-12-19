@@ -1,0 +1,17 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Награды</div>
+
+  <div class="grid grid-cols-4">
+    <div class="awards-item ratio ratio-[286/402]">
+      <div class="awards-item-image"></div>
+      <div class="awards-item-content"></div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

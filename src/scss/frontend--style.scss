@@ -1107,3 +1107,37 @@ label {
     padding: 18px 16px;
   }
 }
+
+.vacancy-item {
+  display      : flex;
+  align-items  : center;
+  padding      : 16px;
+  border-radius: theme('borderRadius.base');
+  gap          : 32px;
+
+
+  @media(max-width:theme('screens.sm')) {
+    gap          : 16px;
+    padding-right: 8px;
+  }
+
+  &-image {
+    flex-shrink: 0;
+    width      : 200px;
+    max-width  : 100%;
+
+    @media(max-width:theme('screens.sm')) {
+      width: 116px;
+    }
+  }
+}
+
+.awards-item {
+  // temp
+
+  &-content,
+  &-image {
+    position: absolute;
+    inset   : 0;
+  }
+}

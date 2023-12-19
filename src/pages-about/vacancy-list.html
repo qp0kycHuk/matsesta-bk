@@ -1,0 +1,31 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Вакансии</div>
+
+  <div class="grid lg:grid-cols-2 gap-5">
+    <% for(let i = 0; i < 4; i++) { %>
+    <a href="vacancy-detail.html" class="vacancy-item bg-l3 btn-group card-shadow">
+      <div class="vacancy-item-image ratio ratio-1/1 rounded-3xl sm:rounded-base overflow-hidden">
+        <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="vacancy-item-content">
+        <div class="sm:text-lg font-semibold font-alt leading-tight">
+          Медицинская сестра
+          по физиотерапии
+        </div>
+
+        <div class="mt-2 leading-tight max-sm:text-xs opacity-80">28 750 ₽ + надбавка за категорию до 30%</div>
+        <button class="btn btn-theme-contur-2 mt-8 rounded-full max-sm:hidden">Узнать больше</button>
+        <button class="btn btn-text btn-primary mt-4 sm:hidden text-sm">Узнать больше</button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
