@@ -5,6 +5,30 @@
   <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
 
   <div class="title section-title">Документы</div>
+
+  <div class="flex flex-col gap-4">
+    <% for(let i = 0; i < 3; i++) { %>
+    <div class="documents-item group" data-toggle-cover>
+      <div class="flex items-center btn-group cursor-pointer pl-2" data-toggle-link>
+        <div class="font-semibold text-xl">Охрана труда</div>
+        <button class="btn btn-icon btn-black btn-light btn-sm ml-auto rounded-full dark:btn-white">
+          <c-icon class="icon group-[.toggle-active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-4 mt-6 active-enabled" data-toggle-content data-toggle-static>
+        <% for(let ii = 0; ii < 10; ii++) { %>
+        <a href="img/test0.gif" download class="flex sm:items-center gap-4 p-4 bg-l3 rounded-xl card-shadow">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#document-text"></c-icon>
+          <div class="max-sm:text-sm">
+            Перечень рекомендуемых мероприятий по улучшению условий труда от 25.01.2016
+          </div>
+        </a>
+        <% } %>
+      </div>
+    </div>
+    <% } %>
+  </div>
 </section>
 
 <%= _.template(require('../html-includes/footer.html').default)() %>

@@ -1097,3 +1097,13 @@ label {
     }
   }
 }
+
+.documents-item {
+  padding      : 18px 32px;
+  background   : var(--bg2);
+  border-radius: theme('borderRadius.base');
+
+  @media(max-width:theme('screens.sm')) {
+    padding: 18px 16px;
+  }
+}
