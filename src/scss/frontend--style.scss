@@ -1140,4 +1140,20 @@ label {
     position: absolute;
     inset   : 0;
   }
+
+  &-content {
+    transition: .25s ease;
+
+    &>* {
+      transition: .25s ease;
+    }
+  }
+
+  &:not(:hover) &-content {
+    opacity: 0;
+
+    &>* {
+      transform: translateY(10px);
+    }
+  }
 }

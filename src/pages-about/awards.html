@@ -6,11 +6,19 @@
 
   <div class="title section-title">Награды</div>
 
-  <div class="grid grid-cols-4">
-    <div class="awards-item ratio ratio-[286/402]">
-      <div class="awards-item-image"></div>
-      <div class="awards-item-content"></div>
-    </div>
+  <div class="grid grid-cols-4 gap-7">
+    <% for(let i = 0; i < 10; i++) { %>
+    <a href="img/test0.gif" data-fancybox="awards" class="awards-item ratio ratio-[286/402]">
+      <div class="awards-item-image">
+        <img src="img/award.jpg" alt="" class="absolute-fit">
+      </div>
+      <div class="awards-item-content flex flex-col items-center justify-center text-center text-white bg-sec">
+        <c-icon class="icon text-5.5xl" href="img/icons.svg#medal"></c-icon>
+        <div class="font-alt text-xl font-semibold mt-8">Орден “Знак Почета”</div>
+        <div class="font-alt mt-2">12.04.1997</div>
+      </div>
+    </a>
+    <% } %>
   </div>
 </section>
 
