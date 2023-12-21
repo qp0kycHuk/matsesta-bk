@@ -79,6 +79,7 @@ module.exports = {
     ...generateHtmlPlugins('./src'),
     ...generateHtmlPlugins('./src/pages-auth'),
     ...generateHtmlPlugins('./src/pages-about'),
+    ...generateHtmlPlugins('./src/pages-lk'),
     new CopyPlugin({
       patterns: [{ from: './src/img/', to: './img/' }, ...generateCopyPlugins('./src/html-dialogs')],
     }),

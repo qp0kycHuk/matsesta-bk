@@ -1,6 +1,6 @@
 <%= _.template(require('./html-includes/header.html').default)() %>
 
-<section class="section-padding relative overflow-hidden">
+<section class="section-padding relative max-lg:overflow-hidden">
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
   <a href="/doctor-list.html" class="flex items-center gap-4 btn-group mb-8">
     <button class="btn btn-icon btn-theme-contur-2 btn-sm rounded-full text-primary">
@@ -23,17 +23,17 @@
         врач-физиотерапевт
       </div>
       <div class="flex flex-col mt-5 sticky top-20">
-        <button class="btn gap-4 justify-start px-4 rounded-xl" data-scroll="#services">
-          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#medical"></c-icon>
-          Оказываемые услуги
+        <button class="btn btn-primary gap-4 justify-start px-4 rounded-xl" data-scroll="#services">
+          <c-icon class="icon text-2xl " href="img/icons.svg#medical"></c-icon>
+          <span class="text-default"> Оказываемые услуги </span>
         </button>
-        <button class="btn gap-4 justify-start px-4 rounded-xl" data-scroll="#academic">
-          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#academic"></c-icon>
-          Образование и квалификация
+        <button class="btn btn-primary gap-4 justify-start px-4 rounded-xl" data-scroll="#academic">
+          <c-icon class="icon text-2xl " href="img/icons.svg#academic"></c-icon>
+          <span class="text-default"> Образование и квалификация </span>
         </button>
-        <button class="btn gap-4 justify-start px-4 rounded-xl" data-scroll="#diploma">
-          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#diploma"></c-icon>
-          Сертификаты
+        <button class="btn btn-primary gap-4 justify-start px-4 rounded-xl" data-scroll="#diploma">
+          <c-icon class="icon text-2xl " href="img/icons.svg#diploma"></c-icon>
+          <span class="text-default"> Сертификаты </span>
         </button>
       </div>
     </div>

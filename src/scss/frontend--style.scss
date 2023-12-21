@@ -47,6 +47,12 @@ a:-webkit-any-link:focus-visible {
   outline: none;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display   : none;
+  appearance: none;
+}
+
 label {
   display: block;
 }
@@ -1160,5 +1166,43 @@ label {
       transform: translateY(10px);
     }
   }
+
+}
+
+
+.lk {
+  display    : flex;
+  align-items: flex-start;
+  gap        : 100px;
+
+  &-aside {
+    width      : 284px;
+    flex-shrink: 0;
+  }
+}
+
+.lk-personal {
+  &-form {
+    width    : 382px;
+    max-width: 100%;
+  }
+}
+
+.filepond--panel-root {
+  // temp
+}
+
+.filepond--drop-label label {
+  font-size: 14px;
+}
+
+.filepond--root[data-style-panel-layout~='circle'] .filepond--file [data-align*='right'] {
+  right: 16px;
+  top  : 16px;
+}
+
+.filepond--root[data-style-panel-layout~='circle'] .filepond--image-preview-wrapper,
+.filepond--root[data-style-panel-layout~="circle"] {
+  border-radius: theme('borderRadius.base');
 
 }
