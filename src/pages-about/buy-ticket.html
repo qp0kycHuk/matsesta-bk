@@ -1,0 +1,32 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Купить путевку с Мацестой</div>
+  <div class="leading-normal max-sm:text-sm">
+    В этом разделе представлены санатории города Сочи, в путевку которых включен курс процедур бальнеологического курорта «Мацеста».
+    <br><br>
+    Приобретение путевки с лечением на «Мацесте» гарантирует прохождение курса сероводородных, радоновых или йодобромных бальнеопроцедур «Мацесты» при наличии результатов обследований и отсутствии противопоказаний.
+  </div>
+
+  <div class="flex items-center gap-2 mt-8">
+    <c-icon class="icon text-2xl text-primary" href="img/icons.svg#information"></c-icon>
+    <div class="font-semibold max-sm:text-sm">Трансфер на бальнеопроцедуры осуществляется бесплатно, согласно графику приема процедур</div>
+  </div>
+
+  <div class="mt-10">
+    <img src="img/buy-ticket.jpg" alt="" class="rounded-2xl sm:rounded-base">
+  </div>
+
+  <div class="mt-10">
+    <div class="sm:text-xl font-semibold">Выберите санаторий и забронируйте путевку в режиме онлайн!</div>
+    <div class="text-xs sm:text-sm opacity-60 mt-1">*форма бронирования расположена внутри странички санатория</div>
+    <div class="mt-10">
+      <a href="/service-categories.html" class="link-hover hover:text-primary">Шаблонный список</a>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
