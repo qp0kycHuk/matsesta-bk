@@ -1144,6 +1144,10 @@ label {
   &-content {
     transition: .25s ease;
 
+    @media (hover: none) {
+      display: none;
+    }
+
     &>* {
       transition: .25s ease;
     }
@@ -1156,4 +1160,5 @@ label {
       transform: translateY(10px);
     }
   }
+
 }
