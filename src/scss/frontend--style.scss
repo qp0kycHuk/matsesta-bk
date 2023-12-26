@@ -1188,21 +1188,14 @@ label {
   }
 }
 
-.filepond--panel-root {
-  // temp
+
+.filepond--item-panel,
+.filepond--file,
+.filepond--image-preview-wrapper {
+  border-radius: 24px;
+  overflow     : hidden;
 }
 
 .filepond--drop-label label {
-  font-size: 14px;
-}
-
-.filepond--root[data-style-panel-layout~='circle'] .filepond--file [data-align*='right'] {
-  right: 16px;
-  top  : 16px;
-}
-
-.filepond--root[data-style-panel-layout~='circle'] .filepond--image-preview-wrapper,
-.filepond--root[data-style-panel-layout~="circle"] {
-  border-radius: theme('borderRadius.base');
-
+  cursor: pointer;
 }
