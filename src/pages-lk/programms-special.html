@@ -1,0 +1,35 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="section-padding">
+  <div class="lk">
+    <%= _.template(require('../html-includes/lk-sidebar.html').default)() %>
+
+    <div class="lk-content">
+      <div class="title section-title lg:text-2.5xl">Спец программы</div>
+
+
+      <div class="flex flex-col gap-5">
+        <% for(let i = 0; i < 10; i++) { %>
+        <a href="javascript:;" class="flex items-center rounded-2xl bg-l2 btn-group p-4 sm:p-2 gap-4 sm:gap-10 max-sm:flex-col">
+          <div class="w-full xs:w-56 ratio ratio-[230/178] rounded-xl overflow-hidden shrink-0">
+            <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+          </div>
+          <div class="">
+            <div class="xs:text-xl font-semibold font-alt">Более 1500 заболеваний лечится!</div>
+            <div class="mt-3 opacity-80 leading-normal text-sm">
+              Главным природным лечебным фактором курорта Сочи и нашей бальнеолечебницы является знаменитая мацеста - уникальная...
+            </div>
+            <button class="btn btn-primary btn-text mt-5 ">Подробнее</button>
+          </div>
+        </a>
+        <% } %>
+      </div>
+
+
+      <%= _.template(require('../html-includes/pagination.html').default)() %>
+    </div>
+  </div>
+</section>
+
+
+<%= _.template(require('../html-includes/footer.html').default)() %>

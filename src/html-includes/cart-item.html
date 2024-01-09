@@ -1,0 +1,54 @@
+<div class="cart-item">
+  <div class="cart-item-content">
+    <div class="flex items-center gap-[inherit]">
+      <div class="cart-item-image">
+        <div class="ratio ratio-[142/98] rounded-2xl overflow-hidden">
+          <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+        </div>
+      </div>
+      <div class="cart-item-info">
+        <div class="text-lg font-semibold">Мужская сила</div>
+      </div>
+    </div>
+    <div class="flex sm:items-center gap-[inherit] max-sm:flex-col">
+      <div class="cart-item-cost">
+        <div>
+          <span class="lg:hidden opacity-60">Цена: </span>
+          <span class="font-semibold">20000 ₽</span>
+        </div>
+      </div>
+      <div class="cart-item-counter sm:max-lg:mx-auto">
+        <c-counter min="1" max="100" value="5"></c-counter>
+      </div>
+      <div class="cart-item-cost">
+        <div>
+          <span class="lg:hidden opacity-60">Итого: </span>
+          <span class="font-semibold">20000 ₽</span>
+        </div>
+      </div>
+    </div>
+    <div class="cart-item-close ml-auto">
+      <button class="btn btn-text">
+        <c-icon class="icon text-4xl opacity-50" href="img/icons.svg#cross-circle"></c-icon>
+      </button>
+    </div>
+  </div>
+  <div class="cart-item-bonus mt-3 border border-dashed border-black border-opacity-30">
+    <div class="flex items-center gap-2">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#coin-stack"></c-icon>
+      <div class="text-sm">
+        Вы можете списать <span class="font-semibold">1000 баллов</span>
+      </div>
+    </div>
+    <button class="btn btn-theme-contur-2 ml-auto rounded-full max-xs:w-full">Списать</button>
+  </div>
+  <div class="cart-item-bonus mt-3 bg-primary bg-opacity-10">
+    <div class="flex items-center gap-2">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#circle-check"></c-icon>
+      <div class="text-sm">
+        Баллы списаны!
+      </div>
+    </div>
+    <button class="btn btn-theme-contur-2 ml-auto rounded-full max-xs:w-full">Готово!</button>
+  </div>
+</div>

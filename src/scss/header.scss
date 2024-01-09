@@ -78,8 +78,7 @@
     pointer-events: none;
 
     @media(max-width:theme('screens.md')) {
-      transform: translateX(-30px);
-
+      transform: translateX(-100%);
     }
   }
 
