@@ -1227,6 +1227,10 @@ label {
       pointer-events: none;
     }
   }
+
+  &-content {
+    flex-grow: 1;
+  }
 }
 
 .lk-personal {
