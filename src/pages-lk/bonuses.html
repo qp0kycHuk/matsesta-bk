@@ -1,0 +1,93 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="section-padding">
+  <div class="title section-title">Бонусы за регистрацию</div>
+
+  <div class="bonuses">
+    <div class="bonuses-grid">
+      <div class="bonuses-user">
+        <img src="img/bonus-user.png" alt="" class="sm:mb-8 mb-4">
+        <div class="text-xl sm:text-2.5xl font-medium font-alt">Врач-агент</div>
+        <div class="mt-2 sm:mt-4 sm:text-xl font-semibold font-alt">1100 бонусов</div>
+        <div class="mt-2 sm:mt-4 font-alt max-sm:text-sm">
+          600 бонусов на счету + <br>
+          500 бонусов за регистрацию
+        </div>
+      </div>
+
+      <div class="bonuses-steps">
+        <div class="bonuses-step">
+          <img src="img/bonus-arrow-1.svg" alt="" class="bonuses-arrow xl:-left-7  max-xl:-top-8 max-xl:-scale-y-100">
+          <div>
+            Приглашение <br>
+            зарегистрироваться <br>
+            на сайте БК “Мацеста” <br>
+            <span class="font-semibold">для пациента</span>
+          </div>
+          <button class="btn max-sm:btn-primary max-sm:btn-text sm:btn-theme-contur-1 mt-5 rounded-full">
+            Скопировать ссылку
+          </button>
+        </div>
+        <div class="bonuses-step">
+          <img src="img/bonus-arrow-2.svg" alt="" class="bonuses-arrow xl:-left-12 max-xl:-top-8">
+          <div>
+            <span class="font-semibold">Пациент</span> <br>
+            получает <span class="font-semibold">300 бонусов</span> <br>
+            за регистрацию
+
+          </div>
+        </div>
+        <div class="bonuses-step">
+          <img src="img/bonus-arrow-2.svg" alt="" class="bonuses-arrow xl:-left-12 max-xl:-top-8">
+          <div>
+            За приглашенного <br>
+            пациента <br>
+            <span class="font-semibold">
+              врач-агент получает <br>
+              100 бонусов
+            </span>
+          </div>
+
+        </div>
+      </div>
+      <div class="bonuses-steps">
+        <div class="bonuses-step">
+          <img src="img/bonus-arrow-1.svg" alt="" class="bonuses-arrow xl:-scale-y-100 xl:-left-7 max-xl:-top-8">
+          <div>
+            Приглашение <br>
+            зарегистрироваться <br>
+            на сайте БК “Мацеста” <br>
+            <span class="font-semibold">для врача-агента</span>
+          </div>
+          <button class="btn max-sm:btn-primary max-sm:btn-text sm:btn-theme-contur-1 mt-5 rounded-full">
+            Скопировать ссылку
+          </button>
+        </div>
+        <div class="bonuses-step">
+          <img src="img/bonus-arrow-2.svg" alt="" class="bonuses-arrow xl:-left-12 max-xl:-top-8">
+          <div>
+            <span class="font-semibold">Врач-агент</span> <br>
+            получает <span class="font-semibold">500 бонусов</span> <br>
+            за регистрацию
+
+          </div>
+        </div>
+        <div class="bonuses-step">
+          <img src="img/bonus-arrow-2.svg" alt="" class="bonuses-arrow xl:-left-12 max-xl:-top-8">
+          <div>
+            За приглашенного <br>
+            врача-агента <br>
+            <span class="font-semibold">
+              врач-агент получает <br>
+              500 бонусов
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
