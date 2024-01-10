@@ -1,0 +1,65 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+<section class="section-padding">
+  <div class="lk">
+    <%= _.template(require('../html-includes/lk-sidebar.html').default)() %>
+
+    <div class="lk-content">
+      <div class="title section-title lg:text-2.5xl">Программа лояльности</div>
+
+      <p class="leading-normal mb-10 max-sm:text-sm">
+        Получать её проще простого - зарегистрируйтесь в программе лояльности и выбирайте
+        понравившиеся предложения. Вас ждёт уникальный мир покупок, где скидки предоставляются на
+        множество категорий, а кешбэк начисляется рублями прямо на карту или счёт автоматически.
+      </p>
+
+      <div class="text-lg font-semibold">Программа лояльности нашего бальнеологического курорта включает в себя:</div>
+
+      <div class="flex items-center gap-6 mt-8">
+        <div class="w-12 h-12 flex rounded-lg xs:rounded-xl bg-primary bg-opacity-20 shrink-0">
+          <c-icon class="icon text-primary m-auto text-2xl" href="img/icons.svg#bill-check"></c-icon>
+        </div>
+        <div class="max-sm:text-sm">
+          <div class="sm:text-lg font-semibold">Кешбэк</div>
+          <div class="opacity-60 max-sm:text-xs">
+            Получайте часть стоимости покупки обратно в баллах и оплачивайте ими программы лечения!
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 mt-8">
+        <div class="w-12 h-12 flex rounded-lg xs:rounded-xl bg-primary bg-opacity-20 shrink-0">
+          <c-icon class="icon text-primary m-auto text-2xl" href="img/icons.svg#sale"></c-icon>
+        </div>
+        <div class="max-sm:text-sm">
+          <div class="sm:text-lg font-semibold">Скидки</div>
+          <div class="opacity-60 max-sm:text-xs">
+            Выбирайте понравившиеся акции и оплачивайте программы сразу со скидкой!
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 mt-8">
+        <div class="w-12 h-12 flex rounded-lg xs:rounded-xl bg-primary bg-opacity-20 shrink-0">
+          <c-icon class="icon text-primary m-auto text-2xl" href="img/icons.svg#gift"></c-icon>
+        </div>
+        <div class="max-sm:text-sm">
+          <div class="sm:text-lg font-semibold">Промокоды</div>
+          <div class="opacity-60 max-sm:text-xs">
+            Забирайте промокоды на скидки и бонусы бесплатно!
+          </div>
+        </div>
+      </div>
+
+      <p class="leading-normal my-10 max-sm:text-sm">
+        В остальном программа лояльности опирается на CRM-систему. В нее вносят данные анкетирования, которое проводят при выдаче карточки участникам программы, а также данные о покупках. CRM-система помогает мониторить эффективность программы лояльности, автоматически собирать и сортировать данные о поведении покупателей и за счет этого улучшать маркетинговую стратегию.
+      </p>
+      <p class="leading-normal mb-10 max-sm:text-sm">
+        В остальном программа лояльности опирается на CRM-систему. В нее вносят данные анкетирования, которое проводят при выдаче карточки участникам программы, а также данные о покупках.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
