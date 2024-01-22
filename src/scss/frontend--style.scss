@@ -1404,3 +1404,112 @@ label {
     border-radius: 12px;
   }
 }
+
+.territory {
+  border-radius: theme('borderRadius.base');
+  background   : radial-gradient(107.66% 86.66% at 28.13% 16.14%, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), rgba(101, 138, 136, 0.30);
+  padding      : 65px;
+  padding-top  : 1px;
+  margin-top   : 100px;
+
+  @media(max-width:theme('screens.lg')) {
+    padding: 1px 15px 20px;
+  }
+
+  &-image {
+    --tw-ratio-padding: calc(100% * 820 / 1100);
+
+    width     : 100%;
+    margin-top: -56px;
+  }
+
+  &-marker {
+    --size: 84px;
+
+    position: absolute;
+
+    @media(max-width:theme('screens.lg')) {
+      --size: 64px;
+    }
+
+
+    @media(max-width:theme('screens.md')) {
+      position  : static;
+      margin-top: 24px;
+    }
+
+    &.toggle-active {
+      z-index: 2;
+    }
+
+    &-icon {
+      font-size: var(--size);
+      cursor   : pointer;
+
+      @media(max-width:theme('screens.md')) {
+        display: none;
+
+      }
+    }
+
+    &-1 {
+      left: calc(100% * 232 / 1100 - var(--size) / 2);
+      top : calc(100% * 139 / 820 - var(--size));
+    }
+
+    &-2 {
+      left: calc(100% * 704 / 1100 - var(--size) / 2);
+      top : calc(100% * 159 / 820 - var(--size));
+    }
+
+    &-3 {
+      left: calc(100% * 757 / 1100 - var(--size) / 2);
+      top : calc(100% * 355 / 820 - var(--size));
+    }
+
+    &-4 {
+      left: calc(100% * 852 / 1100 - var(--size) / 2);
+      top : calc(100% * 442 / 820 - var(--size));
+    }
+
+    &-content {
+      @media(min-width:theme('screens.md')) {
+        position     : absolute;
+        width        : 210px;
+        padding      : 16px;
+        border-radius: 16px;
+        background   : var(--bg3);
+        box-shadow   : 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+        left         : calc(100% + 28px);
+        top          : 50%;
+        transform    : translateY(-50%);
+        transition   : .3s var(--elastic);
+
+        &:not(.toggle-active) {
+          opacity       : 0;
+          pointer-events: none;
+          transform     : translateY(-50%) translateX(15px);
+        }
+      }
+
+
+      @media(max-width:theme('screens.md')) {
+        position : static;
+        transform: none;
+      }
+    }
+
+
+    &:is(&-3, &-4) &-content {
+      @media(min-width:theme('screens.md')) {
+        left : auto;
+        right: calc(100% + 28px);
+
+        &:not(.toggle-active) {
+          transform: translateY(-50%) translateX(-15px);
+
+        }
+      }
+    }
+  }
+}

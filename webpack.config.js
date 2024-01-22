@@ -19,6 +19,7 @@ module.exports = {
   entry: {
     index: './src/js/index.ts',
     components: './src/js/components/index.ts',
+    territory: './src/js/territory/index.ts',
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -81,7 +82,11 @@ module.exports = {
     ...generateHtmlPlugins('./src/pages-about'),
     ...generateHtmlPlugins('./src/pages-lk'),
     new CopyPlugin({
-      patterns: [{ from: './src/img/', to: './img/' }, ...generateCopyPlugins('./src/html-dialogs')],
+      patterns: [
+        // { from: "./src/models/", to: "./models/" },
+        { from: './src/img/', to: './img/' },
+        ...generateCopyPlugins('./src/html-dialogs')
+      ],
     }),
     new FaviconsWebpackPlugin({
       logo: './src/favicon.png',
