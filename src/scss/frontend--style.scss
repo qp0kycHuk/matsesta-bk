@@ -1131,7 +1131,7 @@ label {
   &-content {
     display    : flex;
     align-items: center;
-    gap        : 32px;
+    gap        : 24px;
 
     @media(max-width:theme('screens.lg')) {
       align-items   : stretch;
@@ -1163,7 +1163,7 @@ label {
 
   &-cost {
     flex-shrink: 0;
-    width      : 92px;
+    width      : 82px;
 
     @media(max-width:theme('screens.lg')) {
       width: auto;
@@ -1696,4 +1696,25 @@ label {
     font-size      : 14px;
   }
 
+}
+
+.cookie-notification {
+  position     : fixed;
+  bottom       : 15px;
+  background   : theme('colors.sec');
+  color        : #fff;
+  display      : flex;
+  align-items  : center;
+  z-index      : theme('zIndex.2');
+  padding      : 16px;
+  border-radius: 16px;
+  gap          : 12px;
+  width        : calc(var(--section-width));
+  left         : calc(50% - var(--section-width) / 2);
+
+
+  @media(max-width:theme('screens.sm')) {
+    flex-direction: column;
+    align-items   : stretch;
+  }
 }

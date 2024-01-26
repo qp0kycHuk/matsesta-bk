@@ -188,6 +188,21 @@
   })
 </script>
 
+<div class="cookie-notification" id="cookie-notification">
+  <div class="max-lg:text-sm">
+    Этот веб-сайт использует файлы cookie, чтобы обеспечить удобную работу пользователей с ним и функциональные возможности сайта.
+    Продолжая использовать этот сайт, Вы соглашаетесь с использованием файлов cookie
+  </div>
+  <button class="btn btn-primary btn-fill rounded-full" id="cookie-notification-btn">Согласен</button>
+</div>
+
+<script>
+  document.getElementById('cookie-notification-btn').addEventListener('click', () => {
+    const notification = document.getElementById('cookie-notification')
+    notification.parentElement.removeChild(notification)
+  })
+</script>
+
 </body>
 
 </html>
