@@ -1,0 +1,79 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="relative max-sm:pt-4 py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="h-px bg-default opacity-10 mb-10 max-sm:hidden"></div>
+
+  <div class="detail-nav mb-7 sm:mb-9">
+    <button class="btn btn-icon btn-theme-contur-2 btn-sm rounded-full text-primary">
+      <c-icon class="icon text-2xl" href="img/icons.svg#arrow-left"></c-icon>
+    </button>
+    <div>
+      <div class="text-primary opacity-80">Категории ванн</div>
+    </div>
+  </div>
+
+  <div class="detail-content  mx-auto">
+    <div class="flex flex-col items-start gap-7">
+      <div class="title">Стандарт</div>
+
+      <a href="img/test0.gif" data-fancybox class="rounded-base overflow-hidden w-full my-5 block">
+        <img src="img/test0.gif" alt="" class="w-full">
+      </a>
+
+      <div class="sm:text-xl font-alt font-semibold">Преимущества приема процедур «стандарт»:</div>
+
+      <div class="space-y-4  max-sm:text-sm">
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#wallet"></c-icon>
+          <span class="opacity-80">Лечебные процедуры отпускаются по доступной цене</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#hanger"></c-icon>
+          <span class="opacity-80">Халат, тапочки, полотенце не предоставляются</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#bath-contur"></c-icon>
+          <span class="opacity-80">Индивидуальная комната отдыха после приема общей ванны</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#clock-contur"></c-icon>
+          <span class="opacity-80">Время назначается в информационном сервисном центре</span>
+        </div>
+      </div>
+
+      <div class="sm:text-xl font-alt font-semibold">Длительность обслуживания в отделении «VIP»</div>
+
+      <div class="space-y-4 max-sm:text-sm">
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#hourglass"></c-icon>
+          <span class="opacity-80">30 мин (прием ванны и отдых после процедуры)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#hourglass"></c-icon>
+          <span class="opacity-80">45 мин. (прием ванны + местной процедуры и отдых после процедур)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#hourglass"></c-icon>
+          <span class="opacity-80">60 мин (прием процедуры/процедур и отдых после процедуры/процедур)</span>
+        </div>
+      </div>
+      <div class="p-5 font-semibold max-sm:text-sm rounded-2xl bg-primary bg-opacity-20 w-full">
+        Процедуры отпускаются в ванном здании №4
+      </div>
+      <div class="p-5 font-semibold max-sm:text-sm rounded-2xl bg-primary bg-opacity-20 w-full">
+        Процедуры отпускаются в отделении «люкс» ванного здания (бальнеолечебницы) № 4
+      </div>
+      <div class="p-5 font-semibold max-sm:text-sm rounded-2xl bg-primary bg-opacity-20 w-full">
+        Процедуры отпускаются в отделении «премиум» ванного здания (бальнеолечебницы) № 3
+      </div>
+      <div class="p-5 font-semibold max-sm:text-sm rounded-2xl bg-primary bg-opacity-20 w-full">
+        Процедуры отпускаются в отделении «VIP» ванного здания (бальнеолечебницы) № 3
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

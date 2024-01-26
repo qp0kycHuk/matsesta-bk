@@ -1,0 +1,58 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<!-- Категории ванн -->
+<section class="section-padding relative overflow-hidden">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Категории ванн</div>
+
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-7">
+    <a href="categories-detail.html" class="category-page-item btn-group">
+      <div class="category-page-item-picture">
+        <div class="category-item-image ">
+          <c-icon class="icon" href="img/icons.svg#bath"></c-icon>
+        </div>
+      </div>
+      <div class="category-page-item-content">
+        <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold  font-alt text-center">Стандарт</div>
+        <button class="btn btn-theme-contur-2 rounded-full w-full mt-4 sm:mt-6">Подробнее</button>
+      </div>
+    </a>
+    <a href="categories-detail.html" class="category-page-item btn-group">
+      <div class="category-page-item-picture">
+        <div class="category-item-image ">
+          <c-icon class="icon" href="img/icons.svg#crown"></c-icon>
+        </div>
+      </div>
+      <div class="category-page-item-content">
+        <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold  font-alt text-center">Люкс</div>
+        <button class="btn btn-theme-contur-2 rounded-full w-full mt-4 sm:mt-6">Подробнее</button>
+      </div>
+    </a>
+    <a href="categories-detail.html" class="category-page-item btn-group">
+      <div class="category-page-item-picture">
+        <div class="category-item-image ">
+          <c-icon class="icon" href="img/icons.svg#diamond"></c-icon>
+        </div>
+      </div>
+      <div class="category-page-item-content">
+        <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold  font-alt text-center">Премиум</div>
+        <button class="btn btn-theme-contur-2 rounded-full w-full mt-4 sm:mt-6">Подробнее</button>
+      </div>
+    </a>
+    <a href="categories-detail.html" class="category-page-item btn-group">
+      <div class="category-page-item-picture">
+        <div class="category-item-image ">
+          <c-icon class="icon" href="img/icons.svg#vip"></c-icon>
+        </div>
+      </div>
+      <div class="category-page-item-content">
+        <div class="text-lg sm:text-2xl xl:text-2.5xl font-semibold  font-alt text-center">VIP</div>
+        <button class="btn btn-theme-contur-2 rounded-full w-full mt-4 sm:mt-6">Подробнее</button>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
