@@ -42,7 +42,10 @@ module.exports = {
       gray: '#333',
       white: '#fff',
       black: '#1c1c1c',
-      default: 'var(--text)'
+      default: 'var(--text)',
+      l1: 'var(--bg1)',
+      l2: 'var(--bg2)',
+      l3: 'var(--bg3)',
     },
     fontFamily: {
       base: 'var(--font-base)',
@@ -58,11 +61,7 @@ module.exports = {
       borderRadius: {
         base: '32px'
       },
-      backgroundColor: {
-        l1: 'var(--bg1)',
-        l2: 'var(--bg2)',
-        l3: 'var(--bg3)',
-      },
+
       fontSize: {
         '1.5xl': ['1.375rem', '1.35'],
         '2.1xl': ['1.5625rem', '1.35'],

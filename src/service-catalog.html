@@ -1,0 +1,136 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Бальнеология</div>
+
+  <div class="flex flex-col gap-4">
+    <% for(let i = 0; i < 2; i++) { %>
+    <div class="service-line-wrapper">
+      <form class="service-line">
+        <div class="service-line-content">
+          <div class="font-alt font-semibold xs:text-xl">
+            4-х камерная сероводородная
+            (мацеста) ванна
+          </div>
+          <button class="service-line-btn btn btn-theme-contur-2 gap-2 rounded-full max-sm:text-sm  max-sm:btn-sm lg:mt-5">
+            <c-icon class="icon text-2xl" href="img/icons.svg#cart-contur"></c-icon>
+            В корзину
+          </button>
+        </div>
+        <div class="service-line-age">
+          <div class="text-sm font-semibold mb-2">Выберите возраст</div>
+          <div class="grid grid-cols-2 gap-2 ">
+            <label class="age-checkbox btn gap-2 px-3">
+              <input type="radio" name="age" id="" value="18+" hidden checked>
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-hand"></c-icon>
+              18+
+            </label>
+            <label class="age-checkbox btn gap-2 px-3">
+              <input type="radio" name="age" id="" value="до 18" hidden>
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#child"></c-icon>
+              до 18
+            </label>
+          </div>
+        </div>
+        <div class="service-line-cat">
+          <div class="text-sm font-semibold  mb-2">Выберите категорию</div>
+
+          <div class="swiper cat-slider relative px-4">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide cat-slider-item">
+                Стандарт
+                <input type="radio" name="cat" value="Стандарт" hidden checked>
+              </div>
+              <div class="swiper-slide cat-slider-item">
+                Люкс
+                <input type="radio" name="cat" value="Люкс" hidden>
+              </div>
+              <div class="swiper-slide cat-slider-item">
+                Премиум
+                <input type="radio" name="cat" value="Премиум" hidden>
+              </div>
+              <div class="swiper-slide cat-slider-item">
+                VIP
+                <input type="radio" name="cat" value="VIP" hidden>
+              </div>
+            </div>
+
+            <div class="absolute left-2 top-1/2 -translate-y-1/2 z-[1] cat-slider-prev">
+              <button class="btn btn-xs btn-icon" type="button">
+                <c-icon class="icon opacity-50" href="img/icons.svg#to-left"></c-icon>
+              </button>
+            </div>
+
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 z-[1] cat-slider-next">
+              <button class="btn btn-xs btn-icon" type="button">
+                <c-icon class="icon opacity-50" href="img/icons.svg#to-right"></c-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-line-cost">
+          <div class="flex items-center lg:mt-6">
+            <div class="text-2.5xl font-semibold">от 1200 ₽</div>
+            <button class="btn btn-text btn-primary ml-2" type="button" data-fancybox-modal data-src="dialog-costs.html">
+              <c-icon class="icon text-2xl" href="img/icons.svg#information-contur"></c-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="h-px bg-default opacity-20 my-4"></div>
+      <div class="flex flex-wrap gap-4">
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Противовоспалительный">
+          <c-icon class="icon text-2xl" href="img/icons.svg#detection"></c-icon>
+        </button>
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Обезболивающий">
+          <c-icon class="icon text-2xl" href="img/icons.svg#pills"></c-icon>
+        </button>
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Противоотечный">
+          <c-icon class="icon text-2xl" href="img/icons.svg#knee"></c-icon>
+        </button>
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Регенерирующий">
+          <c-icon class="icon text-2xl" href="img/icons.svg#cell"></c-icon>
+        </button>
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Метаболический">
+          <c-icon class="icon text-2xl" href="img/icons.svg#intestine"></c-icon>
+        </button>
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Фибринолитический">
+          <c-icon class="icon text-2xl" href="img/icons.svg#blood"></c-icon>
+        </button>
+        <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Седативный">
+          <c-icon class="icon text-2xl" href="img/icons.svg#meditation"></c-icon>
+        </button>
+      </div>
+
+
+
+
+
+    </div>
+
+    <% } %>
+  </div>
+  <%= _.template(require('./html-includes/pagination.html').default)() %>
+</section>
+
+<script>
+  new Swiper('.cat-slider', {
+    slidesPerView: 1,
+    navigation: {
+      prevEl: '.cat-slider-prev',
+      nextEl: '.cat-slider-next',
+    },
+    on: {
+      slideChange(swiper) {
+        const activeSlide = swiper.slides[swiper.activeIndex]
+        const checkBox = activeSlide.querySelector('input')
+        checkBox.checked = true
+      }
+    }
+  })
+</script>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

@@ -2,7 +2,8 @@
   color: inherit;
 
   .fancybox__content {
-    color: inherit;
+    color      : inherit;
+    flex-shrink: 0;
   }
 
   .fancybox__slide {

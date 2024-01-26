@@ -11,6 +11,7 @@ import animations from './animations'
 import ymaps from './ymaps'
 
 import '../scss/index.scss'
+import tooltip from './tooltip'
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
@@ -25,6 +26,7 @@ function loadHandler() {
   animations.init()
   ymaps.init()
   phonemask.init('[type="tel"]')
+  tooltip.init()
 
   ripple.attach('.btn')
   ripple.attach('.waved')
@@ -36,7 +38,7 @@ function loadHandler() {
   document.addEventListener('toggleclose', toggleCloseHandler)
 }
 
-const menusIds = ['lk-menu','menu', 'catalog-filter']
+const menusIds = ['lk-menu', 'menu', 'catalog-filter']
 
 function toggleOpenHandler(event: any) {
   if (menusIds.includes(event.detail.target.id)) {
