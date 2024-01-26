@@ -1099,6 +1099,13 @@ label {
   &-info {
     flex-shrink: 0;
     width      : 224px;
+
+    @media(max-width:theme('screens.lg')) {
+      width      : auto;
+      flex-grow  : 1;
+      max-width  : 500px;
+      flex-shrink: 1;
+    }
   }
 
   &-cost {
