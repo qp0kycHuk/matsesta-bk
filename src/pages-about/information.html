@@ -1,0 +1,99 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
+
+  <div class="flex flex-col items-start gap-5 sm:gap-7 max-sm:text-sm">
+    <div class="title section-title">Информация об организации</div>
+    <p>
+      Учрежденный Федерацией Независимых Профсоюзов России холдинг «Бальнеологический курорт «Мацеста» является крупнейшим
+      санаторно-курортным объединением города Сочи.
+    </p>
+    <div class="rounded-base overflow-hidden w-full my-5">
+      <img src="img/information.png" alt="" class="w-full">
+    </div>
+    <div class="title">О холдинге</div>
+    <div>
+      <div class="font-semibold">Полное наименование предприятия:</div>
+      Общество с ограниченной ответственностью «Бальнеологический курорт «Мацеста» (холдинг) города Сочи».
+    </div>
+    <div>
+      <div class="font-semibold">Юридический адрес и фактическое местонахождение:</div>
+      354024, г. Сочи, Аллея Челтенхэма, 4, (862) 241-82-07бесплатная линия по РФ: 8 (800) 301-04-25
+    </div>
+    <div>
+      <div class="font-semibold">Руководитель:</div>
+      Генеральный директор ООО «Бальнеологический курорт «Мацеста» (холдинг) города Сочи» Федосов Василий Григорьевич
+    </div>
+    <div>
+      <div class="font-semibold">Собственность:</div>
+      Общественная Организация Федерация Независимых Профсоюзов России;
+    </div>
+    <div>
+      Общественная Организация Краснодарское Краевое Территориальное Объединение Организаций Профессиональных Союзов
+      «Краснодарский Краевой Совет Профессиональных Союзов» ;
+    </div>
+    <div>
+      Акционерное Общество «Санаторно-Курортное Объединение ФНПР «Профкурорт»
+    </div>
+    <div>
+      <div class="font-semibold">ОКВЭД</div>
+      (основной) — 86.90.4 (деятельность санаторно-курортных организаций
+
+    </div>
+    <div>
+      Перечень основных зданий и сооружений:
+      <br>
+      <br>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>бальнеолечебница № 3 (VIP корпус);</li>
+        <li>бальнеолечебница № 4;</li>
+        <li>поликлиника;</li>
+        <li>радоновая лаборатория;</li>
+        <li>административный корпус</li>
+      </ul>
+    </div>
+    <div class="title">Реквизиты</div>
+    <div class="font-semibold">Реквизиты для расчетов с ООО «Бальнеологический курорт «Мацеста» (холдинг) города Сочи»</div>
+    <ul class="list-disc pl-5 space-y-2">
+      <li>ООО «БК «Мацеста» (холдинг) города Сочи»</li>
+      <li>354024, г. Сочи, Аллея Челтенхэма , д. 4</li>
+      <li>ИНН 2319026342 КПП 231901001</li>
+      <li>Юго-западный Банк ПАО Сбербанк г. Ростов-на-Дону</li>
+      <li>Сч. № 407 028 102 300 600 034 22</li>
+      <li>БИК 046015602</li>
+      <li>К/с № 301 018 106 000 000 006 02</li>
+      <li>О КОНХ 91517, ОКОПФ 65, ОКФС 52, ОКПО 50457265, ОКВЭД 85</li>
+      <li>e-mail: dokukina_nn@matsesta.info</li>
+    </ul>
+    <div class="title">Уголок потребителя</div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-7 w-full">
+      <% for(let i = 0; i < 10; i++) { %>
+      <a href="img/test0.gif" data-fancybox="awards" class=" ratio ratio-[286/402] rounded-2xl overflow-hidden">
+        <img src="img/certificate.jpg" alt="" class="absolute-fit">
+      </a>
+      <% } %>
+    </div>
+
+    <div class="documents-item group w-full">
+      <div class="flex items-center btn-group cursor-pointer pl-2">
+        <div class="font-semibold text-xl">Охрана труда</div>
+
+      </div>
+
+      <div class="flex flex-col gap-4 mt-6 ">
+        <% for(let ii = 0; ii < 10; ii++) { %>
+        <a href="img/test0.gif" download class="flex sm:items-center gap-4 p-4 bg-l3 rounded-xl card-shadow">
+          <c-icon class="icon text-2xl text-primary" href="img/icons.svg#document-text"></c-icon>
+          <div class="max-sm:text-sm">
+            Перечень рекомендуемых мероприятий по улучшению условий труда от 25.01.2016
+          </div>
+        </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
