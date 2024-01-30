@@ -2,7 +2,7 @@
   <div class="p-7 px-4 bg-l2">
     <div class="title text-center">Оставьте отзыв</div>
   </div>
-  <div class="py-6 px-4 sm:p-10">
+  <form id="reviews-form" class="py-6 px-4 sm:p-10">
     <label class="relative">
       <div class="text-sm mb-2 font-semibold">Ваше имя</div>
       <div class="relative">
@@ -52,6 +52,33 @@
         <textarea class="input rounded-xl w-full h-48 resize-none" placeholder="Напишите отзыв"></textarea>
       </div>
     </label>
-    <button class="btn btn-theme-fill mt-6 rounded-full">Отправить</button>
-  </div>
+    <button type="submit" class="btn btn-theme-fill mt-6 rounded-full">Отправить</button>
+  </form>
 </div>
+
+<script>
+  document.getElementById('reviews-form').addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.target)
+
+    const btn = event.target.querySelector('[type="submit"]')
+    btn.disabled = true
+
+    fetch('url', {
+        body: formData,
+        method: 'post'
+      })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success) {
+          Fancybox.modal.open('url-success')
+        } else {
+          Fancybox.modal.open('url-error')
+        }
+
+        btn.disabled = false
+      })
+
+  })
+</script>
