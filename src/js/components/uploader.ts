@@ -52,7 +52,9 @@ class Uploader extends HTMLElement {
       styleButtonRemoveItemPosition: 'right top',
       ...ru,
       labelIdle: `
-        <c-icon class="icon mx-auto text-primary mb-3 text-6xl" href="img/icons.svg#picture" ></c-icon>
+        <c-icon class="icon mx-auto text-primary mb-3 text-6xl" 
+          href="/local/templates/matsesta_bk/img/icons.svg#picture" >
+        </c-icon>
         <div class="text-sm">
           <span class="filepond--label-action">Нажмите</span> <br> или перетащите <br> изображение для загрузки
         </div>`,
