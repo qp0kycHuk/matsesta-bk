@@ -7,8 +7,8 @@
     <div class="lk-content">
       <div class="title section-title lg:text-2.5xl">Личный данные</div>
 
-      <div class="lk-personal-form">
-        <c-uploader class="w-56 cursor-pointer rounded-base overflow-hidden block mb-12" name="avatar" value="img/test.jpg"></c-uploader>
+      <form class="lk-personal-form">
+        <c-uploader class="w-56 cursor-pointer rounded-base overflow-hidden block mb-12" name="avatar" delete-name="PERSONAL_PHOTO_del"></c-uploader>
 
         <label class="relative  w-full">
           <div class="text-sm mb-2 font-semibold">Ваше имя</div>
@@ -89,9 +89,20 @@
         </div>
 
         <button class="btn btn-theme-fill mt-10 rounded-full" type="submit">Сохранить</button>
-      </div>
+      </form>
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelector('.lk-personal-form').addEventListener('submit', (event) => {
+    event.preventDefault()
+    const formData = new FormData(event.target)
+    fetch('', {
+      body: formData,
+      method: 'post'
+    })
+  })
+</script>
 
 <%= _.template(require('../html-includes/footer.html').default)() %>

@@ -19,6 +19,8 @@ FilePond.registerPlugin(
 
 class Uploader extends HTMLElement {
   inputEl = document.createElement('input')
+  deleteInputEl = document.createElement('input')
+  filepond?: FilePond.FilePond
 
   constructor() {
     super()
@@ -26,15 +28,21 @@ class Uploader extends HTMLElement {
 
   connectedCallback() {
     const name = this.getAttribute('name') || ''
+    const deleteName = this.getAttribute('delete-name') || ''
     const value = this.getAttribute('value') || ''
     const required = this.getAttribute('required') !== null
+
+    this.deleteInputEl.name = deleteName
+    this.deleteInputEl.hidden = true
+    this.deleteInputEl.value = 'N'
+    this.appendChild(this.deleteInputEl)
 
     this.inputEl.required = required
     this.inputEl.setAttribute('name', name)
     this.inputEl.setAttribute('accept', 'image/*')
     this.appendChild(this.inputEl)
 
-    FilePond.create(this.inputEl, {
+    this.filepond = FilePond.create(this.inputEl, {
       name,
       required,
       storeAsFile: true,
@@ -58,6 +66,13 @@ class Uploader extends HTMLElement {
         <div class="text-sm">
           <span class="filepond--label-action">Нажмите</span> <br> или перетащите <br> изображение для загрузки
         </div>`,
+      onremovefile: () => {
+        this.inputEl.value = ''
+        this.deleteInputEl.value = 'Y'
+      },
+      onaddfile: () => {
+        this.deleteInputEl.value = 'N'
+      },
     })
   }
 
