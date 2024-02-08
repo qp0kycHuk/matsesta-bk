@@ -26,6 +26,7 @@ class Uploader extends HTMLElement {
 
   connectedCallback() {
     const name = this.getAttribute('name') || ''
+    const value = this.getAttribute('value') || ''
     const required = this.getAttribute('required') !== null
 
     this.inputEl.required = required
@@ -40,6 +41,7 @@ class Uploader extends HTMLElement {
       allowMultiple: false,
       imagePreviewHeight: 256,
       // stylePanelLayout: 'compact circle',
+      files: value ? [value] : [],
 
       acceptedFileTypes: ['image/*'],
       dropValidation: true,
