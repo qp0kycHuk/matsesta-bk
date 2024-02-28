@@ -1,49 +1,7 @@
 <%= _.template(require('./html-includes/header.html').default)() %>
 
-<section class="started">
-  <div class="relative">
-    <div class="started-slider swiper">
-      <div class="swiper-wrapper">
-        <% for(let i = 0; i < 10; i++) { %>
+<%= _.template(require('./html-includes/started.html').default)() %>
 
-        <div class="started-slide swiper-slide">
-          <div class="started-slide-image ratio ratio-[36/20]">
-            <img src="img/test.gif" alt="" class="absolute-fit object-cover">
-          </div>
-          <div class="started-slide-content">
-            <div class="title">
-              Крупнейший
-              бальнеологический
-              курорт России
-            </div>
-            <div class="mt-4 lg:mt-8 max-sm:text-sm mb-auto">
-              Минздравом РФ утверждены методики
-              лечения более 1500 заболеваний
-            </div>
-            <div class="flex mt-8 lg:mt-14">
-              <a href="javascript:;" class="btn btn-theme-contur-1 rounded-full">Узнать подробнее</a>
-            </div>
-          </div>
-        </div>
-
-        <% } %>
-      </div>
-    </div>
-    <div class="relative lg:mt-4 started-pagination-wrapper">
-      <div class="started-pagination absolute slider-pagination"></div>
-    </div>
-  </div>
-</section>
-<script>
-  new Swiper('.started-slider', {
-    spaceBetween: 20,
-    pagination: {
-      el: '.started-pagination',
-      clickable: true,
-      dynamicBullets: true
-    }
-  })
-</script>
 
 <section class="index-about section-padding">
   <div class="index-about-content">

@@ -1,0 +1,36 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative section-padding pb-0">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Услуги</div>
+</section>
+
+<%= _.template(require('./html-includes/started.html').default)() %>
+
+<section class="section-padding relative">
+
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 sm:gap-x-7 sm:gap-y-12 ">
+    <% for(let i = 0; i < 3; i++) { %>
+    <a href="service-list.html" class="product-item card-shadow btn-group">
+      <div class="ratio ratio-[286/190] relative">
+        <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="px-2 sm:px-4 pb-4 sm:pb-6 flex-grow">
+        <div class="h-20 sm:h-28 flex items-center flex-col justify-center">
+          <div class="text-sm sm:text-lg font-semibold text-center leading-tight font-alt">
+            Аппаратная
+            физиотерапия
+          </div>
+        </div>
+        <button class="btn btn-theme-contur-2 gap-2 rounded-full w-full max-sm:text-sm px-2 max-sm:btn-sm">
+          Подробнее
+        </button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

@@ -6,32 +6,110 @@
 
   <div class="title section-title">Бальнеология</div>
 
+  <div class="relative">
+    <input type="text" class="input w-full mb-6 rounded-2xl">
+    <div class="absolute right-0 top-0 flex h-full items-center pr-1">
+      <button class="btn btn-icon rounded-xl btn-sm">
+        <c-icon class="icon" href="img/icons.svg#search"></c-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="mb-16" id="hfehefe-3jh3j4h3-iauweaw8">
+    <div class="swiper p-6 -m-6">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide">
+          <a href="service-detail.html" class="service-item bg-l3 btn-group card-shadow">
+            <div class="service-item-image ratio ratio-[360/234] rounded-base overflow-hidden">
+              <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="service-item-content">
+              <div class="xs:text-xl font-semibold font-alt">Уникальная бальнеотерапия</div>
+              <button class="btn btn-theme-contur-2 mt-5 rounded-full">Узнать больше</button>
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="relative mt-4 ">
+      <div class="absolute slider-pagination"></div>
+    </div>
+  </div>
+  <script>
+    new Swiper('#hfehefe-3jh3j4h3-iauweaw8 .swiper', {
+      spaceBetween: 40,
+      pagination: {
+        el: '#hfehefe-3jh3j4h3-iauweaw8 .slider-pagination',
+        clickable: true,
+        dynamicBullets: true
+      }
+    })
+  </script>
+
+
+
   <div class="flex flex-col gap-4">
+    <div class="service-line-header max-xl:hidden shadow-none bg-l2">
+      <div class="service-line">
+        <div class="text-xs opacity-70">
+          Код вида
+          медицинских
+          услуг
+        </div>
+        <div class="text-xs opacity-70">Вид медицинских услуг</div>
+        <div class="text-xs opacity-70">
+          Номенклатура медицинских
+          услуг согласно Приказа М3
+          РФ от 13.10.2017 №804н
+        </div>
+        <div class="text-xs opacity-70">
+          Возраст
+        </div>
+        <div class="text-xs opacity-70">Категория</div>
+        <div class="text-xs opacity-70">Цена</div>
+      </div>
+    </div>
     <% for(let i = 0; i < 2; i++) { %>
     <div class="service-line-wrapper">
       <form class="service-line">
+        <div class="sm:size-24 sm:bg-l2 flex rounded-3xl">
+          <div class="sm:m-auto text-xs opacity-70">А20.30.002</div>
+        </div>
         <div class="service-line-content">
-          <div class="font-alt font-semibold xs:text-xl">
+          <div class="font-alt font-semibold max-sm:text-sm">
             4-х камерная сероводородная
             (мацеста) ванна
           </div>
-          <button class="service-line-btn btn btn-theme-contur-2 gap-2 rounded-full max-sm:text-sm  max-sm:btn-sm lg:mt-5">
-            <c-icon class="icon text-2xl" href="img/icons.svg#cart-contur"></c-icon>
-            В корзину
+          <div class="xl:hidden lg:mt-3">
+            <div class="text-sm">
+              Ванны сероводородные
+              лечебные
+            </div>
+          </div>
+          <button class="service-line-btn btn  btn-theme-contur-2 gap-2 rounded-full max-sm:text-sm btn-sm lg:mt-4">
+            Подробнее
           </button>
+        </div>
+        <div class="service-line-nomenclature max-xl:hidden">
+          <div class="text-sm">
+            Ванны сероводородные
+            лечебные
+          </div>
         </div>
         <div class="service-line-age">
           <div class="text-sm font-semibold mb-2">Выберите возраст</div>
           <div class="grid grid-cols-2 gap-2 ">
-            <label class="age-checkbox btn gap-2 px-3">
+            <label class="age-checkbox btn btn-sm gap-1 px-2">
               <input type="radio" name="age" id="" value="18+" hidden checked>
-              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-hand"></c-icon>
-              18+
+              <c-icon class="icon text-xl opacity-40" href="img/icons.svg#user-hand"></c-icon>
+              <div class="text-sm">18+</div>
             </label>
-            <label class="age-checkbox btn gap-2 px-3">
+            <label class="age-checkbox btn btn-sm gap-1 px-2">
               <input type="radio" name="age" id="" value="до 18" hidden>
-              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#child"></c-icon>
-              до 18
+              <c-icon class="icon text-xl opacity-40" href="img/icons.svg#child"></c-icon>
+              <div class="text-sm">до 18</div>
             </label>
           </div>
         </div>
@@ -73,14 +151,14 @@
         </div>
         <div class="service-line-cost">
           <div class="flex items-center lg:mt-6">
-            <div class="text-2.5xl font-semibold">от 1200 ₽</div>
+            <div class="max-sm:text-sm font-semibold">от 1200 ₽</div>
             <button class="btn btn-text btn-primary ml-2" type="button" data-fancybox-modal data-src="dialog-costs.html">
               <c-icon class="icon text-2xl" href="img/icons.svg#information-contur"></c-icon>
             </button>
           </div>
         </div>
       </form>
-      <div class="h-px bg-default opacity-20 my-4"></div>
+      <!-- <div class="h-px bg-default opacity-20 my-4"></div>
       <div class="flex flex-wrap gap-4">
         <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Противовоспалительный">
           <c-icon class="icon text-2xl" href="img/icons.svg#detection"></c-icon>
@@ -103,7 +181,7 @@
         <button class="btn btn-sm btn-sec btn-light btn-icon bg-primary bg-opacity-20 rounded-xl" data-tippy-content="Седативный">
           <c-icon class="icon text-2xl" href="img/icons.svg#meditation"></c-icon>
         </button>
-      </div>
+      </div> -->
 
 
 
@@ -132,5 +210,56 @@
     }
   })
 </script>
+
+
+<!-- Зарегистрируйтесь -->
+<section class="py-5 sm:py-12 section-green">
+  <div class="grid lg:grid-cols-2 items-center rounded-base bg-l3">
+    <div class="py-8 px-6 sm:px-12">
+      <form>
+        <div class="title md:text-2.5xl mb-8">
+          Проконсультироваться
+          о назначении с врачом
+        </div>
+
+        <div class="ratio ratio-[600/467] rounded-base overflow-hidden lg:hidden mb-8">
+          <img src="img/avengers.jpg" alt="" class="absolute-fit object-cover">
+        </div>
+
+        <label class="relative  w-full">
+          <div class="text-sm mb-2 font-semibold">Ваше имя</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя...">
+          </div>
+        </label>
+        <label class="relative  mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Ваш телефон</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+            </div>
+            <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ ">
+          </div>
+        </label>
+
+        <button class="btn btn-theme-fill px-9 mt-8 rounded-full">Отправить</button>
+
+        <label class="flex items-center gap-2 cursor-pointer mt-7 w-full">
+          <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked>
+          <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
+        </label>
+
+      </form>
+    </div>
+    <div class="p-2 pt-0 lg:p-4 lg:pl-0 max-lg:hidden">
+      <div class="ratio ratio-[600/467] rounded-base overflow-hidden">
+        <img src="img/avengers.jpg" alt="" class="absolute-fit object-cover">
+      </div>
+    </div>
+  </div>
+</section>
 
 <%= _.template(require('./html-includes/footer.html').default)() %>

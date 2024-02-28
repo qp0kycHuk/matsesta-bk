@@ -54,14 +54,17 @@ module.exports = {
     zIndex: [0, 321, 322, 323, 324, 325, 326, 327, 328, 329, 'auto'],
     extend: {
       spacing: {
-        [15]: '60px'
+        [15]: (15 / 4) + 'rem',
+        [25]: (25 / 4) + 'rem',
       },
       inputSize: elementsSizes,
       btnSize: elementsSizes,
       borderRadius: {
         base: '32px'
       },
-
+      boxShadow: {
+        2: '0px 8px 20px 0px #20294C0F, 0px 1px 3px 0px #20294C1A'
+      },
       fontSize: {
         '1.5xl': ['1.375rem', '1.35'],
         '2.1xl': ['1.5625rem', '1.35'],

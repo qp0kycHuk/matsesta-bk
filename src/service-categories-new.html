@@ -1,0 +1,35 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+
+  <div class="flex md:items-center max-md:flex-col gap-4 section-title">
+    <div class="title">Медицинские услуги</div>
+    <button class="btn btn-primary btn-theme-fill rounded-full md:ml-auto">Скачать прайс-лист</button>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-x-7 sm:gap-y-12 ">
+    <% for(let i = 0; i < 8; i++) { %>
+    <a href="service-list.html" class="product-item bg-[#FFF2E4] btn-group">
+
+      <div class="px-2 sm:px-4 pb-4 sm:pb-6 flex-grow">
+        <div class="ratio ratio-[286/190] relative">
+          <div class="absolute-fit flex items-center justify-center">
+            <div class="text-sm sm:text-lg font-semibold text-center leading-tight font-alt">
+              Аппаратная
+              физиотерапия
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-theme-contur-2 gap-2 rounded-full w-full max-sm:text-sm px-2 max-sm:btn-sm">
+          Подробнее
+        </button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

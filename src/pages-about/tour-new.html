@@ -1,0 +1,151 @@
+<%= _.template(require('../html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('../html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Обзорный тур</div>
+
+  <div class="flex max-xl:flex-col xl:items-start xl:gap-25 gap-10">
+    <div class="w-full sm:w-[420px] flex-shrink-0">
+      <div class="ratio w-full ratio-[420/288] relative rounded-3xl overflow-hidden">
+        <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <button class="btn rounded-full btn-theme-fill w-full mt-6">Записаться на экскурсию</button>
+    </div>
+    <div class="flex-grow">
+      <div class="title lg:text-2.5xl mb-8">Мацеста. Иди к огненной воде</div>
+
+      <div class="flex items-center gap-4">
+        <div class="size-16 rounded-2xl shadow-2 flex">
+          <c-icon class="icon text-3.5xl text-primary m-auto" href="img/icons.svg#calendar-contur"></c-icon>
+        </div>
+        <div>
+          <div class="text-lg font-semibold">Начало обзорного тура</div>
+          Пн 10:00, 12:00 <span class="opacity-40">|</span> Сб-Вс 13:00
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 mt-4">
+        <div class="size-16 rounded-2xl shadow-2 flex">
+          <c-icon class="icon text-3.5xl text-primary m-auto" href="img/icons.svg#clock-contur"></c-icon>
+        </div>
+        <div>
+          <div class="text-lg font-semibold">Продолжительность</div>
+          1 час 20 минут
+        </div>
+      </div>
+      <div class="mt-10 p-7 rounded-2xl bg-red/10 flex items-center">
+        <div>
+          23 февраля 2024 г. в День защитника Отечества <br>
+          Обзорные туры проводятся в 10:00 и в 12:00
+        </div>
+        <c-icon class="icon ml-auto text-2xl text-red" href="img/icons.svg#information"></c-icon>
+      </div>
+      <div class="mt-10">
+        <div class="text-lg font-semibold">Что входит в обзорный тур</div>
+        <ul class="mt-5 list-disc opacity-80 pl-5">
+          <li>Посещение природно-ландшафтного памятника “Источник”</li>
+          <li>Посещение главного здания</li>
+          <li>Дегустация лечебной столовой минеральной воды “Пластунская”</li>
+        </ul>
+      </div>
+      <div class="mt-10">
+        <div class="flex items-center gap-4 ">
+          <div class="size-16 rounded-2xl bg-primary flex">
+            <c-icon class="icon text-3.5xl text-white m-auto" href="img/icons.svg#wallet"></c-icon>
+          </div>
+          <div>
+            <div class="opacity-70">Стоимость экскурсии</div>
+            <div class="text-2.5xl font-semibold">500 ₽</div>
+          </div>
+        </div>
+        <button class="btn btn-theme-contur-1 rounded-full mt-6">Полный прейскурант</button>
+
+        <div class="flex items-center gap-4 mt-10">
+          <div class="size-16 rounded-2xl bg-primary flex">
+            <c-icon class="icon text-3.5xl text-white m-auto" href="img/icons.svg#location-contur"></c-icon>
+          </div>
+          <div>
+            <div class="text-lg font-semibold">Адрес</div>
+            г. Сочи, ул. Аллея Челтэнхема 14
+          </div>
+        </div>
+        <button class="btn btn-theme-contur-1 rounded-full mt-6">Как добраться</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10 sm:mt-25 p-7 rounded-2xl bg-red/10 flex sm:items-center max-sm:flex-col gap-4">
+    <div class="text-xl font-semibold">Тематические экскурсии по ссылке</div>
+    <button class="btn btn-theme-contur-1 rounded-full sm:ml-auto">Смотреть экскурсии</button>
+  </div>
+  <div class="title section-title mt-14 mb-8">Полный прейскурант цен</div>
+
+  <div class="flex flex-col gap-4 ">
+    <div class="flex rounded-2xl bg-l2 px-8 py-7 max-sm:flex-col-reverse gap-3">
+      <div class="font-alt sm:self-center max-sm:text-sm">Взрослые с 14 лет</div>
+      <div class="font-alt font-semibold text-2.5xl sm:ml-auto">500 ₽</div>
+    </div>
+    <div class="flex rounded-2xl bg-l2 px-8 py-7 max-sm:flex-col-reverse gap-3">
+      <div class="font-alt sm:self-center max-sm:text-sm">Дети с 7 до 13 лет *, в сопровождении взрослых</div>
+      <div class="font-alt font-semibold text-2.5xl sm:ml-auto">250 ₽</div>
+    </div>
+    <div class="flex rounded-2xl bg-l2 px-8 py-7 max-sm:flex-col-reverse gap-3">
+      <div class="font-alt sm:self-center max-sm:text-sm">
+        <ul class="pl-5 list-disc">
+          <li>Члены профсоюзных организация, входящих в систему ФНПР</li>
+          <li>Пенсионеры (граждане РФ)</li>
+          <li>Многодетные семьи</li>
+          <li>Инвалиды 3 группы</li>
+          <li>Герои Российской Федерации</li>
+          <li>Герои Социалистического Труда</li>
+          <li>Герои Советского Союза</li>
+          <li>Студенты очной формы обучения, курсанты</li>
+        </ul>
+      </div>
+      <div class="font-alt font-semibold text-2.5xl sm:ml-auto">300 ₽*</div>
+    </div>
+    <div class="flex rounded-2xl bg-l2 px-8 py-7 max-sm:flex-col-reverse gap-3">
+      <div class="font-alt sm:self-center max-sm:text-sm">
+        <ul class="pl-5 list-disc">
+          <li>Дети до 6 лет*;</li>
+          <li>Инвалиды 1 и 2 группы с сопровождающим;</li>
+          <li>Ветераны и участники Великой Отечественной войны;</li>
+          <li>Участники боевых действий;</li>
+          <li>Лица, награжденные знаком «жителю блокадного Ленинграда»;</li>
+          <li>Лица, подвергшиеся воздействию радиации в следствие катастрофы на ЧАЭС;</li>
+          <li>Участники СВО;</li>
+          <li>Военнослужащие, проходящие военную службы по призыву</li>
+        </ul>
+      </div>
+      <div class="font-alt font-semibold text-2.5xl sm:ml-auto">бесплатно**</div>
+    </div>
+  </div>
+  <div class="mt-10">
+    <div class="text-red">
+      * Дети до 13 лет допускаются на объекты показа только в сопровождении взрослого
+    </div>
+    <div class="text-red mt-3">
+      ** Требуется предъявить документ, подтверждающий социальный статус, для получения услуг по специальной цене/бесплатно
+    </div>
+  </div>
+  <div class="title section-title mt-14 mb-8">Как добраться</div>
+  <ul class="pl-5 list-disc space-y-3">
+    <li>
+      <b> Из Сочи:</b> на маршрутном такси № 43 и автобусах №№ 120, 121 до остановки «Рынок»
+    </li>
+    <li>
+      <b>Из Адлера:</b> «Олимпийский парк», «Сочи-Парк отель» автобус № 551, ж/д вокзал «Адлер» автобусы №№ 105а, 105с, 552, затем пересадка на остановке «Заря» — необходимо перейти по подземному переходу на противоположную сторону Курортного проспекта – направление движения автотранспорта из центра Сочи), далее на маршрутном такси № 90 до остановки «Старая Мацеста», маршрутное такси № 43 и автобусы №№ 120, 121 до остановки «Рынок».
+    </li>
+    <li>
+      <b> От железнодорожной станции «Мацеста»:</b> автобусы №№ 120, 121 до остановки «Рынок».
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+<%= _.template(require('../html-includes/footer.html').default)() %>
