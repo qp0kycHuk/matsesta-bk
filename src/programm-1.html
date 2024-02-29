@@ -1,0 +1,385 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative max-sm:pt-4 py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="h-px bg-default opacity-10 mb-10 max-sm:hidden"></div>
+
+  <div class="detail-nav mb-7 sm:mb-9">
+    <button class="btn btn-icon btn-theme-contur-2 btn-sm rounded-full text-primary">
+      <c-icon class="icon text-2xl" href="img/icons.svg#arrow-left"></c-icon>
+    </button>
+    <div>
+      <div class="text-primary opacity-80">Программы лечения</div>
+    </div>
+  </div>
+
+  <div class="detail-content  mx-auto">
+    <div class="title section-title">Лечебная программа «Стандарт 14 дней»</div>
+    <div class="flex flex-col gap-12">
+      <div class="relative md:p-4 md:rounded-base overflow-hidden md:h-96">
+        <div class="md:absolute-fit ratio ratio-[36/20]">
+          <img src="img/test0.gif" alt="" class="absolute-fit object-cover rounded-xl sm:rounded-3xl">
+        </div>
+        <div class="relative md:rounded-3xl md:bg-l3 md:p-8 md:h-full flex flex-col justify-center md:w-80 max-md:mt-5">
+          <div class="font-alt text-xl">
+            Лечебная программа <br>
+            «Стандарт 14 дней»
+          </div>
+          <div class="mt-5 font-alt font-semibold text-2.5xl">
+            от 10 600 ₽
+          </div>
+          <div class="flex mt-8 lg:mt-12">
+            <a href="javascript:;" class="btn btn-theme-contur-1 rounded-full">Купить</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="title section-title">Ожидаемый лечебный эффект</div>
+
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#like"></c-icon>
+            Улучшение кровообращения в органах малого таза
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#like"></c-icon>
+            Уменьшение воспалительного процесса
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#like"></c-icon>
+            Снижение болевого синдрома
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#like"></c-icon>
+            Нормализация менструального цикла
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#like"></c-icon>
+            Коррекция эндокринных нарушений (эстроген-прогестероновых взаимоотношений)
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#like"></c-icon>
+            Повышение местного иммунитета
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-l2 rounded-xl sm:rounded-base px-4 sm:px-8 py-10">
+        <div class="font-semibold sm:text-xl font-alt sm:mb-10 mb-5">Преимущества лечебной программы</div>
+
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#circle-check-1"></c-icon>
+            Данная программа востребована для женщин, у которых есть проблемы
+            с наступлением и вынашиванием беременности
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#circle-check-1"></c-icon>
+            Программа позволяет подготовиться к беременности, включая и подготовку
+            к протоколам вспомогательных репродуктивных технологий (ВРТ).
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#circle-check-1"></c-icon>
+            Также программа будет эффективна после перенесенных заболеваний женской
+            половой сферы, операций и в периоды менопаузы.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="title section-title">Показания</div>
+
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Воспалительные болезни женских тазовых органов в стадии ремиссии
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Спаечный процесс в малом тазу
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Невоспалительные болезни женских половых органов (нарушение менструального цикла,
+            климактерическое состояние)
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Женское бесплодие (тубоперитониального и нейроэндоринного генеза)
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Дисгормональные заболевания (миома матки, эндометриоз, аденомиоз и др., не требующие
+            в реальном времени оперативного лечения)
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Восстановление после оперативных вмешательств на органах малого таза
+          </div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-primary text-2xl" href="img/icons.svg#medical-kit"></c-icon>
+            Подготовка к планируемой беременности
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-red/10 rounded-xl sm:rounded-base px-4 sm:px-8 py-10">
+        <div class="flex items-center gap-4">
+          <c-icon class="icon text-red text-3xl" href="img/icons.svg#danger-contur"></c-icon>
+          <div class="font-alt font-semibold text-xl">Важно</div>
+        </div>
+        <div class="font-alt mt-6 max-sm:text-sm">
+          При лечении гинекологических и экстрагенитальных заболеваний необходимо
+          руководствоваться данными фоновой гормональной активности. При неизменной функции
+          яичников и при наличии гипоэстрогении (сниженное содержание эстрогенов) показаны
+          сероводородные процедуры. При гинекологических заболеваниях, сопровождающихся
+          гиперэстрогенией (повышенным содержанием эстрогенов), а также при сочетании
+          экстрагенительных заболеваний с миомой матки, эндометриозом, фиброзно-кистозной
+          мастопатией, не требующими в настоящее время оперативного лечения, показаны радоновые
+          и йодобромные процедуры.
+        </div>
+      </div>
+
+      <div>
+        <div class="title section-title">Курс лечения</div>
+
+        <div class="rounded-2xl border border-black/10 divide-y divide-black/10">
+          <div class="flex sm:items-center max-sm:flex-col gap-2 px-4 sm:px-8 py-5">
+            <div class="flex items-center gap-2">
+              <c-icon class="icon text-primary text-2xl" href="img/icons.svg#user-group"></c-icon>
+              <div class="font-alt">Возрастное ограничение</div>
+            </div>
+            <div class="font-alt font-semibold text-xl sm:ml-auto">18+</div>
+          </div>
+          <div class="flex sm:items-center max-sm:flex-col gap-2 px-4 sm:px-8 py-5">
+            <div class="flex items-center gap-2">
+              <c-icon class="icon text-primary text-2xl" href="img/icons.svg#hourglass-fill"></c-icon>
+              <div class="font-alt">Программа рассчитана на срок пребывания в г. Сочи</div>
+            </div>
+            <div class="font-alt font-semibold text-xl sm:ml-auto">от 12 до 20 дней</div>
+          </div>
+          <div class="flex sm:items-center max-sm:flex-col gap-2 px-4 sm:px-8 py-5">
+            <div class="flex items-center gap-2">
+              <c-icon class="icon text-primary text-2xl" href="img/icons.svg#hospital"></c-icon>
+              <div class="font-alt">Лечение осуществляется в амбулаторных условиях</div>
+            </div>
+            <div class="font-alt font-semibold text-xl sm:ml-auto">Ванное здание №4</div>
+          </div>
+          <div class="flex sm:items-center max-sm:flex-col gap-2 px-4 sm:px-8 py-5 bg-l2">
+            <div class="flex items-center gap-2">
+              <c-icon class="icon text-primary text-2xl" href="img/icons.svg#calendar-add"></c-icon>
+              <div class="font-alt">Срок действия программы</div>
+            </div>
+            <div class="font-alt font-semibold text-xl sm:ml-auto text-red">до 30.12.2024</div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-red/10 flex  px-4 sm:px-8 gap-2 py-6 mt-4">
+          <c-icon class="icon text-2xl text-red" href="img/icons.svg#danger-contur"></c-icon>
+          <div class="font-alt font-semibold self-center">В стоимость лечебной программы проживание не включено</div>
+        </div>
+      </div>
+
+      <!-- 2 columns -->
+      <div>
+        <div class="title section-title">Выберите программу</div>
+
+        <div class="grid sm:grid-cols-2 gap-3">
+          <% for(let i = 0; i < 2; i++) { %>
+          <div class="bg-l2 rounded-xl sm:rounded-base px-4 sm:px-6 py-8 flex flex-col">
+            <div class="font-alt">Вариант 1</div>
+            <div class="text-xl font-alt font-semibold">12-14 дней</div>
+            <div class="mt-6 font-alt">Прием врача-физиотерапевта</div>
+            <div class="sm:mt-2 font-alt text-primary text-xs">первичный, динамическое наблюдение</div>
+
+            <div class="h-px bg-default opacity-10 w-full my-6"></div>
+
+            <div class="font-alt">
+              Общая ванна
+              по назначению врача
+            </div>
+            <div class="font-alt font-semibold sm:mt-3">8 процедур</div>
+            <div class="sm:mt-2 font-alt text-primary text-xs">
+              сероводородная (мацестинская) / радоновая /
+              йодобромная ванна
+            </div>
+
+            <div class="h-px bg-default opacity-10 w-full my-6"></div>
+
+            <div class="font-alt"> Местные процедуры </div>
+            <div class="font-alt font-semibold sm:mt-3">8 процедур</div>
+            <div class="sm:mt-2 font-alt text-primary text-xs">
+              гинекологические орошения
+            </div>
+
+            <div class="text-xl font-alt font-semibold mt-6">от 17 000 ₽</div>
+            <div class="mb-8 sm:mb-16"></div>
+            <button class="btn btn-theme-fill mt-auto px-10 rounded-full">Забронировать</button>
+          </div>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- 3 columns -->
+      <div>
+        <div class="title section-title">Выберите программу</div>
+
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
+          <% for(let i = 0; i < 3; i++) { %>
+          <div class="bg-l2 rounded-xl sm:rounded-base px-4 sm:px-6 py-8 flex flex-col">
+            <div class="font-alt">Вариант 1</div>
+            <div class="text-xl font-alt font-semibold">12-14 дней</div>
+            <div class="mt-6 font-alt">Прием врача-физиотерапевта</div>
+            <div class="sm:mt-2 font-alt text-primary text-xs">первичный, динамическое наблюдение</div>
+
+            <div class="h-px bg-default opacity-10 w-full my-6"></div>
+
+            <div class="font-alt">
+              Общая ванна
+              по назначению врача
+            </div>
+            <div class="font-alt font-semibold sm:mt-3">8 процедур</div>
+            <div class="sm:mt-2 font-alt text-primary text-xs">
+              сероводородная (мацестинская) / радоновая /
+              йодобромная ванна
+            </div>
+
+            <div class="h-px bg-default opacity-10 w-full my-6"></div>
+
+            <div class="font-alt"> Местные процедуры </div>
+            <div class="font-alt font-semibold sm:mt-3">8 процедур</div>
+            <div class="sm:mt-2 font-alt text-primary text-xs">
+              гинекологические орошения
+            </div>
+
+            <div class="text-xl font-alt font-semibold mt-6">от 17 000 ₽</div>
+            <div class="mb-6"></div>
+            <button class="btn btn-theme-fill mt-auto px-10 rounded-full">Забронировать</button>
+          </div>
+          <% } %>
+        </div>
+      </div>
+
+      <div class="bg-primary/10 rounded-xl sm:rounded-base px-4 sm:px-8 py-10">
+        <div class="flex items-center gap-4">
+          <c-icon class="icon text-primary text-3xl" href="img/icons.svg#clipboard-list-contur"></c-icon>
+          <div class="font-alt font-semibold sm:text-xl">Основные требования для начала амбулаторного лечения:</div>
+        </div>
+        <div class="font-alt mt-6 max-sm:text-sm text-sm">
+          <ul class="list-disc pl-5 space-y-2">
+            <li>для граждан РФ – внутренний паспорт;</li>
+            <li>
+              для иностранных граждан – заграничный паспорт, виза и миграционная карта, иные документы, в случаях, предусмотренных законодательством Российской Федерации;
+            </li>
+            <li>
+              санаторно-курортная карта с пройдённым медицинским обследованием по форме 072/у;
+              <div class="text-red">
+                (срок действия санаторно-курортной карты 2 месяца с даты оформления) рекомендуем оформить в поликлинике по месту жительства у врача – терапевта)
+              </div>
+            </li>
+            <li>санаторно-курортную карту Вы можете оформить в г. Сочи, прибыв за 1-2 дня до начала приема лечебных процедур.</li>
+
+          </ul>
+        </div>
+        <div class="font-alt mt-6 text-sm">
+          При отсутствии санаторно-курортной карты, врач-физиотерапевт БК «Мацеста» (холдинг) города Сочи» вправе отказать в приеме или отложить назначение медицинских процедур до получения санаторно-курортной карты.
+        </div>
+        <div class="h-px bg-default opacity-10 w-full my-6"></div>
+        <div class="font-medium font-alt text-sm">
+          Если Вы планируете пройти лечение по приобретенной Лечебной Программе и с Вами
+          будет ребенок, то курс лечения ребенку будет назначен индивидуально на приеме
+          врача-физиотерапевта курорта «Мацеста»
+        </div>
+
+        <div class="flex items-center gap-4 mt-12">
+          <c-icon class="icon text-primary text-3xl" href="img/icons.svg#child-wierd"></c-icon>
+          <div class="font-alt font-semibold sm:text-xl">Необходимые документы для назначения курса лечения
+            для детей до 18 лет:</div>
+        </div>
+        <div class="font-alt mt-6 max-sm:text-sm text-sm">
+          <ul class="list-disc pl-5 space-y-2">
+            <li>
+              паспорт или свидетельство о рождении, доверенность (согласие) от законных представителей в случае, если ребенок пребывает на лечение без законных представителей;
+            </li>
+            <li>
+              санаторно-курортная карта по форме 076/у;
+            </li>
+            <li>
+              справка врача-педиатра или эпидемиолога об отсутствии контакта ребенка с инфекционными больными (справка об эпидемиологическом окружении) сроком не менее 3 дней до даты отъезда.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="font-alt font-semibold sm:text-xl">Для начала приема процедур Вам потребуется</div>
+        <ul class="pl-5 list-disc mt-6 space-y-5 max-sm:text-sm">
+          <li><span class="font-semibold">Паспорт</span></li>
+          <li>
+            <span class="font-semibold">Санаторно – курортная карта по форме №072/у </span>
+            (срок действия санаторно-курортной карты 2 месяца с даты оформления) рекомендуем оформить в поликлинике по месту жительства у врача – терапевта).
+          </li>
+          <li>
+            <span class="font-semibold">Справка об эпидокружении, выдается в поликлинике по месту жительства</span>, в ней указывается, что пациент не был в контакте с инфекционными больными в течение 14 дней. Справка действительна 3 дня, не считая дороги. ( В соответствии с обязательными рекомендациями Роспотребнадзора РФ от 23.06.2020 г. по организации работы санаторно-курортных учреждений в условиях сохранения рисков распространения COVID-19.)
+          </li>
+        </ul>
+
+        <div class="h-px bg-default opacity-10 w-full my-8"></div>
+
+        <div class="font-alt max-sm:text-sm">
+          Санаторно-курортную карту <span class="font-semibold">Вы можете оформить в г. Сочи,</span> прибыв за 1-2 дня до начала приема лечебных процедур.
+          <br><br>
+          <span class="font-semibold">При отсутствии санаторно-курортной карты,</span> врач-физиотерапевт БК «Мацеста» (холдинг) города Сочи» вправе отказать в приеме или отложить назначение медицинских процедур до получения санаторно-курортной карты.
+        </div>
+      </div>
+
+      <div class="rounded-xl sm:rounded-base px-4 sm:px-8 py-10 border border-black/10">
+        <div class="font-alt font-semibold sm:text-xl mb-8">
+          Необходимые документы можно получить в медицинских организациях по месту
+          жительства (в поликлинике, у лечащего врача)
+        </div>
+        <div class="font-alt max-sm:text-sm">
+          При отсутствии перечисленных документов, объективно характеризующих здоровье пациента, врач БК «Мацеста» вправе отказать в приеме или отложить назначение медицинских процедур.
+          Пациентам, прибывающих на лечение в санатории города Сочи, назначение мацестинских процедур производится непосредственно медицинскими специалистами санатория.
+          <br><br>
+          Информация о противопоказаниях и о том, какой вид бальнеотерапии или грязелечения показан при конкретных основном и сопутствующих диагнозах пациента, других данных состояния его здоровья изложена в разделах «Мацестинская бальнеотерапия», «Йодобромная бальнеотерапия», «Радоновая бальнеотерапия», «Грязелечение», «Питьевые минеральные воды».
+          <br><br>
+          <span class="font-semibold">Предварительную консультацию</span> по вопросам показаний, назначения и прохождения курса бальнеологического лечения можно получить по тел.: 8 (800) 301-04-25 (бесплатная линия связи по РФ) или отправив свой вопрос на e-mail: info@matsesta.info.
+
+        </div>
+      </div>
+
+      <div class="bg-red/10 rounded-xl sm:rounded-base px-4 sm:px-8 py-10">
+        <div class="flex items-center gap-4">
+          <c-icon class="icon text-red text-3xl" href="img/icons.svg#danger-contur"></c-icon>
+          <div class="font-alt font-semibold text-xl">Противопоказания</div>
+        </div>
+        <div class="font-alt mt-6 max-sm:text-sm">
+          <ul class="list-disc pl-5">
+            <li>Все заболевания в острой стадии и стадии обострения</li>
+            <li>Частые гипертонические кризы</li>
+            <li>Острые инфекционные заболевания</li>
+            <li>Стенокардия напряжения III ФК</li>
+            <li>Нарушения сердечного ритма и проводимости</li>
+            <li>Бронхиальная астма</li>
+            <li>Заболевания печени и почек, сопровождающиеся почечной и печеночной недостаточностью</li>
+            <li>Желчнокаменная болезнь,</li>
+            <li>Мочекаменная болезнь,</li>
+            <li>Заболевания крови</li>
+            <li>Эпилепсия</li>
+            <li>Беременность на любых сроках, лактация</li>
+            <li>Подозрения на онкологическую патологию</li>
+            <li>Дефекты кожных покровов (раны, язвенные поражения)</li>
+            <li>Туберкулез</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
