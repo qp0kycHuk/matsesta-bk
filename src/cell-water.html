@@ -1,0 +1,59 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative max-sm:pt-4 py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="flex  md:items-center max-md:flex-col gap-4 section-title">
+    <div class="title ">Доставка минеральных вод</div>
+    <button class="btn btn-theme-fill rounded-full md:ml-auto">Скачать прайс-лист</button>
+  </div>
+  <div class="flex flex-col gap-4">
+    <div class="grid lg:grid-cols-4 gap-3 items-center bg-l2 px-10 py-4 rounded-2xl max-lg:hidden">
+      <div class="text-xs opacity-70 ">Наименование</div>
+      <div class="text-xs opacity-70 ">
+        Минеральная вода, м3/ <br>
+        раствор радона*37 кБк
+      </div>
+      <div class="text-xs opacity-70 ">
+        Доставка по Центральному <br>
+        и Хостинскому району
+      </div>
+      <div class="text-xs opacity-70 ">
+        Комплексное обслуживание бюветов <br>
+        (доставка, сервисное обслуживание)
+      </div>
+    </div>
+    <% for(let i = 0; i < 10; i++) { %>
+    <div class="grid lg:grid-cols-4 gap-1 items-center px-3 sm:px-10 py-4 rounded-xl sm:rounded-3xl card-shadow">
+      <div>
+        <div class="font-semibold">Йодобромная вода</div>
+        <button class="btn btn-theme-contur-2 mt-4 rounded-full max-lg:hidden">Подробнее</button>
+      </div>
+      <div>
+        <div class="text-xs opacity-70 lg:hidden">
+          Минеральная вода, м3/
+          раствор радона*37 кБк
+        </div>
+        <div class="font-alt">1800,00</div>
+      </div>
+      <div>
+        <div class="text-xs opacity-70 lg:hidden">
+          Доставка по Центральному
+          и Хостинскому району
+        </div>
+        <div class="font-alt">8500,00 (11 м3)</div>
+      </div>
+      <div>
+        <div class="text-xs opacity-70 lg:hidden">
+          Комплексное обслуживание бюветов
+          (доставка, сервисное обслуживание)
+        </div>
+        <div class="font-alt">индивидуальный расчет</div>
+      </div>
+      <button class="btn btn-theme-contur-2 mt-4 rounded-full lg:hidden">Подробнее</button>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
