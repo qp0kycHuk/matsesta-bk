@@ -1,153 +1,160 @@
-<div class="dialog-water py-6 px-4 sm:p-10" data-tab-cover>
-  <div class="title text-center section-title">Заказать воду</div>
+<div class="dialog-water " data-tab-cover>
+  <div class="py-6 px-4 sm:p-10">
 
-  <div class="grid grid-cols-2 gap-6">
-    <button class="btn tab-btn btn-gray btn-light rounded-xl font-medium tab-active" data-tab-link="1">Для юрлиц</button>
-    <button class="btn tab-btn btn-gray btn-light rounded-xl font-medium" data-tab-link="2">Для физлиц</button>
-  </div>
+    <div class="title text-center section-title">Заказать воду</div>
 
-  <div class="tab-content-cover mt-6">
-    <div class="tab-content tab-active" data-tab-content="1">
-      <label class="relative w-full">
-        <div class="text-sm mb-2 font-semibold">Название компании *</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#buildings-contur"></c-icon>
-          </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите название...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Юридический адрес</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#location-contur"></c-icon>
-          </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Введите адрес...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">ИНН</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#note-contur"></c-icon>
-          </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите ИНН...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">КПП</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#note-contur"></c-icon>
-          </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите КПП...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">E-mail</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
-          </div>
-          <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
-        </div>
-      </label>
-      <label class="relative  mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Телефон</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
-          </div>
-          <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ ">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Контактное лицо</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
-          </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="ФИО">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Комментарий к заказу</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-start pl-4 pt-3">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#dialog"></c-icon>
-          </div>
-          <textarea class="input rounded-xl w-full pl-12 h-28 resize-none" placeholder="Напишите комментарий"></textarea>
-        </div>
-      </label>
+    <div class="grid grid-cols-2 gap-3 sm:gap-6">
+      <button class="btn tab-btn btn-gray btn-light rounded-xl font-medium tab-active" data-tab-link="1">
+        <span class="max-sm:text-sm">Для юрлиц</span>
+      </button>
+      <button class="btn tab-btn btn-gray btn-light rounded-xl font-medium" data-tab-link="2">
+        <span class="max-sm:text-sm">Для физлиц</span>
+      </button>
     </div>
-    <div class="tab-content" data-tab-content="2">
-      <label class="relative w-full">
-        <div class="text-sm mb-2 font-semibold">Фамилия *</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+
+    <div class="tab-content-cover mt-6">
+      <div class="tab-content tab-active" data-tab-content="1">
+        <label class="relative w-full">
+          <div class="text-sm mb-2 font-semibold">Название компании *</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#buildings-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите название...">
           </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите фамилию...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Имя *</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Юридический адрес</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#location-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Введите адрес...">
           </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Отчество *</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">ИНН</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#note-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите ИНН...">
           </div>
-          <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите отчество...">
-        </div>
-      </label>
-      <label class="relative  mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Телефон *</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">КПП</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#note-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите КПП...">
           </div>
-          <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ ">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">E-mail *</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">E-mail</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+            </div>
+            <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
           </div>
-          <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
-        </div>
-      </label>
-      <label class="relative mt-6 w-full">
-        <div class="text-sm mb-2 font-semibold">Комментарий к заказу</div>
-        <div class="relative">
-          <div class="absolute left-0 h-full pointer-events-none flex items-start pl-4 pt-3">
-            <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#dialog"></c-icon>
+        </label>
+        <label class="relative  mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Телефон</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+            </div>
+            <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ ">
           </div>
-          <textarea class="input rounded-xl w-full pl-12 h-28 resize-none" placeholder="Напишите комментарий"></textarea>
-        </div>
-      </label>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Контактное лицо</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="ФИО">
+          </div>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Комментарий к заказу</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-start pl-4 pt-3">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#dialog"></c-icon>
+            </div>
+            <textarea class="input rounded-xl w-full pl-12 h-28 resize-none" placeholder="Напишите комментарий"></textarea>
+          </div>
+        </label>
+      </div>
+      <div class="tab-content" data-tab-content="2">
+        <label class="relative w-full">
+          <div class="text-sm mb-2 font-semibold">Фамилия *</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите фамилию...">
+          </div>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Имя *</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя...">
+          </div>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Отчество *</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+            </div>
+            <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите отчество...">
+          </div>
+        </label>
+        <label class="relative  mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Телефон *</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+            </div>
+            <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ ">
+          </div>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">E-mail *</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+            </div>
+            <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту...">
+          </div>
+        </label>
+        <label class="relative mt-6 w-full">
+          <div class="text-sm mb-2 font-semibold">Комментарий к заказу</div>
+          <div class="relative">
+            <div class="absolute left-0 h-full pointer-events-none flex items-start pl-4 pt-3">
+              <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#dialog"></c-icon>
+            </div>
+            <textarea class="input rounded-xl w-full pl-12 h-28 resize-none" placeholder="Напишите комментарий"></textarea>
+          </div>
+        </label>
+      </div>
     </div>
+
+    <button class="btn btn-theme-fill px-9 mx-auto mt-8 rounded-full">Отправить заявку</button>
+
+    <label class="flex items-center gap-2 cursor-pointer mt-7 w-full">
+      <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked>
+      <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
+    </label>
+
+    <label class="flex items-center gap-2 cursor-pointer mt-2 w-full">
+      <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0">
+      <div class="opacity-60 text-xs sm:text-sm">Согласие на получение рекламной продукции</div>
+    </label>
   </div>
-
-  <button class="btn btn-theme-fill px-9 mx-auto mt-8 rounded-full">Отправить заявку</button>
-
-  <label class="flex items-center gap-2 cursor-pointer mt-7 w-full">
-    <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked>
-    <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
-  </label>
-
-  <label class="flex items-center gap-2 cursor-pointer mt-2 w-full">
-    <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0">
-    <div class="opacity-60 text-xs sm:text-sm">Согласие на получение рекламной продукции</div>
-  </label>
 </div>
