@@ -318,6 +318,12 @@ label {
   }
 }
 
+.tab-btn {
+  &.tab-active {
+    @apply btn-theme-fill;
+  }
+}
+
 .btn-light {
   &:is([data-theme="dark"] &) {
     color: #fff
@@ -960,6 +966,7 @@ label {
   }
 }
 
+.dialog-water,
 .dialog-review {
   width        : 466px;
   max-width    : 100%;
@@ -973,6 +980,7 @@ label {
     border-radius: 12px;
   }
 }
+
 
 .contacts {
   display: flex;

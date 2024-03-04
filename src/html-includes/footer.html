@@ -197,7 +197,7 @@
 </div> -->
 
 <script>
-  document.getElementById('cookie-notification-btn').addEventListener('click', () => {
+  document.getElementById('cookie-notification-btn')?.addEventListener('click', () => {
     const notification = document.getElementById('cookie-notification')
     notification.parentElement.removeChild(notification)
   })
