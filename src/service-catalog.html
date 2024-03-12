@@ -71,9 +71,10 @@
         <div class="text-xs opacity-70">Цена</div>
       </div>
     </div>
-    <% for(let i = 0; i < 2; i++) { %>
     <div class="service-line-wrapper">
       <form class="service-line">
+        <input type="hidden" name="id" value="abc-cde-1">
+
         <div class="sm:size-24 sm:bg-l2 flex rounded-3xl">
           <div class="sm:m-auto text-xs opacity-70">А20.30.002</div>
         </div>
@@ -102,12 +103,12 @@
           <div class="text-sm font-semibold mb-2">Выберите возраст</div>
           <div class="grid grid-cols-2 gap-2 ">
             <label class="age-checkbox btn btn-sm gap-1 px-2">
-              <input type="radio" name="age" id="" value="18+" hidden checked>
+              <input type="radio" name="age" id="" value="age-id-1" hidden checked>
               <c-icon class="icon text-xl opacity-40" href="img/icons.svg#user-hand"></c-icon>
               <div class="text-sm">18+</div>
             </label>
             <label class="age-checkbox btn btn-sm gap-1 px-2">
-              <input type="radio" name="age" id="" value="до 18" hidden>
+              <input type="radio" name="age" id="" value="age-id-2" hidden>
               <c-icon class="icon text-xl opacity-40" href="img/icons.svg#child"></c-icon>
               <div class="text-sm">до 18</div>
             </label>
@@ -120,19 +121,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide cat-slider-item">
                 Стандарт
-                <input type="radio" name="cat" value="Стандарт" hidden checked>
+                <input type="radio" name="cat" value="cat-id-1" hidden checked>
               </div>
               <div class="swiper-slide cat-slider-item">
                 Люкс
-                <input type="radio" name="cat" value="Люкс" hidden>
+                <input type="radio" name="cat" value="cat-id-2" hidden>
               </div>
               <div class="swiper-slide cat-slider-item">
                 Премиум
-                <input type="radio" name="cat" value="Премиум" hidden>
+                <input type="radio" name="cat" value="cat-id-3" hidden>
               </div>
               <div class="swiper-slide cat-slider-item">
                 VIP
-                <input type="radio" name="cat" value="VIP" hidden>
+                <input type="radio" name="cat" value="cat-id-4" hidden>
               </div>
             </div>
 
@@ -151,8 +152,8 @@
         </div>
         <div class="service-line-cost">
           <div class="flex items-center lg:mt-6">
-            <div class="max-sm:text-sm font-semibold">от 1200 ₽</div>
-            <button class="btn btn-text btn-primary ml-2" type="button" data-fancybox-modal data-src="dialog-costs.html">
+            <div class="max-sm:text-sm font-semibold" data-cost>от 1200 ₽</div>
+            <button class="btn btn-text btn-primary ml-2" type="button" data-dialog data-fancybox-modal data-src="dialog-costs.html">
               <c-icon class="icon text-2xl" href="img/icons.svg#information-contur"></c-icon>
             </button>
           </div>
@@ -189,7 +190,6 @@
 
     </div>
 
-    <% } %>
   </div>
   <%= _.template(require('./html-includes/pagination.html').default)() %>
 </section>
@@ -206,8 +206,51 @@
         const activeSlide = swiper.slides[swiper.activeIndex]
         const checkBox = activeSlide.querySelector('input')
         checkBox.checked = true
+        const event = new Event('change', {
+          bubbles: true
+        })
+        checkBox.dispatchEvent(event)
+
       }
     }
+  })
+</script>
+
+<script>
+  const data = {
+    'abc-cde-1': {
+      'age-id-1': {
+        'cat-id-1': 'от 1200 ₽',
+        'cat-id-2': 'от 2200 ₽',
+        'cat-id-3': 'от 3200 ₽',
+        'cat-id-4': 'от 4200 ₽',
+      },
+      'age-id-2': {
+        'cat-id-1': 'от 1850 ₽',
+        'cat-id-2': 'от 2850 ₽',
+        'cat-id-3': 'от 3850 ₽',
+        'cat-id-4': 'от 4850 ₽',
+      },
+    }
+  }
+
+  document.addEventListener('change', (event) => {
+    const form = event.target.closest('.service-line')
+    if (!form) return
+
+    const formData = new FormData(form)
+    const id = formData.get('id')
+    const ageId = formData.get('age')
+    const catId = formData.get('cat')
+
+    const cost = data[id][ageId][catId]
+
+    const $costNode = form.querySelector('[data-cost]')
+    $costNode.textContent = cost
+
+    const button = form.querySelector('[data-dialog]')
+    button.setAttribute('data-src', 'dialog-costs.html?' + new URLSearchParams(formData).toString())
+
   })
 </script>
 
