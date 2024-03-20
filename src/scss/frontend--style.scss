@@ -219,7 +219,7 @@ label {
 
   .slider-arrow {
     position: absolute;
-    top     : calc(50% - var(--size) / 2);
+    top     : calc(50% - var(--tw-btn-size) / 2);
     opacity : 0.4;
 
     @media(hover) {
@@ -811,7 +811,7 @@ label {
   }
 
   &-button {
-    --size: 112px;
+    --tw-btn-size: 112px;
 
     margin-bottom: 50px;
     background   : radial-gradient(352.91% 141.42% at 0% 100%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.14) 100%);
