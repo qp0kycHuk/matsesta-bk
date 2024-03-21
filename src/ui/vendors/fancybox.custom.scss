@@ -4,10 +4,16 @@
   .fancybox__content {
     color      : inherit;
     flex-shrink: 0;
+
   }
 
   .fancybox__slide {
     padding: 16px;
 
   }
+}
+
+.fancybox__content {
+  padding   : 0;
+  background: none;
 }

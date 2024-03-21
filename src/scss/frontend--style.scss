@@ -981,6 +981,9 @@ label {
   }
 }
 
+.dialog-review {
+  width: 932px;
+}
 
 .contacts {
   display: flex;
@@ -1734,5 +1737,31 @@ label {
   @media(max-width:theme('screens.sm')) {
     flex-direction: column;
     align-items   : stretch;
+  }
+}
+
+.geo-suggest {
+  position: relative;
+
+  &-items {
+    position     : absolute;
+    left         : 0;
+    top          : calc(100% + 2px);
+    width        : 100%;
+    z-index      : 2;
+    background   : theme('colors.l3');
+    box-shadow   : theme('boxShadow.xl');
+    padding      : 16px 8px;
+    border-radius: 8px;
+  }
+
+  &-item {
+    cursor: pointer;
+
+    @media(hover) {
+      &:hover {
+        color: theme('colors.primary');
+      }
+    }
   }
 }

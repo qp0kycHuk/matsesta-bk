@@ -21,6 +21,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/js-cookie": "^3.0.3",
     "@types/three": "^0.160.0",
+    "@types/throttle-debounce": "^5.0.2",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "autoprefixer": "^10.4.4",
@@ -74,6 +75,7 @@
     "prettier-eslint": "^16.3.0",
     "swiper": "^11.0.3",
     "three": "^0.160.0",
+    "throttle-debounce": "^5.0.0",
     "tippy.js": "^6.3.7",
     "ymaps": "^0.2.1"
   }
