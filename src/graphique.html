@@ -1,0 +1,233 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">График работы</div>
+  <div class="font-alt font-semibold">График работы ВАННЫХ ЗДАНИЙ (БАЛЬНЕОЛЕЧЕБНИЦ)</div>
+  <div class="font-alt mt-8 max-sm:text-sm">
+    ООО «БК «Мацеста» (холдинг) города Сочи» <br class="max-sm:hidden">
+    по приему и обслуживанию пациентов c 01.02.2023 г.
+  </div>
+
+  <div class="mt-8 sm:border sm:border-black/15 sm:rounded-base overflow-auto max-sm:-mx-[15px] max-sm:px-[15px]">
+    <table class="w-full font-alt ">
+      <tr>
+        <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/2">Наименование</td>
+        <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/4">Часы работы</td>
+        <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/4">Выходной</td>
+      </tr>
+      <tr>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15">
+          Ванное здание (бальнеолечебница) № 4
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 font-semibold">
+          с 07.45 до 14.27 *
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15">
+          без выходных
+        </td>
+      </tr>
+      <tr>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15">
+          Отделение грязелечения в ванном здании (бальнеолечебнице) № 4
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 font-semibold">
+          с 07.45 до 14.27 *
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15">
+          без выходных
+        </td>
+      </tr>
+      <tr>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15">
+          Ванное здание (бальнеолечебница) № 3
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 font-semibold">
+          с 07.45 до 14.27 *
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15">
+          воскресенье
+        </td>
+      </tr>
+      <tr>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-black/5">
+          Ванное здание (бальнеолечебница) № 3
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-black/5 font-semibold">
+          с 07.45 до 14.27 *
+        </td>
+        <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-black/5">
+
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="text-red font-alt mt-6">*регистрация пациентов на процедуры до 13.30</div>
+  <div class="text-red font-alt mt-3 ">** регистрация пациентов на процедуры до 12.30</div>
+
+  <div class="mt-14">
+    <div class="font-alt text-xl font-semibold">График работы АМБУЛАТОРНО-ПОЛИКЛИНИЧЕСКОГО ОТДЕЛЕНИЯ</div>
+    <div class="mt-8 font-alt max-sm:text-sm">
+      ООО «БК «Мацеста» (холдинг) города Сочи» <br class="max-sm:hidden">
+      по приему и обслуживанию пациентов c 01.02.2023 г.
+    </div>
+
+    <div class="mt-8 sm:border sm:border-black/15 sm:rounded-base overflow-auto max-sm:-mx-[15px] max-sm:px-[15px]">
+      <table class="w-full font-alt ">
+        <tr>
+          <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y  border-black/15 bg-primary/30 w-1/2">Наименование</td>
+          <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/4">Часы работы</td>
+          <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/4">Выходной</td>
+        </tr>
+        <tr>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 align-top">
+            Амбулаторно-поликлиническое отделение
+          </td>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 font-semibold">
+            Понедельник - пятница <br>
+            с 07.45 до 14.00 <br>
+            суббота: с 07.45 до 13.00 <br>
+            <span class="text-red"> оформление на лечение:</span> <br>
+            Понедельник - пятница <br>
+            с 07.45 до 13.30 <br>
+            суббота: с 07.45 до 11.30
+          </td>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 align-top">
+            воскресенье
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="mt-14">
+    <div class="font-alt text-xl font-semibold">График работы КАССЫ</div>
+    <div class="mt-8 font-alt max-sm:text-sm">
+      ООО «БК «Мацеста» (холдинг) города Сочи» <br class="max-sm:hidden">
+      по обслуживанию физических и юридических лиц c 01.02.2023 г.
+    </div>
+
+    <div class="mt-8 sm:border sm:border-black/15 sm:rounded-base overflow-auto max-sm:-mx-[15px] max-sm:px-[15px]">
+      <table class="w-full font-alt ">
+        <tr>
+          <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y  border-black/15 bg-primary/30 w-1/2">Наименование</td>
+          <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/4">Часы работы</td>
+          <td class="font-semibold max-sm:text-sm p-3 sm:p-7 border-y border-black/15 bg-primary/30 w-1/4">Выходной</td>
+        </tr>
+        <tr>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 align-top">
+            кассир по обслуживанию ФИЗИЧЕСКИХ ЛИЦ <br>
+            (находится в амбулаторно-поликлиническом отделении)
+          </td>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 font-semibold">
+            Понедельник-пятница <br>
+            с 07.45 до 14.00 <br>
+            Суббота <br>
+            с 07.45 до 12.00
+          </td>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 align-top">
+            воскресенье
+          </td>
+        </tr>
+        <tr>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 align-top">
+            кассир по обслуживанию ЮРИДИЧЕСКИХ* И ФИЗИЧЕСКИХ ЛИЦ
+            (находится в бальнеолечебнице № 4)
+          </td>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 font-semibold">
+            Понедельник-пятница <br>
+            с 07.45 до 14.00 <br>
+            Воскресенье <br>
+            с 07.45 до 12.00
+          </td>
+          <td class="max-sm:text-sm p-3 sm:p-7 border-y border-black/15 align-top">
+            суббота
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="text-red font-alt mt-3 ">*по субботам ЮРИДИЧЕСКИЕ ЛИЦА обслуживаются в кассе амбулаторно-поликлинического отделения</div>
+  </div>
+
+  <div class="mt-14 sm:border sm:border-black/15 sm:rounded-base overflow-hidden sm:p-8 font-alt">
+    <div class="sm:text-xl font-semibold mb-8">НЕРАБОЧИЕ И ПРАЗДНИЧНЫЕ ДНИ В 2023 ГОДУ:</div>
+    <div class="flex flex-col gap-4 max-sm:text-sm">
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#calendar"></c-icon>
+        <div>
+          <span class="font-semibold">23 февраля </span> — День защитника Отечества — праздничный нерабочий день
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#calendar"></c-icon>
+        <div>
+          <span class="font-semibold">8 марта </span> — Международный женский день — праздничный нерабочий день
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#calendar"></c-icon>
+        <div>
+          <span class="font-semibold">1 мая </span> — Праздник Весны и Труда — праздничный нерабочий день
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#calendar"></c-icon>
+        <div>
+          <span class="font-semibold">9 мая </span> — День Победы — праздничный нерабочий день
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#calendar"></c-icon>
+        <div>
+          <span class="font-semibold">12 июня </span> — День России — праздничный нерабочий день
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#calendar"></c-icon>
+        <div>
+          <span class="font-semibold">4 ноября </span> — День народного единства — праздничный нерабочий день
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-14 p-8 bg-primary/10 font-alt sm:rounded-base max-sm:-mx-[15px] max-sm:px-[15px]">
+    <div class="title mb-8">Как добраться</div>
+    <ul class="list-disc pl-5 space-y-2 max-sm:text-sm">
+      <li>
+        <b>Из Сочи: </b> на маршрутном такси № 43 и автобусах №№ 120, 121 до остановки «Рынок»
+      </li>
+      <li>
+        <b>Из Адлера: </b> на автобусах №№ 105, 105с, 125п, 125с, затем пересадка на остановке «Заря» — необходимо перейти по подземному переходу на противоположную сторону Курортного проспекта – направление движения автотранспорта из центра Сочи), далее на маршрутных такси № 90 до остановки «Старая Мацеста», маршрутное такси № 43 и автобусы №№ 120, 121 до остановки «Рынок».
+      </li>
+      <li>
+        <b>От железнодорожной станции «Мацеста»: </b> на маршрутных такси № 90 до остановки «Старая Мацеста», маршрутное такси № 43 и автобусы №№ 120, 121 до остановки «Рынок».
+      </li>
+      <li>
+        <b>Официальный транспортный портал о городском пассажирском транспорте в г. Сочи: </b>
+        <a href="transport.sochi.ru" target="_blank" class="text-primary">transport.sochi.ru</a>
+      </li>
+    </ul>
+    <div class="mt-14">
+      <div class="sm:text-2.5xl font-medium mb-6">По вопросам аренды помещений обращаться:</div>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#user"></c-icon>
+        Дульцева Людмила Викторовна
+      </div>
+      <div class="flex items-center gap-2 mt-3">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#email"></c-icon>
+        <div>
+          e-mail: <a href="mailto:info@matsesta.info">info@matsesta.info</a>, <a href="mailto:dultceva_lv@matsesta.info">dultceva_lv@matsesta.info</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 mt-3">
+        <c-icon class="icon text-2xl text-primary" href="img/icons.svg#phone"></c-icon>
+        <div>
+          тел.: <a href="tel:8 (800) 301-04-25">8 (800) 301-04-25</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
