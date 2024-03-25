@@ -1786,6 +1786,11 @@ label {
   border-radius: 16px;
   margin-bottom: 56px;
 
+  @media(max-width:theme('screens.sm')) {
+    flex-direction: column;
+    gap           : 4px;
+  }
+
   &-item {
     padding        : 10px 15px;
     flex-grow      : 1;
@@ -1794,5 +1799,10 @@ label {
     align-items    : center;
     justify-content: center;
     line-height    : 1.1;
+
+    @media(max-width:theme('screens.sm')) {
+      text-align     : left;
+      justify-content: start;
+    }
   }
 }
