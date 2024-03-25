@@ -936,6 +936,7 @@ label {
 .detail-content {
   width    : 810px;
   max-width: 100%;
+  overflow : auto;
 
   p {
     line-height: 1.5;
@@ -943,6 +944,18 @@ label {
 
     @media(max-width:theme('screens.sm')) {
       font-size: 14px;
+    }
+  }
+
+  table {
+    overflow: auto;
+    width   : 100%;
+
+    td {
+      font-size  : 13px;
+      line-height: 1.2;
+      border     : 1px solid theme('colors.black / 30%');
+      padding    : 6px;
     }
   }
 }
