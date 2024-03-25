@@ -1,0 +1,36 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Наша команда</div>
+
+  <div class="team-tabs">
+    <div class="team-tabs-item">Руководство</div>
+    <div class="team-tabs-item">Медицинская служба</div>
+    <div class="team-tabs-item">
+      Управление <br>
+      Сочиминвод
+    </div>
+    <div class="team-tabs-item">
+      Управление <br>
+      эксплуатации
+    </div>
+    <div class="team-tabs-item">Благоустройство</div>
+    <div class="team-tabs-item">Профсоюз</div>
+  </div>
+
+  <div class="flex items-center gap-6">
+    <div class="size-19 rounded-full bg-primary/20 flex">
+      <c-icon class="icon text-4.5xl text-primary m-auto" href="img/icons.svg#user"></c-icon>
+    </div>
+    <div>
+      <div class="text-xl font-semibold">Федосов Василий Григорьевич</div>
+      <div class="mt-1">генеральный директор Бальнеологического курорта «Мацеста»</div>
+    </div>
+  </div>
+
+  <button class="btn btn-theme-fill mt-14 rounded-full">Хочу работать в Мацесте</button>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

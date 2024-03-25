@@ -55,6 +55,9 @@ module.exports = {
     extend: {
       spacing: {
         [15]: (15 / 4) + 'rem',
+        [17]: (17 / 4) + 'rem',
+        [18]: (18 / 4) + 'rem',
+        [19]: (19 / 4) + 'rem',
         [25]: (25 / 4) + 'rem',
       },
       inputSize: elementsSizes,

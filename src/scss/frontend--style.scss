@@ -1778,3 +1778,21 @@ label {
     }
   }
 }
+
+.team-tabs {
+  display      : flex;
+  background   : theme('colors.l2');
+  padding      : 8px;
+  border-radius: 16px;
+  margin-bottom: 56px;
+
+  &-item {
+    padding        : 10px 15px;
+    flex-grow      : 1;
+    text-align     : center;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    line-height    : 1.1;
+  }
+}
