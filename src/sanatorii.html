@@ -1,0 +1,130 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Санатории</div>
+
+
+  <div class="rounded-base overflow-hidden w-full my-5">
+    <img src="img/sanatorii.png" alt="" class="w-full">
+  </div>
+
+  <div class="mt-15 font-semibold sm:text-xl">Дорогие друзья! Бальнеологический курорт «Мацеста» работает для вас круглый год!</div>
+  <div class="mt-8 font-semibold">Путевка в санаторий с лечением на «Мацесте» — оптимальный выбор для оздоровления по системе «все включено».</div>
+
+  <div class="flex items-center mt-8 gap-4">
+    <div class="size-16 rounded-2xl bg-primary flex shrink-0">
+      <c-icon class="icon m-auto text-3xl text-white" href="img/icons.svg#phone-contur"></c-icon>
+    </div>
+    <div class="max-sm:text-sm">
+      По вопросам бронирования путевок с лечением на «Мацесте» в санатории города Сочи звоните по телефону бесплатной линии по РФ <br>
+      <a href="tel:8 (800) 301-04-25" class="sm:text-xl font-semibold">8 (800) 301-04-25</a>
+    </div>
+  </div>
+  <div class="mt-15 font-semibold sm:text-xl">Путевки в санатории города Сочи принято разделять на 2 категории:</div>
+  <div class="mt-10 font-semibold">1. Путевка с лечением на Мацесте</div>
+  <div class="mt-6 max-sm:text-sm">Лечебная составляющая данного типа путевок включает курс бальнеологических процедур «Мацесты» и процедуры на базе санатория</div>
+  <div class="opacity-60 italic max-sm:text-sm">
+    * Мацестинские процедуры включаются санаторием в путевки строго при наличии у отдыхающего не менее, чем 13 суток по путевке, а в некоторых
+    санаториях- не менее 18 суток.
+  </div>
+
+  <a href="service-detail.html" class="service-item bg-l3 mt-8 btn-group card-shadow">
+    <div class="service-item-image ratio ratio-[360/234] rounded-base overflow-hidden">
+      <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <div class="service-item-content">
+      <div class="xs:text-xl font-semibold font-alt">Купить путевку с Мацестой</div>
+      <div class="mt-4 opacity-80">
+        В этом разделе представлены санатории города Сочи, в путевку которых включен курс
+        процедур бальнеологического курорта «Мацеста
+      </div>
+      <button class="btn btn-theme-contur-2 mt-5 rounded-full">Узнать больше</button>
+    </div>
+  </a>
+
+  <div class="mt-10 font-semibold">2. «Общетерапевтическая» или «Оздоровительная» путевка</div>
+  <div class="mt-6 max-sm:text-sm">
+    Данный тип предусматривает наличие процедур на базе санатория, курс бальнеологических процедур «Мацесты» назначается врачом санатория
+    по прибытии, за дополнительную плату
+  </div>
+  <div class="opacity-60 italic max-sm:text-sm">
+    *Количество дней пребывания по путевке должно быть не менее 13-14
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-x-7 sm:gap-y-12 mt-10">
+    <% for(let i = 0; i < 3; i++) { %>
+    <a href="service-list.html" class="product-item card-shadow btn-group">
+      <div class="ratio ratio-[286/190] relative">
+        <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="px-2 sm:px-4 pb-4 sm:pb-6 flex-grow">
+        <div class="h-20 sm:h-28 flex items-center flex-col justify-center">
+          <div class="text-sm sm:text-lg font-semibold text-center leading-tight font-alt">
+            Аппаратная
+            физиотерапия
+          </div>
+        </div>
+        <button class="btn btn-theme-contur-2 gap-2 rounded-full w-full max-sm:text-sm px-2 max-sm:btn-sm">
+          Подробнее
+        </button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <div class="mt-16 max-sm:text-sm">
+    Санаторный отдых предполагает методичное движение от одной процедуры к следующей в течение дня, иногда останавливаясь на завтраки, обеды, полдники и ужин. По Вашему желанию — график процедур может быть составлен так, чтобы уже после обеда Вы оказались совершенно свободны. В городе Сочи всегда есть чем заняться и что посмотреть — можно отдохнуть на море, отправиться в близлежащие горы, посетить музеи, выставки, спектакли, концерты, съездить на экскурсию (как правило в каждом санатории работает экскурсионное бюро, а некоторые санатории предлагают своим отдыхающим трансфер на концерты и зрелищные мероприятия). Изумительной красоты природа и мягкий субтропический климат, безусловно, дополняют лечебный эффект.
+    <br><br>
+    Расписание Вашей жизни в санатории строго индивидуально и будет составлено врачами санатория в день вашего прибытия.
+    В случае противопоказаний к сероводородной бальнеотерапии, врач санатория может назначить радоновые или процедуры на природной йодобромной воде Кудепстинского месторождения, которые также отпускаются в мацестинской бальнеолечебнице. В санаториях мацестинские процедуры назначают строго через день и чередуют с процедурами, оказываемыми на базе санатория: физиопроцедуры с магнитами и тракциями, озонотерапия, ароматерапия, массажи, аппараты для снижения веса и прочие процедуры.
+  </div>
+  <div class="mt-10 font-semibold sm:text-xl text-sm">
+    Внимательно ознакомьтесь с новыми правилами получения бальнеологического и санаторно-курортного лечения
+    в текущих условиях <a href="/" class="text-primary underline underline-offset-4">здесь</a>
+  </div>
+
+  <div class="mt-16">
+    <div class="title">Обязательно посмотрите</div>
+
+
+    <a href="service-detail.html" class="service-item bg-l3 mt-10 btn-group card-shadow">
+      <div class="service-item-image ratio ratio-[360/234] rounded-base overflow-hidden">
+        <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="service-item-content">
+        <div class="xs:text-xl font-semibold font-alt">Купить путевку с Мацестой</div>
+        <div class="mt-4 opacity-80">
+          В этом разделе представлены санатории города Сочи, в путевку которых включен курс
+          процедур бальнеологического курорта «Мацеста
+        </div>
+        <button class="btn btn-theme-contur-2 mt-5 rounded-full">Узнать больше</button>
+      </div>
+    </a>
+    <a href="service-detail.html" class="service-item bg-l3 mt-4 btn-group card-shadow">
+      <div class="service-item-image ratio ratio-[360/234] rounded-base overflow-hidden">
+        <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="service-item-content">
+        <div class="xs:text-xl font-semibold font-alt">Купить путевку с Мацестой</div>
+        <div class="mt-4 opacity-80">
+          В этом разделе представлены санатории города Сочи, в путевку которых включен курс
+          процедур бальнеологического курорта «Мацеста
+        </div>
+        <button class="btn btn-theme-contur-2 mt-5 rounded-full">Узнать больше</button>
+      </div>
+    </a>
+
+    <div class="mt-10 max-sm:text-sm">
+      <b> Санаторно-курортное лечение осуществляется строго при наличии санаторно – курортной карты по форме №072/у</b>, для детей санаторно-курортной карты по форме №076/у-04 и справки о санитарно-эпидемиологическом окружении (отсутствие контактов с инфекционными больными). Мы рекомендуем оформить санаторно-курортную карту в поликлинике по месту жительства бесплатно, либо на платной основе в частной клинике, имеющей на это лицензию. Если Вы прибыли в санаторий без санаторно-курортной карты, то необходимо будет ее оформить в санатории. Это занимает 2-3 дня, стоимость оформления карты от 2500 руб. до 5000 руб. В этом случает процедуры (ни мацестинские ни процедуры, отпускаемые в санатории) врач санатория Вам не назначит, пока не будет готова санаторно-курортная карта. С картой вы сэкономите пару дней, и процедуры начнутся почти сразу.
+    </div>
+    <div class="mt-10 font-semibold text-sm xl:text-xl">
+      По вопросам бронирования путевок с лечением на «Мацесте» в санатории города Сочи звоните по телефону бесплатной
+      линии по РФ <a href="tel:8 (800) 301-04-25" class="text-primary underline underline-offset-4">8 (800) 301-04-25</a>
+    </div>
+  </div>
+
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
