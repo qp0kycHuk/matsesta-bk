@@ -185,9 +185,11 @@
 
 </footer>
 <script>
-  new Swiper('.locations-slider', {
-    slidesPerView: 'auto'
-  })
+  if (window.screen.width < 1000) {
+    new Swiper('.locations-slider', {
+      slidesPerView: 'auto'
+    })
+  }
 </script>
 
 <!-- <div class="cookie-notification" id="cookie-notification">
