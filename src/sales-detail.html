@@ -1,0 +1,63 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="relative max-sm:pt-4 py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="h-px bg-default opacity-10 mb-10 max-sm:hidden"></div>
+
+  <div class="detail-nav mb-7 sm:mb-9">
+    <button class="btn btn-icon btn-theme-contur-2 btn-sm rounded-full text-primary">
+      <c-icon class="icon text-2xl" href="img/icons.svg#arrow-left"></c-icon>
+    </button>
+    <div>
+      <div class="text-primary opacity-80">Специальные предложения и акции</div>
+    </div>
+  </div>
+
+  <div class="detail-content  mx-auto">
+    <div class="flex flex-col items-start gap-7">
+      <div class="title">Скидка до 15% при оплате онлайн</div>
+
+      <div class="rounded-xl sm:rounded-base overflow-hidden w-full">
+        <img src="img/sale.jpg" alt="" class="w-full">
+      </div>
+
+      <div class="font-semibold">Скидка на процедуры в составе лечебной программы до 15% при оплате онлайн!</div>
+
+      <div class="opacity-80">
+        Сделайте всего 3 шага для получения выгоды:
+      </div>
+
+      <ul class="opacity-80">
+        <li>выберете подходящую лечебную программу</li>
+        <li>забронируйте лечебную программу на удобные даты</li>
+        <li>оплатите бронь онлайн</li>
+      </ul>
+      <div class="opacity-80 italic">
+        * Скидки не суммируются со скидками для льготных категорий граждан
+      </div>
+    </div>
+  </div>
+  <div class="bg-default h-px w-full my-7 opacity-20"></div>
+
+  <div class="title section-title">Забронировать</div>
+  <div class="flex flex-col gap-5">
+    <% for(let i = 0; i < 10; i++) { %>
+    <a href="service-detail.html" class="service-item bg-l3 btn-group card-shadow">
+      <div class="service-item-image ratio ratio-[360/234] rounded-base overflow-hidden">
+        <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="service-item-content">
+        <div class="xs:text-xl font-semibold font-alt">Раннее бронирование за 60-90 дней</div>
+
+        <div class="mt-3 opacity-80 leading-normal max-sm:text-sm">
+          Выгода 7% на процедуры в составе курса лечения при покупке любой лечебной программы!
+        </div>
+        <button class="btn btn-theme-contur-2 mt-5 rounded-full">Забронировать</button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
