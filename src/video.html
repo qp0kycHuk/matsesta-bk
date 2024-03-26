@@ -1,0 +1,32 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Видео</div>
+
+  <div class="grid xs:grid-cols-2 gap-2 sm:gap-7 ">
+    <% for(let i = 0; i < 8; i++) { %>
+    <a href="https://www.youtube.com/watch?v=VOPZf3zWceo" data-fancybox class="product-item card-shadow btn-group">
+      <div class="ratio ratio-[600/282] relative">
+        <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+        <div class="absolute-fit flex">
+          <button class="btn btn-text m-auto">
+            <img src="img/youtube.svg" alt="" class="max-sm:w-20">
+          </button>
+        </div>
+      </div>
+      <div class="sm:p-7 p-4 flex-grow">
+        <div class="flex items-center flex-col justify-center">
+          <div class="text-sm md:text-lg font-semibold leading-tight font-alt">
+            Видеопрезентация Бальнеологического
+            курорта "Мацеста"
+          </div>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

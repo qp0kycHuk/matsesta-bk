@@ -315,6 +315,9 @@ label {
     border-radius : 32px;
     cursor        : pointer;
 
+    @media(max-width:theme('screens.sm')) {
+      border-radius: theme('borderRadius.xl');
+    }
   }
 }
 
