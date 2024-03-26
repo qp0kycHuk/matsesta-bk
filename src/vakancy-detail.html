@@ -1,0 +1,86 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Медицинская сестра по физиотерапии</div>
+
+  <div>
+    <div class="sm:text-xl font-medium mb-6">Условия работы:</div>
+
+    <ul class="list-disc pl-6 space-y-2 max-sm:text-sm">
+      <li>
+        <b>Заработная плата: 28 750 руб. в месяц + надбавка за категорию до 30%;</b>
+      </li>
+      <li>
+        Премирование согласно коллективному договору;
+      </li>
+      <li>
+        Официальное оформление, полный социальный пакет, постоянная работа, своевременная выплата заработной платы.
+      </li>
+      <li>
+        График работы: 6-дневная рабочая неделя.
+      </li>
+    </ul>
+  </div>
+
+  <div class="bg-default h-px w-full my-7 opacity-20"></div>
+
+  <div>
+    <div class="sm:text-xl font-medium mb-6">Требования:</div>
+
+    <ul class="list-disc pl-6 space-y-2 max-sm:text-sm">
+      <li>
+        Среднее медицинское образование по специальности «Медицинская сестра»;
+      </li>
+      <li>
+        Cпециальная подготовка по специальности «Физиотерапия».
+      </li>
+      <li>
+        Основные обязанности:
+      </li>
+      <li>
+        Прием пациента после осмотра врачом, внесение отметок о выполнении процедур;
+      </li>
+      <li>
+        Контроль за состоянием пациента во время проведения процедур;
+      </li>
+      <li>
+        Контроль за работой аппарата, показаниями измерительных приборов, сигнальных часов;
+      </li>
+      <li>
+        Помощь при врачебных манипуляциях;
+      </li>
+      <li>
+        Соблюдение правил асептики и антисептики;
+      </li>
+      <li>
+        Ведение учетно-отчетной документации.
+      </li>
+    </ul>
+  </div>
+
+  <div class="bg-default h-px w-full my-7 opacity-20"></div>
+
+  <div>
+    <div class="sm:text-xl font-medium mb-6">Контакты:</div>
+    <div class="flex items-center gap-2">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#user"></c-icon>
+      Инспектор отдела кадров Теряева Надежда Юрьевна
+    </div>
+    <div class="flex items-center gap-2 mt-3">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#phone"></c-icon>
+      <div>
+        Телефон: <a href="tel:+7 (862) 267-77-04" class="hover:text-primary">+7 (862) 267-77-04</a> | мобильный <a href="tel:+7 (938) 520-09-70" class="hover:text-primary">+7 (938) 520-09-70</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 mt-3">
+      <c-icon class="icon text-2xl text-primary" href="img/icons.svg#email"></c-icon>
+      <div>
+        E-mail: <a href="mailto:teryaeva_nj@matsesta.info" class="hover:text-primary">teryaeva_nj@matsesta.info</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
