@@ -4,6 +4,45 @@
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
   <div class="title section-title">Наша команда</div>
 
+  <div class="team-tabs">
+    <div class="team-tabs-item">Руководство</div>
+    <div class="team-tabs-item">Медицинская служба</div>
+    <div class="team-tabs-item">
+      Управление <br>
+      Сочиминвод
+    </div>
+    <div class="team-tabs-item">
+      Управление <br>
+      эксплуатации
+    </div>
+    <div class="team-tabs-item">Благоустройство</div>
+    <div class="team-tabs-item active">Профсоюз</div>
+  </div>
+
+
+  <div class="sm:text-xl font-alt italic max-sm:text-sm">
+    «Не забывая прошлое, трудимся в настоящем и творим будущее».
+  </div>
+
+  <div class="rounded-xl sm:rounded-base overflow-hidden w-full mt-12">
+    <img src="img/team-6.jpg" alt="" class="w-full">
+  </div>
+
+  <div class="mt-8 sm:mt-14 grid xs:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 sm:gap-10">
+    <% for(let i = 0; i < 10; i++) { %>
+    <a href="javascript:;" class="block group">
+      <div class="ratio ratio-[384/274] rounded-xl sm:rounded-base overflow-hidden">
+        <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="text-center font-semibold font-alt mt-5 transition group-hover:text-primary max-sm:text-sm">
+        Собрание профсоюзного коллектива
+        в холле Ванного здания №4
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <%= _.template(require('./html-includes/team-footer.html').default)() %>
 </section>
 
 

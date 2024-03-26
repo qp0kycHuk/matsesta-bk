@@ -4,6 +4,67 @@
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
   <div class="title section-title">Наша команда</div>
 
+  <div class="team-tabs">
+    <div class="team-tabs-item">Руководство</div>
+    <div class="team-tabs-item active">Медицинская служба</div>
+    <div class="team-tabs-item">
+      Управление <br>
+      Сочиминвод
+    </div>
+    <div class="team-tabs-item">
+      Управление <br>
+      эксплуатации
+    </div>
+    <div class="team-tabs-item">Благоустройство</div>
+    <div class="team-tabs-item">Профсоюз</div>
+  </div>
+
+  <div class="font-alt font-semibold text-primary max-sm:text-sm">Информация о кадровом составе</div>
+  <div class="mt-6 font-alt font-semibold sm:text-xl">Руководство медицинской службы</div>
+  <div class="grid xl:grid-cols-2 gap-4 sm:gap-6 mt-4">
+    <% for(let i = 0; i < 4; i++) { %>
+    <a href="doctor-detail.html" class="doctor-item bg-l3 btn-group card-shadow">
+      <div class="doctor-item-image ratio ratio-1/1 rounded-base overflow-hidden">
+        <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="doctor-item-content">
+        <div class="xs:text-lg font-semibold font-alt">Кабак Юлия</div>
+        <div class="mt-1 opacity-80 leading-tight max-sm:text-xs">
+          Главный врач, доктор
+          медицинских наук
+        </div>
+        <div class="mt-2 sm:mt-5 max-sm:text-sm">
+          Стаж: 30 лет
+        </div>
+        <button class="btn btn-theme-contur-2 mt-5 rounded-full max-sm:hidden">Узнать больше</button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <div class="mt-12 font-alt font-semibold sm:text-xl">Амбулаторно-поликлиническое отделение</div>
+  <div class="grid xl:grid-cols-2 gap-4 sm:gap-6 mt-4">
+    <% for(let i = 0; i < 2; i++) { %>
+    <a href="doctor-detail.html" class="doctor-item bg-l3 btn-group card-shadow">
+      <div class="doctor-item-image ratio ratio-1/1 rounded-base overflow-hidden">
+        <img src="img/video-placeholder.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="doctor-item-content">
+        <div class="xs:text-lg font-semibold font-alt">Кабак Юлия</div>
+        <div class="mt-1 opacity-80 leading-tight max-sm:text-xs">
+          Главный врач, доктор
+          медицинских наук
+        </div>
+        <div class="mt-2 sm:mt-5 max-sm:text-sm">
+          Стаж: 30 лет
+        </div>
+        <button class="btn btn-theme-contur-2 mt-5 rounded-full max-sm:hidden">Узнать больше</button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <%= _.template(require('./html-includes/team-footer.html').default)() %>
 </section>
 
 

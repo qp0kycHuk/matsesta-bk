@@ -4,6 +4,32 @@
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
   <div class="title section-title">Наша команда</div>
 
+  <div class="team-tabs">
+    <div class="team-tabs-item">Руководство</div>
+    <div class="team-tabs-item">Медицинская служба</div>
+    <div class="team-tabs-item">
+      Управление <br>
+      Сочиминвод
+    </div>
+    <div class="team-tabs-item active">
+      Управление <br>
+      эксплуатации
+    </div>
+    <div class="team-tabs-item">Благоустройство</div>
+    <div class="team-tabs-item">Профсоюз</div>
+  </div>
+
+  <div class="sm:text-xl font-alt italic max-sm:text-sm">
+    «Ежедневно команда управления эксплуатации трудится на благо обеспечения жизнедеятельности
+    крупнейшего бальнеологического курорта России, ежедневного принимающего до 1000 человек
+    на оздоровительные процедуры».
+  </div>
+
+  <div class="rounded-xl sm:rounded-base overflow-hidden w-full mt-12">
+    <img src="img/team-4.jpg" alt="" class="w-full">
+  </div>
+
+  <%= _.template(require('./html-includes/team-footer.html').default)() %>
 </section>
 
 

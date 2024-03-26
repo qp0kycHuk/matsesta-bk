@@ -5,7 +5,7 @@
   <div class="title section-title">Наша команда</div>
 
   <div class="team-tabs">
-    <div class="team-tabs-item">Руководство</div>
+    <div class="team-tabs-item active">Руководство</div>
     <div class="team-tabs-item">Медицинская служба</div>
     <div class="team-tabs-item">
       Управление <br>
@@ -19,8 +19,8 @@
     <div class="team-tabs-item">Профсоюз</div>
   </div>
 
-  <div class="flex sm:items-center gap-4 sm:gap-6">
-    <div class="size-15 sm:size-19 rounded-full bg-primary/20 flex shrink-0">
+  <div class="flex  gap-4 sm:gap-6">
+    <div class="size-15 sm:size-19 rounded-full bg-primary/20 flex shrink-0 self-start">
       <c-icon class="icon text-4.5xl text-primary m-auto" href="img/icons.svg#user"></c-icon>
     </div>
     <div>
@@ -29,27 +29,7 @@
     </div>
   </div>
 
-  <div class="flex items-center max-md:pb-8 gap-6 md:gap-11 bg-[#FFE9D2] p-2 md:rounded-2xl mt-14 max-md:flex-col max-md:-mx-[15px] max-md:px-[15px]">
-    <div class="w-56 ratio ratio-[230/178] rounded-xl overflow-hidden shrink-0">
-      <img src="img/test0.gif" alt="" class="absolute-fit">
-      <div class="absolute-fit flex">
-        <button class="btn btn-icon btn-white relative backdrop-blur-lg bg-white/40 m-auto rounded-full ring-4 ring-white/20">
-          <c-icon class="icon text-white" href="img/icons.svg#play"></c-icon>
-        </button>
-      </div>
-    </div>
-    <div>
-      <div class="font-alt sm:text-xl font-medium">
-        Видео о сотрудниках к 118-летию Бальнеологического курорта «Мацеста».
-      </div>
-      <div class="text-sm opacity-80 mt-2">
-        В преддверии празднования 118-летия Бальнеологического курорта «Мацеста», мы спросили у наших сотрудников,
-        что для них значит это заветное слово «Мацеста».
-      </div>
-    </div>
-  </div>
-
-  <button class="btn btn-theme-fill mt-14 rounded-full">Хочу работать в Мацесте</button>
+  <%= _.template(require('./html-includes/team-footer.html').default)() %>
 </section>
 
 

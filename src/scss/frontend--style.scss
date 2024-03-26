@@ -1786,9 +1786,15 @@ label {
   border-radius: 16px;
   margin-bottom: 56px;
 
-  @media(max-width:theme('screens.sm')) {
+  @media(max-width:theme('screens.lg')) and (min-width:theme('screens.md')) {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media(max-width:theme('screens.md')) {
     flex-direction: column;
     gap           : 4px;
+    margin-bottom : 32px;
   }
 
   &-item {
@@ -1800,7 +1806,14 @@ label {
     justify-content: center;
     line-height    : 1.1;
 
-    @media(max-width:theme('screens.sm')) {
+    &.active {
+      border-radius: 12px;
+      background   : #fff;
+      box-shadow   : 0 8px 20px 0 #20294C0F, 0 1px 3px 0 #20294C1A;
+
+    }
+
+    @media(max-width:theme('screens.lg')) {
       text-align     : left;
       justify-content: start;
     }

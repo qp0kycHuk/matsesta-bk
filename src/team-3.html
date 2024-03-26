@@ -4,6 +4,36 @@
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
   <div class="title section-title">Наша команда</div>
 
+  <div class="team-tabs">
+    <div class="team-tabs-item">Руководство</div>
+    <div class="team-tabs-item">Медицинская служба</div>
+    <div class="team-tabs-item active">
+      Управление <br>
+      Сочиминвод
+    </div>
+    <div class="team-tabs-item">
+      Управление <br>
+      эксплуатации
+    </div>
+    <div class="team-tabs-item">Благоустройство</div>
+    <div class="team-tabs-item">Профсоюз</div>
+  </div>
+
+  <div class="sm:text-xl font-alt italic max-sm:text-sm">
+    «Мы добываем минеральные воды курорта «Мацеста» из самых недр земли, следим за их составом
+    и методикой использования, для Вашего здоровья».
+  </div>
+  <div class="flex items-center gap-4 sm:gap-6 mt-6">
+    <div class="size-15 sm:size-19 rounded-full bg-primary/20 flex shrink-0 relative self-start">
+      <img src="img/test0.gif" alt="" class="absolute-fit rounded-full object-cover">
+    </div>
+    <div>
+      <div class="sm:text-xl font-semibold">Ренев Роман Сергеевич</div>
+      <div class="mt-1 max-sm:text-xs">начальник Управления «Сочиминвод»</div>
+    </div>
+  </div>
+
+  <%= _.template(require('./html-includes/team-footer.html').default)() %>
 </section>
 
 
