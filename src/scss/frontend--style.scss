@@ -612,9 +612,11 @@ label {
 }
 
 .category-page-item {
-  box-shadow   : 0 10px 20px 0 rgba(0, 0, 0, 0.06);
-  border-radius: theme('borderRadius.base');
-  overflow     : hidden;
+  box-shadow    : 0 10px 20px 0 rgba(0, 0, 0, 0.06);
+  border-radius : theme('borderRadius.base');
+  overflow      : hidden;
+  display       : flex;
+  flex-direction: column;
 
   @media(max-width:theme('screens.sm')) {
     border-radius: 16px;
@@ -650,8 +652,11 @@ label {
   }
 
   &-content {
-    padding   : 24px 16px;
-    text-align: center;
+    padding       : 24px 16px;
+    text-align    : center;
+    flex-grow     : 1;
+    display       : flex;
+    flex-direction: column;
 
     @media(max-width:theme('screens.sm')) {
       padding: 16px 8px;
