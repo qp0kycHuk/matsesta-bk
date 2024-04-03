@@ -71,22 +71,49 @@
         <div class="text-xs opacity-70">Цена</div>
       </div>
     </div>
-    <div class="service-line-wrapper">
+    <div class="service-line-wrapper group" data-toggle-cover data-toggle-static>
       <form class="service-line">
         <input type="hidden" name="id" value="abc-cde-1">
-
-        <div class="sm:size-24 sm:bg-l2 flex rounded-3xl">
-          <div class="sm:m-auto text-xs opacity-70">А20.30.002</div>
+        <div class="md:w-24 md:min-h-24 md:bg-l2 rounded-3xl md:p-2 md:pl-3 md:pr-1 group/id" data-toggle-cover data-toggle-static>
+          <div class="flex md:flex-col max-md:gap-2 max-md:flex-wrap md:justify-center">
+            <div class="text-xs opacity-70">А20.30.001</div>
+            <div class="text-xs opacity-70">А20.30.002</div>
+            <div class="text-xs opacity-70">А20.30.003</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.004</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.005</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.006</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.007</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.008</div>
+            <div class="md:hidden w-full"></div>
+            <button class="btn btn-primary btn-text group-[.toggle-active]/id:hidden" type="button" data-toggle-link>
+              <span class="text-xs underline underline-offset-4">
+                Еще...
+              </span>
+            </button>
+            <button class="btn btn-primary btn-text hidden group-[.toggle-active]/id:block" type="button" data-toggle-link>
+              <span class="text-xs underline underline-offset-4">
+                Скрыть
+              </span>
+            </button>
+          </div>
         </div>
         <div class="service-line-content">
-          <div class="font-alt font-semibold max-sm:text-sm">
-            4-х камерная сероводородная
-            (мацеста) ванна
+          <div class="font-alt font-semibold max-sm:text-sm line-clamp-2 group-[.toggle-active]:line-clamp-none">
+            Электрофорез с аппликацией Тамбуканской грязи (малый аппликатор 300 см2) лучезапястный сустав / лоутевой сустав / голеностопный сустав / кисть
           </div>
+          <button class="btn btn-primary btn-text group-[.toggle-active]:hidden" type="button" data-toggle-link>
+            <span class="text-sm underline underline-offset-4">
+              Показать полное описание
+            </span>
+          </button>
+          <button class="btn btn-primary btn-text hidden group-[.toggle-active]:block" type="button" data-toggle-link>
+            <span class="text-sm underline underline-offset-4">
+              Скрыть полное описание
+            </span>
+          </button>
           <div class="xl:hidden lg:mt-3">
-            <div class="text-sm">
-              Ванны сероводородные
-              лечебные
+            <div class="text-sm line-clamp-4 group-[.toggle-active]:line-clamp-none">
+              Воздействие лечебной грязью при заболеваниях костной системы. Воздействие лечебной грязью при заболеваниях нижних дыхательных путей и легочной ткани. Воздействие лечебной грязью при заболеваниях периферических сосудов. Воздействие лечебной грязью при заболеваниях печени и желчевыводящих путей. Воздействие лечебной грязью при заболеваниях поджелудочной железы. Воздействие лечебной грязью при заболеваниях пищевода, желудка, двенадцатиперстной кишки. Воздействие лечебной грязью при заболеваниях женских половых органов Грязелечение заболеваний периферической нервной системы.
             </div>
           </div>
           <button class="service-line-btn btn  btn-theme-contur-2 gap-2 rounded-full max-sm:text-sm btn-sm lg:mt-4">
@@ -94,9 +121,8 @@
           </button>
         </div>
         <div class="service-line-nomenclature max-xl:hidden">
-          <div class="text-sm">
-            Ванны сероводородные
-            лечебные
+          <div class="text-sm line-clamp-4 group-[.toggle-active]:line-clamp-none">
+            Воздействие лечебной грязью при заболеваниях костной системы. Воздействие лечебной грязью при заболеваниях нижних дыхательных путей и легочной ткани. Воздействие лечебной грязью при заболеваниях периферических сосудов. Воздействие лечебной грязью при заболеваниях печени и желчевыводящих путей. Воздействие лечебной грязью при заболеваниях поджелудочной железы. Воздействие лечебной грязью при заболеваниях пищевода, желудка, двенадцатиперстной кишки. Воздействие лечебной грязью при заболеваниях женских половых органов Грязелечение заболеваний периферической нервной системы.
           </div>
         </div>
         <div class="service-line-age">
@@ -151,7 +177,7 @@
           </div>
         </div>
         <div class="service-line-cost">
-          <div class="flex items-center lg:mt-6">
+          <div class="flex items-center lg:mt-9">
             <div class="max-sm:text-sm font-semibold" data-cost>от 1200 ₽</div>
             <button class="btn btn-text btn-primary ml-2" type="button" data-dialog data-fancybox-modal data-src="dialog-costs.html">
               <c-icon class="icon text-2xl" href="img/icons.svg#information-contur"></c-icon>

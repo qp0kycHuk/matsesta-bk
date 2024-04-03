@@ -1659,7 +1659,7 @@ label {
   display              : grid;
   grid-template-columns: 96px 1fr 180px 172px 160px 120px;
   gap                  : 36px;
-  align-items          : center;
+  align-items          : start;
   width                : 100%;
 
   @media (max-width:theme('screens.xl')) {
