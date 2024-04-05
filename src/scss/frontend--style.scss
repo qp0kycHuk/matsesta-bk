@@ -41,6 +41,9 @@ body {
   }
 }
 
+svg {
+  display: block !important;
+}
 
 /* stylelint-disable-next-line selector-no-vendor-prefix */
 a:-webkit-any-link:focus-visible {
