@@ -25,6 +25,9 @@ function init() {
   }
 
   window.Fancybox = Fancybox
+
+  // @ts-ignore
+  Fancybox.modal.open('dialog-form-1.html')
 }
 
 interface CustomWindow extends Window {
