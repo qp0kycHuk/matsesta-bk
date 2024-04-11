@@ -1836,3 +1836,47 @@ label {
     }
   }
 }
+
+.social {
+  position: fixed;
+  z-index : 325;
+  right   : 80px;
+  bottom  : 80px;
+
+  @media(max-width:theme('screens.lg')) {
+    right : 40px;
+    bottom: 40px;
+  }
+
+  @media(max-width:theme('screens.sm')) {
+    right: 20px;
+  }
+
+  &-items {
+    position      : absolute;
+    right         : 0;
+    bottom        : calc(100% + 12px);
+    display       : flex;
+    flex-direction: column-reverse;
+    gap           : 12px;
+    transition    : .25s ease;
+  }
+
+  &:not(.toggle-active) &-items {
+    opacity       : 0;
+    pointer-events: none;
+    transform     : translateY(50px);
+  }
+
+  &-shadow {
+    position  : fixed;
+    inset     : 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index   : 324;
+  }
+
+  &:not(.toggle-active)~&-shadow {
+    opacity       : 0;
+    pointer-events: none;
+  }
+}
