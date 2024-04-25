@@ -1665,8 +1665,18 @@ label {
   align-items          : start;
   width                : 100%;
 
+  &-analiz {
+    grid-template-columns: 96px 96px 1fr 232px 120px 120px;
+
+  }
+
   @media (max-width:theme('screens.xl')) {
     grid-template-columns: 96px 1fr 172px 160px 120px;
+
+    &-analiz {
+      grid-template-columns: 96px 96px 1fr 120px 120px;
+
+    }
   }
 
   @media (max-width:theme('screens.lg')) {

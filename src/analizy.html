@@ -1,0 +1,147 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Бальнеология</div>
+  <div class="flex flex-col gap-4">
+    <div class="service-line-header max-xl:hidden shadow-none bg-l2">
+      <div class="service-line service-line-analiz">
+        <div class="text-xs opacity-70">
+          Код услуги
+        </div>
+        <div class="text-xs opacity-70">
+          Код вида
+          медицинских
+          услуг
+        </div>
+        <div class="text-xs opacity-70">Вид медицинских услуг</div>
+        <div class="text-xs opacity-70">
+          Противопоказания
+        </div>
+        <div class="text-xs opacity-70">
+          Срок выполнения
+        </div>
+        <div class="text-xs opacity-70">Цена (Без НДС)</div>
+      </div>
+    </div>
+    <div class="service-line-wrapper group" data-toggle-cover data-toggle-static>
+      <form class="service-line service-line-analiz">
+        <input type="hidden" name="id" value="abc-cde-1">
+        <div class="md:w-24 md:min-h-24 md:bg-l2 rounded-3xl md:p-2 md:pl-3 md:pr-1 group/id" data-toggle-cover data-toggle-static>
+          <div class="flex md:flex-col max-md:gap-2 max-md:flex-wrap md:justify-center">
+            <div class="text-xs opacity-70">А20.30.001</div>
+            <div class="text-xs opacity-70">А20.30.002</div>
+            <div class="text-xs opacity-70">А20.30.003</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.004</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.005</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.006</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.007</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.008</div>
+            <div class="md:hidden w-full"></div>
+            <button class="btn btn-primary btn-text group-[.toggle-active]/id:hidden" type="button" data-toggle-link>
+              <span class="text-xs underline underline-offset-4">
+                Еще...
+              </span>
+            </button>
+            <button class="btn btn-primary btn-text hidden group-[.toggle-active]/id:block" type="button" data-toggle-link>
+              <span class="text-xs underline underline-offset-4">
+                Скрыть
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="md:w-24 md:min-h-24 md:bg-l2 rounded-3xl md:p-2 md:pl-3 md:pr-1 group/id" data-toggle-cover data-toggle-static>
+          <div class="flex md:flex-col max-md:gap-2 max-md:flex-wrap md:justify-center">
+            <div class="text-xs opacity-70">А20.30.001</div>
+            <div class="text-xs opacity-70">А20.30.002</div>
+            <div class="text-xs opacity-70">А20.30.003</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.004</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.005</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.006</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.007</div>
+            <div class="text-xs opacity-70 hidden group-[.toggle-active]/id:block">А20.30.008</div>
+            <div class="md:hidden w-full"></div>
+            <button class="btn btn-primary btn-text group-[.toggle-active]/id:hidden" type="button" data-toggle-link>
+              <span class="text-xs underline underline-offset-4">
+                Еще...
+              </span>
+            </button>
+            <button class="btn btn-primary btn-text hidden group-[.toggle-active]/id:block" type="button" data-toggle-link>
+              <span class="text-xs underline underline-offset-4">
+                Скрыть
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="service-line-content">
+          <div class="font-alt font-semibold max-sm:text-sm line-clamp-2 group-[.toggle-active]:line-clamp-none">
+            Электрофорез с аппликацией Тамбуканской грязи (малый аппликатор 300 см2) лучезапястный сустав / лоутевой сустав / голеностопный сустав / кисть
+          </div>
+          <button class="btn btn-primary btn-text group-[.toggle-active]:hidden" type="button" data-toggle-link>
+            <span class="text-sm underline underline-offset-4">
+              Показать полное описание
+            </span>
+          </button>
+          <button class="btn btn-primary btn-text hidden group-[.toggle-active]:block" type="button" data-toggle-link>
+            <span class="text-sm underline underline-offset-4">
+              Скрыть полное описание
+            </span>
+          </button>
+          <div class="xl:hidden lg:mt-3">
+            <div class="text-sm line-clamp-4 group-[.toggle-active]:line-clamp-none">
+              Воздействие лечебной грязью при заболеваниях костной системы. Воздействие лечебной грязью при заболеваниях нижних дыхательных путей и легочной ткани. Воздействие лечебной грязью при заболеваниях периферических сосудов. Воздействие лечебной грязью при заболеваниях печени и желчевыводящих путей. Воздействие лечебной грязью при заболеваниях поджелудочной железы. Воздействие лечебной грязью при заболеваниях пищевода, желудка, двенадцатиперстной кишки. Воздействие лечебной грязью при заболеваниях женских половых органов Грязелечение заболеваний периферической нервной системы.
+            </div>
+            <button class="btn btn-primary btn-text group-[.toggle-active]:hidden" type="button" data-toggle-link>
+              <span class="text-sm underline underline-offset-4">
+                еще...
+              </span>
+            </button>
+            <button class="btn btn-primary btn-text hidden group-[.toggle-active]:block" type="button" data-toggle-link>
+              <span class="text-sm underline underline-offset-4">
+                ЕЕЕЩЩЩЩЕЕЕЕЕ!!!
+              </span>
+            </button>
+          </div>
+          <button class="service-line-btn btn  btn-theme-contur-2 gap-2 rounded-full max-sm:text-sm btn-sm lg:mt-4">
+            Подробнее
+          </button>
+        </div>
+        <div class="service-line-nomenclature max-xl:hidden">
+          <div class="text-xs line-clamp-4 group-[.toggle-active]:line-clamp-none">
+            Воздействие лечебной грязью при заболеваниях костной системы. Воздействие лечебной грязью при заболеваниях нижних дыхательных путей и легочной ткани. Воздействие лечебной грязью при заболеваниях периферических сосудов. Воздействие лечебной грязью при заболеваниях печени и желчевыводящих путей. Воздействие лечебной грязью при заболеваниях поджелудочной железы. Воздействие лечебной грязью при заболеваниях пищевода, желудка, двенадцатиперстной кишки. Воздействие лечебной грязью при заболеваниях женских половых органов Грязелечение заболеваний периферической нервной системы.
+          </div>
+          <button class="btn btn-primary btn-text group-[.toggle-active]:hidden" type="button" data-toggle-link>
+            <span class="text-sm underline underline-offset-4">
+              еще...
+            </span>
+          </button>
+          <button class="btn btn-primary btn-text hidden group-[.toggle-active]:block" type="button" data-toggle-link>
+            <span class="text-sm underline underline-offset-4">
+              ЕЕЕЩЩЩЩЕЕЕЕЕ!!!
+            </span>
+          </button>
+        </div>
+
+        <div class="service-line-date">
+          <div class="flex items-center lg:mt-9">
+            <div class="max-sm:text-sm font-semibold" data-cost>До 1 дня</div>
+
+          </div>
+        </div>
+        <div class="service-line-cost">
+          <div class="flex items-center lg:mt-9">
+            <div class="max-sm:text-sm font-semibold" data-cost>от 1200 ₽</div>
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+  <%= _.template(require('./html-includes/pagination.html').default)() %>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
