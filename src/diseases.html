@@ -1,0 +1,108 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative max-sm:pt-4 py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+
+  <div class="title section-title">Мы лечим</div>
+
+  <div class="flex items-center gap-4 mb-6">
+    <div class="font-medium">А-Я</div>
+    <div class="flex-grow bg-default h-px opacity-10"></div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <% for(let i = 0; i < 3; i++) { %>
+    <div class="rounded-base bg-l2 p-6 group" data-toggle-cover data-toggle-static>
+      <div class="size-20 rounded-2xl bg-l3 flex mb-6">
+        <div class="m-auto text-primary font-semibold text-[44px]">
+          A
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 sm:gap-4">
+        <div class="font-medium">Аллергия</div>
+        <div class="font-medium">Анемия</div>
+        <div class="font-medium">Апное сна</div>
+        <div class="font-medium">Аритмия</div>
+        <div class="font-medium hidden group-[.toggle-active]:block">Аритмия</div>
+        <div class="font-medium hidden group-[.toggle-active]:block">Аритмия</div>
+        <div class="font-medium hidden group-[.toggle-active]:block">Аритмия</div>
+        <button class="btn btn-primary btn-text group-[.toggle-active]:hidden" type="button" data-toggle-link>
+          <span class="text-sm underline underline-offset-4">
+            Показать больше
+          </span>
+        </button>
+        <button class="btn btn-primary btn-text hidden group-[.toggle-active]:block" type="button" data-toggle-link>
+          <span class="text-sm underline underline-offset-4">
+            Показать меньше
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="rounded-base bg-l2 p-6 group" data-toggle-cover data-toggle-static>
+      <div class="size-20 rounded-2xl bg-l3 flex mb-6">
+        <div class="m-auto text-primary font-semibold text-[44px]">
+          A
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 sm:gap-4">
+        <div class="font-medium">Аллергия</div>
+        <div class="font-medium">Анемия</div>
+
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+  <div class="mt-10"></div>
+
+  <div class="flex items-center gap-4 mb-6">
+    <div class="font-medium">A-Z</div>
+    <div class="flex-grow bg-default h-px opacity-10"></div>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <% for(let i = 0; i < 3; i++) { %>
+    <div class="rounded-base bg-l2 p-6 group" data-toggle-cover data-toggle-static>
+      <div class="size-20 rounded-2xl bg-l3 flex mb-6">
+        <div class="m-auto text-primary font-semibold text-[44px]">
+          Z
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 sm:gap-4">
+        <div class="font-medium">Аллергия</div>
+        <div class="font-medium">Анемия</div>
+        <div class="font-medium">Апное сна</div>
+        <div class="font-medium">Аритмия</div>
+        <div class="font-medium hidden group-[.toggle-active]:block">Аритмия</div>
+        <div class="font-medium hidden group-[.toggle-active]:block">Аритмия</div>
+        <div class="font-medium hidden group-[.toggle-active]:block">Аритмия</div>
+        <button class="btn btn-primary btn-text group-[.toggle-active]:hidden" type="button" data-toggle-link>
+          <span class="text-sm underline underline-offset-4">
+            Показать больше
+          </span>
+        </button>
+        <button class="btn btn-primary btn-text hidden group-[.toggle-active]:block" type="button" data-toggle-link>
+          <span class="text-sm underline underline-offset-4">
+            Показать меньше
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="rounded-base bg-l2 p-6 group" data-toggle-cover data-toggle-static>
+      <div class="size-20 rounded-2xl bg-l3 flex mb-6">
+        <div class="m-auto text-primary font-semibold text-[44px]">
+          Z
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 sm:gap-4">
+        <div class="font-medium">Аллергия</div>
+        <div class="font-medium">Анемия</div>
+
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
