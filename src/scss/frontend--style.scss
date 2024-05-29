@@ -324,6 +324,16 @@ label {
   }
 }
 
+@media (hover) {
+  // temp
+
+  .btn-white:hover,
+  .btn-white:is(.btn-group:hover .btn),
+  .btn-white:is(.btn-peer:hover~.btn) {
+    --tw-btn-color: #fff;
+  }
+}
+
 .tab-btn {
   &.tab-active {
     @apply btn-theme-fill;
@@ -993,6 +1003,16 @@ label {
     @media(max-width:theme('screens.xs')) {
       width: 100%;
     }
+  }
+}
+
+.dialog {
+  background   : var(--bg3);
+  max-width    : 100%;
+  border-radius: theme('borderRadius.base');
+
+  @media(max-width:theme('screens.sm')) {
+    border-radius: 12px;
   }
 }
 
@@ -1899,4 +1919,10 @@ label {
     opacity       : 0;
     pointer-events: none;
   }
+}
+
+.dialog-search {
+  width  : var(--section-width);
+  padding: 48px 24px;
+
 }

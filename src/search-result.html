@@ -1,0 +1,40 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="section-padding relative">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="title section-title">Результаты поиска</div>
+  <div class="relative ">
+    <input type="text" class="input w-full rounded-xl" placeholder="Найти..." value="Эрондондоновская вода">
+    <div class="absolute right-1 top-1/2 -translate-y-1/2">
+      <button class="btn btn-sm btn-icon btn-primary rounded-xl">
+        <c-icon class="icon text-2xl text-default" href="img/icons.svg#search"></c-icon>
+      </button>
+    </div>
+  </div>
+  <div class="mt-8 font-semibold text-xl mb-10">
+    Найдено: 4
+  </div>
+  <div class="flex flex-col gap-5">
+    <% for(let i = 0; i < 10; i++) { %>
+    <a href="service-detail.html" class="service-item bg-l3 btn-group card-shadow">
+      <div class="lg:p-5">
+        <div class="service-item-content">
+          <div class="xs:text-xl font-semibold font-alt">Лечебная программа «VIP 14 дней»</div>
+          <div class="mt-3 flex items-center gap-2 text-primary">
+
+            <div class="text-xs xs:text-sm">Раздел: Программы лечения</div>
+          </div>
+          <div class="mt-3 opacity-80 leading-normal max-sm:text-sm">
+            «Мацеста» — это крупнейший бальнеологический курорт России, расположившийся
+            в городе-курорте Сочи. Сама природа, одарив Сочи уникальным сочетанием субтропического...
+          </div>
+          <button class="btn btn-theme-contur-2 mt-5 rounded-full">Подробнее</button>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
