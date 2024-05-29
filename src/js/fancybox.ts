@@ -1,33 +1,41 @@
 import { Fancybox } from '@fancyapps/ui'
+import ru from '@fancyapps/ui/src/Fancybox/l10n/ru'
 
 function init() {
-  const options = {
+  Fancybox.defaults.trapFocus = false
+  Fancybox.defaults.autoFocus = false
+  Fancybox.defaults.placeFocusBack = false
+  Fancybox.defaults.l10n = ru
+  Fancybox.defaults.template.spinner = '<div class="progress progress-circle"> </div>'
+
+  Fancybox.bind('[data-fancybox-modal]', {
+    type: 'ajax',
     dragToClose: false,
     mainClass: 'fancybox-custom-modal',
-    defaultType: 'ajax',
-  }
+  })
 
-  Fancybox.defaults.Thumbs = {
-    showOnStart: false,
-  }
-
-  Fancybox.bind('[data-fancybox]')
-  // @ts-ignore
-  Fancybox.bind('[data-fancybox-modal]', options)
-
-  // @ts-ignore
   Fancybox.modal = {}
 
-  // @ts-ignore
-  Fancybox.modal.open = (src) => {
-    // @ts-ignore
-    Fancybox.show([{ src, ...options }], options)
+  Fancybox.modal.open = (src: string, options: any) => {
+    return Fancybox.show(
+      [
+        {
+          src: src,
+          ...options,
+        },
+      ],
+      {
+        type: 'ajax',
+        dragToClose: false,
+        mainClass: 'fancybox-custom-modal',
+        ...options,
+      }
+    )
   }
 
   window.Fancybox = Fancybox
 
-  // @ts-ignore
-  // Fancybox.modal.open('dialog-form-1.html')
+  // Fancybox.modal.open('dialog-form-2.html')
 }
 
 interface CustomWindow extends Window {

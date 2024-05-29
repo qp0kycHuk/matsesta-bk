@@ -1,0 +1,139 @@
+<div class="dialog-form dialog-form-2" id="dialog-form">
+  <form @submit="submitHandler">
+    <div class="title md:text-2.5xl mb-8">Задать вопрос врачу</div>
+
+    <label class="relative  w-full">
+      <div class="text-sm mb-2 font-semibold">Ваше имя</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+        </div>
+        <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя..." required name="name">
+      </div>
+    </label>
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Ваш телефон</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+        </div>
+        <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ " required name="phone">
+      </div>
+    </label>
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Ваша почта</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+        </div>
+        <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту..." required name="email">
+      </div>
+    </label>
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Ваш город</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#location-contur"></c-icon>
+        </div>
+        <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите город..." required name="city">
+      </div>
+    </label>
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Информация для врача</div>
+      <div class="relative">
+        <div class="absolute left-0 top-3.5 pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#dialog"></c-icon>
+        </div>
+        <textarea placeholder="Напишите..." class="input rounded-xl w-full pl-12 h-40 resize-none" required name="info"></textarea>
+      </div>
+    </label>
+
+    <label class="btn btn-primary btn-light gap-2 rounded-xl mt-6 cursor-pointer relative">
+      <c-icon class="icon text-2xl" href="img/icons.svg#attach"></c-icon>
+      <div class="grow text-default">Прикрепить файл</div>
+      <input type="file" @change="changeHandler" class="absolute inset-0 opacity-0 pointer-events-none" multiple accept="image/*, application/pdf, application/msword, .doc, application/vnd.openxmlformats-officedocument.wordprocessingml.document, .docx">
+    </label>
+    <div class="flex flex-col mt-3">
+      <div class="flex items-center px-4 py-3 gap-3" v-for="(item, index) in items" v-show="!item.removed">
+        <div class="text-sm truncate" :class="item.invalidated ? 'text-red':''">
+          {{ item.file.name }}
+        </div>
+        <div class="opacity-60 text-xs whitespace-nowrap ml-auto" v-show="item.message">({{item.message}})</div>
+        <button class="btn btn-text btn-sec ml-auto" type="button" @click="item.removed = true">
+          <c-icon class="icon text-2xl" href="img/icons.svg#cross-circle"></c-icon>
+        </button>
+      </div>
+    </div>
+
+    <button class="btn btn-theme-fill px-9 mt-8 rounded-full" :disabled="loading">Отправить</button>
+
+    <label class="flex items-center gap-2 cursor-pointer mt-7 w-full">
+      <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked required>
+      <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
+    </label>
+
+    <label class="flex items-center gap-2 cursor-pointer mt-2 w-full">
+      <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0">
+      <div class="opacity-60 text-xs sm:text-sm">Согласие на получение рекламной продукции</div>
+    </label>
+  </form>
+
+</div>
+
+<script>
+  (() => {
+    const app = Vue.createApp({
+      data: () => ({
+        items: [],
+        loading: false,
+        error: false,
+      }),
+      methods: {
+        changeHandler(event) {
+          const files = event.target.files
+          console.log(files);
+          Array.from(files).forEach((file) => {
+            const item = {
+              file
+            }
+
+            if (file.size > (4 * 1024 * 1024)) {
+              item.invalidated = true
+              item.message = 'Макс. 4Мб'
+            }
+
+            this.items.push(item)
+          })
+        },
+        submitHandler(event) {
+          event.preventDefault()
+
+          const formData = new FormData(event.target)
+
+          this.items.forEach((item) => {
+            if (!item.removed && !item.invalidated) {
+              formData.append('files[]', item.file)
+            }
+          })
+
+          this.loading = true
+
+          fetch('submitHandler.php', {
+              method: 'post',
+              body: formData
+            })
+            .then((response) => response.json())
+            .then((result) => {
+              console.log(result);
+
+            })
+            .finally(() => {
+              this.loading = true
+            })
+        }
+      }
+    })
+
+    app.mount(document.getElementById('dialog-form'))
+  })();
+</script>

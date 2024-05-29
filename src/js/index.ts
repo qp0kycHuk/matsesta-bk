@@ -9,9 +9,14 @@ import ripple from '@qpokychuk/ripple'
 import swiper from './swiper'
 import animations from './animations'
 import ymaps from './ymaps'
+import tooltip from './tooltip'
+// @ts-ignore
+import * as Vue from 'vue/dist/vue.esm-bundler.js'
 
 import '../scss/index.scss'
-import tooltip from './tooltip'
+
+// @ts-ignore
+window.Vue = Vue
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 

@@ -52,7 +52,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.17",
+    "@fancyapps/ui": "^4.0.27",
     "@pqina/filepond-plugin-image-editor": "^9.0.3",
     "@pqina/pintura": "^8.70.1",
     "@qpokychuk/fonts": "^1.0.8",
@@ -77,6 +77,7 @@
     "three": "^0.160.0",
     "throttle-debounce": "^5.0.0",
     "tippy.js": "^6.3.7",
-    "ymaps": "^0.2.1"
+    "ymaps": "^0.2.1",
+    "vue": "^3.4.27"
   }
 }

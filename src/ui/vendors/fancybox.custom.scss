@@ -2,18 +2,42 @@
   color: inherit;
 
   .fancybox__content {
-    color      : inherit;
-    flex-shrink: 0;
-
+    padding   : 0;
+    background: none;
+    max-width : 100%;
   }
 
   .fancybox__slide {
-    padding: 16px;
+    padding  : 15px;
+    max-width: 100%;
 
   }
-}
 
-.fancybox__content {
-  padding   : 0;
-  background: none;
+  .carousel__button.is-close {
+    position: fixed;
+    right   : 0;
+    top     : 0;
+    padding : 16px;
+    width   : 68px;
+    height  : 68px;
+
+    @media(max-width:theme('screens.sm')) {
+      position: absolute;
+      width   : 32px;
+      height  : 32px;
+      top     : 4px;
+      right   : 4px;
+      padding : 0;
+
+    }
+
+    svg {
+      @media(max-width:theme('screens.sm')) {
+        filter: none;
+        color : currentColor;
+        width : 12px;
+        height: 12px;
+      }
+    }
+  }
 }
