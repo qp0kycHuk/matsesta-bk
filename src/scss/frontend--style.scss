@@ -1842,6 +1842,7 @@ label {
   padding      : 8px;
   border-radius: 16px;
   margin-bottom: 56px;
+  gap          : 4px;
 
   @media(max-width:theme('screens.lg')) and (min-width:theme('screens.md')) {
     display              : grid;
@@ -1850,29 +1851,37 @@ label {
 
   @media(max-width:theme('screens.md')) {
     flex-direction: column;
-    gap           : 4px;
     margin-bottom : 32px;
   }
 
   &-item {
-    padding        : 10px 15px;
-    flex-grow      : 1;
+    padding        : 10px 32px;
+    transition     : .2s ease;
     text-align     : center;
     display        : flex;
     align-items    : center;
     justify-content: center;
     line-height    : 1.1;
+    height         : 52px;
+    border-radius  : 12px;
+
+    @media(hover) {
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+
+      }
+    }
 
     &.active {
-      border-radius: 12px;
-      background   : #fff;
-      box-shadow   : 0 8px 20px 0 #20294C0F, 0 1px 3px 0 #20294C1A;
+      background: #fff;
+      box-shadow: 0 8px 20px 0 #20294C0F, 0 1px 3px 0 #20294C1A;
 
     }
 
     @media(max-width:theme('screens.lg')) {
       text-align     : left;
       justify-content: start;
+      padding        : 10px 20px;
     }
   }
 }
