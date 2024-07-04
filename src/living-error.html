@@ -1,0 +1,14 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative  py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="flex items-center gap-2">
+    <c-icon class="icon text-red text-2xl sm:text-4xl" href="img/icons.svg#cross-circle-1"></c-icon>
+    <div class="title">Не забронировано</div>
+  </div>
+  <div class="mt-8 font-alt font-medium opacity-80">Мы не смогли забронировать вас. Что-то пошло не так</div>
+
+  <button class="btn btn-theme-contur-2 rounded-full sm:px-20 max-sm:w-full mt-12">Вернуться</button>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
