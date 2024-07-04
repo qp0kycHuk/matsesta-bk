@@ -1935,3 +1935,12 @@ label {
   padding: 48px 24px;
 
 }
+
+.dialog-where-from {
+  width  : 600px;
+  padding: 42px 32px;
+
+  @media(max-width:theme('screens.sm')) {
+    padding: 32px 16px;
+  }
+}
