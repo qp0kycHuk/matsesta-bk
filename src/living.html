@@ -1,0 +1,20 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative max-sm:pt-4 py-14">
+  <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
+  <div class="h-px bg-default opacity-10 mb-10 max-sm:hidden"></div>
+  <div class="detail-nav mb-7 sm:mb-9">
+    <button class="btn btn-icon btn-theme-contur-2 btn-sm rounded-full text-primary">
+      <c-icon class="icon text-2xl" href="/img/icons.svg#arrow-left"></c-icon>
+    </button>
+    <div>
+      <div class="text-primary opacity-80">Лечение с проживанием</div>
+    </div>
+  </div>
+
+  <div class="detail-content mx-auto">
+    <div class="title">Лечение с проживанием</div>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
