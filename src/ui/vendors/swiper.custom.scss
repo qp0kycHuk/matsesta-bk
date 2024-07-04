@@ -42,7 +42,7 @@ img.swiper-lazy:not(.swiper-lazy-loaded) {
   }
 
   @media(hover) {
-    &:hover {
+    &:not(.swiper-pagination-bullet-active):hover {
       background: var(--swiper-pagination-color, var(--swiper-theme-color));
       opacity   : 0.6;
     }

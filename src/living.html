@@ -1,6 +1,10 @@
 <%= _.template(require('./html-includes/header.html').default)() %>
 
-<section class="relative max-sm:pt-4 py-14">
+<script>
+  window.livingLocation = [43.571497, 39.802446]
+</script>
+
+<section class="relative max-sm:pt-4 py-14 overflow-hidden">
   <%= _.template(require('./html-includes/breadcrumps.html').default)() %>
   <div class="h-px bg-default opacity-10 mb-10 max-sm:hidden"></div>
   <div class="detail-nav mb-7 sm:mb-9">
@@ -12,9 +16,230 @@
     </div>
   </div>
 
-  <div class="detail-content mx-auto">
-    <div class="title">Лечение с проживанием</div>
+  <div class="detail-content mx-auto overflow-visible">
+    <div class="title mb-12">Лечение с проживанием</div>
+
+    <div class="mb-12 pb-px">
+      <div class=" swiper" id="jigurda-slider">
+        <div class="swiper-wrapper">
+          <% for(let i = 0; i < 10; i++) { %>
+          <div class="swiper-slide">
+            <div class="relative md:p-4 md:rounded-base overflow-hidden md:h-96">
+              <div class="md:absolute-fit ratio ratio-[36/20]">
+                <img src="img/test0.gif" alt="" class="absolute-fit object-cover rounded-xl sm:rounded-3xl">
+              </div>
+              <div class="relative md:rounded-3xl md:bg-l3 md:p-8 md:h-full flex flex-col justify-center md:w-80 max-md:mt-5">
+                <div class="font-alt text-xl">
+                  Лечебная программа <br>
+                  «Стандарт 14 дней»
+                </div>
+                <div class="mt-5 font-alt font-semibold text-2.5xl">
+                  от 10 600 ₽
+                </div>
+                <div class="flex mt-8 lg:mt-12">
+                  <a href="javascript:;" class="btn btn-theme-contur-1 rounded-full">Купить</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="relative mt-8">
+        <div class="absolute slider-pagination" id="jigurda-slider-pagination"></div>
+      </div>
+
+    </div>
+    <script>
+      new Swiper('#jigurda-slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        pagination: {
+          el: "#jigurda-slider-pagination",
+          clickable: true,
+          dynamicBullets: true
+        },
+      })
+    </script>
+
+
+    <p class="">
+      Уважаемые гости, рады сообщить о том, что для Вашего удобства появилась возможность забронировать проживание в новом отеле в 10-15 минутах ходьбы от ванного здания!
+      <br><br>
+      CLEVER - новый современный апарт-отель с повышенным сервисом и услугами. Открытый подогреваемый бассейн, сауна и детская площадка располагаются на закрытой территории комплекса. Комплекс расположен в тихом жилом районе в территориальной близости от всех значимых объектов города Сочи. В шаговой доступности располагаются продуктовые супермаркеты, кофейни, прогулочная зона вдоль реки "Мацеста", детская и спортивные площадки. Морской пляж всего в 10 минутах на бесплатном трансфере, который предоставляется для Гостей апарт-отеля в летнее время. Поездка от Аэропорта и Ж/Д вокзала занимает 25 минут. Уютные номера с современным ремонтом и встроенной кухонной зоной, которые предусмотрены как для краткосрочного, так и для длительного проживания. Все апартаменты укомплектованы всем необходимым для комфортного отдыха, возможностью размещения с питомцами. Круглосуточная зона ресепшн и ежедневное обслуживание номеров, сделает Ваш отдых более комфортным
+    </p>
+
+
+    <div class="title mb-8 mt-20">Наши апартаменты</div>
+    <div class="relative">
+      <div class="rooms-slider swiper -mx-1.5 py-5 -my-5 max-lg:overflow-visible">
+        <div class="swiper-wrapper">
+          <% for(let i = 0; i < 10; i++) { %>
+          <div class="swiper-slide px-1.5 w-11/12 xs:w-8/12 sm:w-1/2 lg:w-1/3">
+            <div class="rooms-item">
+
+              <div class="swiper rooms-item-slider swiper-no-swiping relative">
+                <div class="swiper-wrapper">
+                  <% for(let ii = 0; ii < 10; ii++) { %>
+                  <div class="rooms-item-image ratio ratio-[262/188] swiper-slide">
+                    <img src="img/test0.gif" alt="" class="absolute-fit object-cover">
+                  </div>
+                  <% } %>
+                </div>
+
+                <div class="absolute bottom-4 left-0 w-full z-[2]">
+                  <div class="rooms-item-slider-pagination absolute slider-pagination"></div>
+                </div>
+              </div>
+
+              <div class="rooms-item-content">
+                <div class="flex justify-between py-2 px-4 rounded-2xl bg-default/5 mb-6">
+                  <!--Сплит -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#conditioner"></c-icon>
+                  <!-- Ванная -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#bath"></c-icon>
+                  <!-- ТВ -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#tv"></c-icon>
+                  <!-- Балкон -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#balcony"></c-icon>
+                  <!-- WI FI -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#wifi"></c-icon>
+                  <!-- 1-спальн -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#bed-1"></c-icon>
+                  <!-- 2-спальн -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#bed-2"></c-icon>
+                  <!-- Эл замки -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#card"></c-icon>
+                  <!-- Фен -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#hairdryer"></c-icon>
+                  <!-- Кухня -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#kitchen"></c-icon>
+                  <!-- Микроволновка -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#microwave"></c-icon>
+                  <!-- Душ -->
+                  <c-icon class="icon text-2xl opacity-30" href="img/icons.svg#shower"></c-icon>
+                </div>
+                <div class="font-semibold font-alt">Luxe family с балконом</div>
+                <div class="text-xs text-primary">54002, Краснодарский край, г. Сочи</div>
+                <div class="mt-6 font-semibold font-alt">От 9500 ₽</div>
+                <div class="mt-6 flex flex-col gap-3">
+                  <div class="flex items-center gap-2">
+                    <c-icon class="icon text-2xl text-primary" href="img/icons.svg#users"></c-icon>
+                    до 6 мест
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <c-icon class="icon text-2xl text-primary" href="img/icons.svg#square"></c-icon>
+                    42 м²
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <c-icon class="icon text-2xl text-primary" href="img/icons.svg#widjet"></c-icon>
+                    1 комн.
+                  </div>
+                </div>
+
+                <button class="btn btn-theme-fill rounded-full mt-8 w-full">
+                  Забронировать
+                </button>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+
+      <button class="slider-arrow slider-arrow-prev btn btn-text btn-primary mr-5 rooms-slider-prev">
+        <c-icon class="icon text-5.5xl text-default" href="img/icons.svg#slider-prev"></c-icon>
+      </button>
+
+      <button class="slider-arrow slider-arrow-next btn btn-text btn-primary ml-5 rooms-slider-next">
+        <c-icon class="icon text-5.5xl text-default" href="img/icons.svg#slider-next"></c-icon>
+      </button>
+    </div>
+    <div class="relative mt-6">
+      <div class="rooms-pagination absolute slider-pagination"></div>
+    </div>
   </div>
 </section>
+<script>
+  new Swiper('.rooms-slider', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: ".rooms-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+    navigation: {
+      prevEl: ".rooms-slider-prev",
+      nextEl: ".rooms-slider-next",
+    }
+  })
+  new Swiper('.rooms-item-slider', {
+    noSwipingClass: 'swiper-no-swiping-inner',
+    pagination: {
+      el: ".rooms-item-slider-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+  })
+</script>
+
+
+<section class="bg-[#0F3F75]">
+  <!-- frame -->
+</section>
+
+
+<section class="bg-l2 section-padding">
+  <div class="title text-center">Остались вопросы?</div>
+  <div class="mt-6 font-alt sm:text-xl opacity-80 text-center mb-14">
+    Напишите нам в мессенджеры или закажите обратный звонок
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+    <div class="card-shadow bg-l3 rounded-base p-4">
+      <div class="h-36 pt-12">
+        <img src="img/whatsapp.svg" alt="" class="mx-auto">
+      </div>
+      <div class="text-lg font-alt font-semibold mt-7 text-center">Написать в WhatsApp</div>
+      <button class="btn btn-theme-contur-2 rounded-full w-full mt-7">Написать</button>
+    </div>
+    <div class="card-shadow bg-l3 rounded-base p-4">
+      <div class="h-36 pt-12">
+        <img src="img/telegramm.svg" alt="" class="mx-auto">
+      </div>
+      <div class="text-lg font-alt font-semibold mt-7 text-center">Написать в Telegram</div>
+      <button class="btn btn-theme-contur-2 rounded-full w-full mt-7">Написать</button>
+    </div>
+    <div class="card-shadow bg-l3 rounded-base p-4">
+      <div class="h-36 pt-12">
+        <img src="img/vk.svg" alt="" class="mx-auto">
+      </div>
+      <div class="text-lg font-alt font-semibold mt-7 text-center">Написать в VK</div>
+      <button class="btn btn-theme-contur-2 rounded-full w-full mt-7">Написать</button>
+    </div>
+    <div class="card-shadow bg-l3 rounded-base p-4">
+      <div class="h-36 pt-12">
+        <img src="img/phone.svg" alt="" class="mx-auto">
+      </div>
+      <div class="text-lg font-alt font-semibold mt-7 text-center">Заказать звонок</div>
+      <button class="btn btn-theme-contur-2 rounded-full w-full mt-7">Написать</button>
+    </div>
+
+  </div>
+
+  <a href="tel:8 800 301 25" class="bg-red/10 hover:bg-red/15 rounded-xl px-4 sm:px-8 mt-14 py-3  flex gap-3 max-lg:flex-col lg:items-center">
+    <div class="flex items-center gap-4">
+      <c-icon class="icon text-red text-3xl" href="img/icons.svg#danger-contur"></c-icon>
+      <div class="font-alt font-semibold">Горячая линия по телефону</div>
+    </div>
+    <div class="flex items-center gap-4 lg:ml-auto">
+      <c-icon class="icon text-primary text-3xl" href="img/icons.svg#phone"></c-icon>
+      <div class="font-alt font-semibold text-xl">8 800 301 25</div>
+    </div>
+    <div class="opacity-70 lg:ml-12">Ежедневно с 8:00-17:00</div>
+  </a>
+</section>
+
+<div class="map" id="living-map"></div>
 
 <%= _.template(require('./html-includes/footer.html').default)() %>

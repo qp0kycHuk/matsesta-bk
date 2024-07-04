@@ -42,7 +42,7 @@ module.exports = {
       gray: '#333',
       white: '#fff',
       black: '#1c1c1c',
-      default: 'var(--text)',
+      default: withOpacity('--default-rgb'),
       l1: 'var(--bg1)',
       l2: 'var(--bg2)',
       l3: 'var(--bg3)',
@@ -85,4 +85,15 @@ module.exports = {
     require('./tailwind.input.js')({}),
     require('./tailwind.checkbox.js')({}),
   ],
+}
+
+
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return 'rgba(var(' + variableName + '), ' + opacityValue + ')'
+    }
+
+    return 'rgba(var(' + variableName + '), 1)'
+  }
 }
