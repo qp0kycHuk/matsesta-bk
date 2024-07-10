@@ -12,7 +12,10 @@ function mapsInit() {
   if (mapInited) return
   mapInited = true
 
-  if ((document.getElementById('map') || document.getElementById('living-map')) && window.locations?.length) {
+  if (
+    (document.getElementById('map') || document.getElementById('living-map')) &&
+    (window.locations?.length || window.livingLocation?.length)
+  ) {
     ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU').then((maps: any) => {
       // Обычная крта
       if (document.getElementById('map')) {
