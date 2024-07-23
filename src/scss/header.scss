@@ -29,9 +29,10 @@
 }
 
 .nav {
-  position: sticky;
-  top     : 2px;
-  z-index : theme('zIndex[3]');
+  position : sticky;
+  top      : 2px;
+  z-index  : theme('zIndex[3]');
+  font-size: 14px;
 
   &-list {
     display      : flex;
