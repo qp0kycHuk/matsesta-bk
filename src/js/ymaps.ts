@@ -42,37 +42,10 @@ function mapsInit() {
 
         const map = new maps.Map('map', options)
 
-        const colors = ['005142', '658B1B', '5B5656', 'E28570']
-
-        window.locations.forEach((location, index) => {
-          const placemark = new maps.Placemark(
-            location.coords,
-            {
-              balloonContent: `
-              <div class="text-center py-4 w-44">
-                <div class="font-semibold ">${location.title}</div>
-                <div class="mt-3 ">Режим работы:</div>
-                <div class="mt-1  leading-normal max-sm:text-sm">
-                  ${location.shedule.join('<br>')}
-                </div>
-                <div class="mt-3 ">
-                  ${location.weekend}
-                </div>
-              </div>
-            `,
-            },
-            {
-              iconLayout: 'default#image',
-              iconImageHref: getIcon(colors[index % colors.length]),
-              iconImageSize: [74 / 2, 84 / 2],
-              iconImageOffset: [-(74 / 2 / 2), -84 / 2],
-              hasBalloon: true,
-              openBalloonOnClick: true,
-              hideIconOnBalloonOpen: false,
-            }
-          )
-
-          map.geoObjects.add(placemark)
+        addMarkers({
+          maps,
+          map,
+          locations: window.locations,
         })
 
         map.controls.remove('geolocationControl')
@@ -89,12 +62,33 @@ function mapsInit() {
       if (document.getElementById('living-map')) {
         const coords = window.livingLocation
 
-        console.log(window.livingLocation)
+        let bounds = window.livingLocations.reduce<number[][]>(
+          (acc, current) => {
+            return [
+              [Math.min(acc[0][0], current.coords[0]), Math.min(acc[0][1], current.coords[1])],
+              [Math.max(acc[1][0], current.coords[0]), Math.max(acc[1][1], current.coords[1])],
+            ]
+          },
+          [
+            [Infinity, Infinity],
+            [-Infinity, -Infinity],
+          ]
+        )
 
-        const map = new maps.Map('living-map', {
-          center: coords,
-          zoom: 17,
-        })
+        bounds = [
+          [Math.min(bounds[0][0], window.livingLocation[0]), Math.min(bounds[0][1], window.livingLocation[1])],
+          [Math.max(bounds[1][0], window.livingLocation[0]), Math.max(bounds[1][1], window.livingLocation[1])],
+        ]
+
+        const options =
+          window.livingLocations.length > 1
+            ? { bounds }
+            : {
+              center: window.livingLocation,
+              zoom: 17,
+            }
+
+        const map = new maps.Map('living-map', options)
 
         const placemark = new maps.Placemark(
           coords,
@@ -109,6 +103,14 @@ function mapsInit() {
             hideIconOnBalloonOpen: false,
           }
         )
+
+        if (window.livingLocations) {
+          addMarkers({
+            maps,
+            map,
+            locations: window.livingLocations,
+          })
+        }
 
         map.geoObjects.add(placemark)
 
@@ -137,12 +139,48 @@ function getCleverIcon() {
   `
 }
 
+function addMarkers({ maps, locations, map }: { map: any; maps: any; locations: Location[] }) {
+  const colors = ['005142', '658B1B', '5B5656', 'E28570']
+
+  locations.forEach((location, index) => {
+    const placemark = new maps.Placemark(
+      location.coords,
+      {
+        balloonContent: `
+        <div class="text-center py-4 w-44">
+          <div class="font-semibold ">${location.title}</div>
+          <div class="mt-3 ">Режим работы:</div>
+          <div class="mt-1  leading-normal max-sm:text-sm">
+            ${location.shedule.join('<br>')}
+          </div>
+          <div class="mt-3 ">
+            ${location.weekend}
+          </div>
+        </div>
+      `,
+      },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: getIcon(colors[index % colors.length]),
+        iconImageSize: [74 / 2, 84 / 2],
+        iconImageOffset: [-(74 / 2 / 2), -84 / 2],
+        hasBalloon: true,
+        openBalloonOnClick: true,
+        hideIconOnBalloonOpen: false,
+      }
+    )
+
+    map.geoObjects.add(placemark)
+  })
+}
+
 export default { init }
 
 interface CustomWindow extends Window {
   coords: [number, number]
   livingLocation: [number, number]
   locations: Location[]
+  livingLocations: Location[]
 }
 
 interface Location {
