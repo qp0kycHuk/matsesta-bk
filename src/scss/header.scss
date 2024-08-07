@@ -25,6 +25,8 @@
   @media(max-width:theme('screens.sm')) {
     padding-top   : 12px;
     padding-bottom: 12px;
+    flex-direction: column;
+    gap           : 12px;
   }
 }
 

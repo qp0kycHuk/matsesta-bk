@@ -93,8 +93,8 @@
         города Сочи»
       </div>
     </a>
-    <div class="flex header-contacts gap-7">
-      <a href="javascript:;" class="flex items-center gap-4 btn btn-text group max-md:hidden">
+    <div class="flex header-contacts gap-7 max-sm:w-full max-sm:flex-col">
+      <a href="javascript:;" class="flex items-center gap-4 btn btn-text group max-xl:hidden">
         <button class="shadow btn btn-primary btn-whitebg btn-icon rounded-2xl">
           <c-icon class="text-2xl icon" href="img/icons.svg#email"></c-icon>
         </button>
@@ -103,18 +103,21 @@
           <div class="text-sm opacity-40 ">по всем вопросам</div>
         </div>
       </a>
-      <a href="javascript:;" class="flex items-center gap-4 btn btn-text group">
+      <a href="javascript:;" class="flex items-center gap-4 btn btn-text group max-sm:w-full">
         <button class="shadow btn btn-primary btn-whitebg btn-icon rounded-2xl max-xs:hidden">
           <c-icon class="text-2xl icon" href="img/icons.svg#phone"></c-icon>
         </button>
-        <div>
+        <div class="max-sm:w-full max-sm:flex items-center">
           <div class="font-medium group-hover:underline underline-offset-4 max-sm:text-sm">8 (800) 301-04-25</div>
-          <div class="text-xs opacity-40 sm:text-sm ">бесплатно по РФ</div>
+          <div class="text-xs opacity-40 sm:text-sm max-sm:ml-auto">бесплатно по РФ</div>
         </div>
       </a>
     </div>
-    <button class="ml-6 rounded-full btn btn-theme-contur-1 xl:ml-12 max-xl:text-sm max-sm:grow max-sm:px-2">Задать вопрос врачу</button>
-    <div class="header-cart max-xl:hidden">
+    <div class="flex gap-2 sm:gap-4 max-sm:w-full max-xs:flex-col">
+      <button class="rounded-full btn btn-theme-contur-1 max-xs:btn-sm max-xl:text-sm max-sm:grow px-2 sm:px-4">Задать вопрос менеджеру</button>
+      <button class="rounded-full btn btn-theme-contur-1 max-xs:btn-sm max-xl:text-sm max-sm:grow px-2 sm:px-4">Задать вопрос врачу</button>
+    </div>
+    <!-- <div class="header-cart max-xl:hidden">
       <a href="cart.html" class="gap-3 p-4 -m-4 rounded-full btn btn-primary btn-text">
         <c-icon class="text-2xl icon" href="img/icons.svg#cart"></c-icon>
         <span class="text-default">Корзина</span>
@@ -122,7 +125,7 @@
           4
         </div>
       </a>
-    </div>
+    </div> -->
   </header>
 
   <header class="nav">
@@ -299,6 +302,7 @@
           <!-- mobile contacts -->
           <div class="md:hidden">
             <button class="w-full rounded-full btn btn-theme-contur-1">Бесплатная консультация врача</button>
+            <button class="w-full rounded-full btn btn-theme-contur-1 mt-4">Задать вопрос менеджеру</button>
             <button class="w-full gap-2 mt-6 rounded-full btn btn-theme-fill">
               <c-icon class="text-2xl icon" href="img/icons.svg#marker-around"></c-icon>
               Обзорные туры
@@ -345,7 +349,10 @@
             </button>
           </div>
           <!-- /soc -->
-          <button class="mt-8 rounded-full btn btn-theme-contur-1 max-md:hidden">Бесплатная консультация врача</button>
+          <div class="mt-8 flex flex-col w-max gap-4">
+            <button class="rounded-full btn btn-theme-contur-1 max-md:hidden">Бесплатная консультация врача</button>
+            <button class="rounded-full btn btn-theme-contur-1 max-md:hidden">Задать вопрос менеджеру</button>
+          </div>
           <button class="w-full gap-2 mt-6 rounded-full btn btn-black btn-light md:hidden">
             <div class="text-white w-6 h-6 rounded-md bg-[#A993F6] flex">
               <c-icon class="m-auto icon" href="img/icons.svg#uds"></c-icon>
