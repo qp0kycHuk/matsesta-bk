@@ -1,0 +1,134 @@
+<div class="dialog-form dialog-form-2" id="dialog-form">
+  <form @submit="submitHandler">
+    <div class="title md:text-2.5xl mb-8">
+      Задать вопрос
+      по экскурсии
+    </div>
+
+    <label class="relative  w-full">
+      <div class="text-sm mb-2 font-semibold">Ваше имя</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#user-contur"></c-icon>
+        </div>
+        <input type="text" class="input rounded-xl w-full pl-12" placeholder="Напишите имя..." required name="name">
+      </div>
+    </label>
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Ваш телефон</div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#phone-contur"></c-icon>
+        </div>
+        <input type="tel" class="input rounded-xl w-full pl-12" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _ _ " required name="phone">
+      </div>
+    </label>
+
+    <div class="text-lg font-alt font-semibold opacity-40 my-6">Записаться на экскурсию</div>
+
+    <label class="relative w-full">
+      <div class="text-sm mb-2 font-semibold">Дата</div>
+      <div class="relative">
+        <div class="absolute right-0 h-full pointer-events-none flex items-center pr-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#calendar"></c-icon>
+        </div>
+        <input type="date" class="input rounded-xl w-full pr-12" placeholder="ДД.ММ.ГГГГ" required name="email">
+      </div>
+    </label>
+    <div class="mt-6">
+      <div class="text-sm mb-2 font-semibold">Время посещения</div>
+      <div class="flex flex-col gap-3">
+        <label class="flex items-center gap-2">
+          <input type="radio" class="radio rounded-full" name="time" value="10:00" checked>
+          <div class="opacity-60">10:00</div>
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" class="radio rounded-full" name="time" value="12:00">
+          <div class="opacity-60">12:00</div>
+        </label>
+      </div>
+    </div>
+    <div class="grid mt-6 grid-cols-2 gap-4">
+      <div>
+        <div class="text-sm mb-2 font-semibold">Взрослые</div>
+        <c-counter data-min="1" data-max="100" name="adults"></c-counter>
+      </div>
+      <div>
+        <div class="text-sm mb-2 font-semibold">Дети (с 7 до 13 лет)</div>
+        <c-counter data-min="0" data-max="100" name="children"></c-counter>
+      </div>
+    </div>
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Ваша почта <span class="font-normal opacity-60">(не обязательно)</span></div>
+      <div class="relative">
+        <div class="absolute left-0 h-full pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#email-contur"></c-icon>
+        </div>
+        <input type="email" class="input rounded-xl w-full pl-12" placeholder="Напишите почту..." name="email">
+      </div>
+    </label>
+
+    <label class="relative  mt-6 w-full">
+      <div class="text-sm mb-2 font-semibold">Задайте вопрос <span class="font-normal opacity-60">(не обязательно)</span></div>
+      <div class="relative">
+        <div class="absolute left-0 top-3.5 pointer-events-none flex items-center pl-4">
+          <c-icon class="icon text-2xl opacity-40" href="img/icons.svg#dialog"></c-icon>
+        </div>
+        <textarea placeholder="Напишите..." class="input rounded-xl w-full pl-12 h-40 resize-none" name="info"></textarea>
+      </div>
+    </label>
+
+
+
+    <button class="btn btn-theme-fill px-9 mt-8 rounded-full" :disabled="loading">
+      <div v-show="loading" class="progress-circle text-sm"></div>
+      <div v-show="!loading">Отправить</div>
+    </button>
+
+    <label class="flex items-center gap-2 cursor-pointer mt-7 w-full">
+      <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0" checked required>
+      <div class="opacity-60 text-xs sm:text-sm">Согласие на обработку персональных данных</div>
+    </label>
+
+    <label class="flex items-center gap-2 cursor-pointer mt-2 w-full">
+      <input type="checkbox" class="checkbox rounded-lg bg-l3 cursor-pointer shrink-0">
+      <div class="opacity-60 text-xs sm:text-sm">Согласие на получение рекламной продукции</div>
+    </label>
+  </form>
+
+</div>
+
+<script>
+  (() => {
+    const app = Vue.createApp({
+      data: () => ({
+        loading: false,
+        error: false,
+      }),
+      methods: {
+        submitHandler(event) {
+          event.preventDefault()
+
+          const formData = new FormData(event.target)
+
+          this.loading = true
+
+          fetch('submitHandler.php', {
+              method: 'post',
+              body: formData
+            })
+            .then((response) => response.json())
+            .then((result) => {
+              console.log(result);
+
+            })
+            .finally(() => {
+              this.loading = true
+            })
+        }
+      }
+    })
+
+    app.mount(document.getElementById('dialog-form'))
+  })();
+</script>

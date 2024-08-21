@@ -11,14 +11,13 @@ class Counter extends HTMLElement {
   timeoutIteration = 0
   defaultInterval = 320
 
-  wrapperClassName = 'bg-l2 p-2 gap-2.5 flex items-center justify-between rounded-xl relative '
-  inputClassName = 'w-7 h-7 bg-l1 text-center rounded-lg'
-  minusClassName = 'btn btn-xs btn-icon rounded-md'
-  plusClassName = 'btn btn-xs btn-icon rounded-md'
+  wrapperClassName = 'input !border-none !shadow-none relative gap-2.5 flex items-center justify-between relative'
+  inputClassName = 'input rounded-xl text-center grow absolute inset-0 size-full apperance-none'
+  minusClassName = 'btn btn-xs btn-icon rounded-md z-[2]'
+  plusClassName = 'btn btn-xs btn-icon rounded-md z-[2]'
 
   constructor() {
     super()
-
     this.addListeners()
   }
 
@@ -43,8 +42,8 @@ class Counter extends HTMLElement {
   }
 
   connectedCallback() {
-    const min = parseInt(this.getAttribute('min') || '')
-    const max = parseInt(this.getAttribute('max') || '')
+    const min = parseInt(this.getAttribute('min') || this.getAttribute('data-min') || '')
+    const max = parseInt(this.getAttribute('max') || this.getAttribute('data-max') || '')
     const value = parseInt(this.getAttribute('value') || '')
     const name = this.getAttribute('name') || ''
 
@@ -60,6 +59,7 @@ class Counter extends HTMLElement {
     this.classList.add(...this.wrapperClassName.trim().split(' '))
 
     this.inputEl.className = this.inputClassName
+    this.inputEl.type = 'number'
 
     this.minusButton.type = 'button'
     this.minusButton.className = this.minusClassName
@@ -75,8 +75,8 @@ class Counter extends HTMLElement {
       <span class="opacity-50 text-2xl">+</span>
     `
 
-    this.appendChild(this.minusButton)
     this.appendChild(this.inputEl)
+    this.appendChild(this.minusButton)
     this.appendChild(this.plusButton)
   }
 
