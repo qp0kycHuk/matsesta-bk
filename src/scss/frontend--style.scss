@@ -2001,3 +2001,14 @@ label {
   }
 
 }
+
+.air-datepicker {
+  --adp-cell-background-color-selected      : theme('colors.primary');
+  --adp-cell-background-color-selected-hover: theme('colors.sec');
+  --adp-color-current-date                  : theme('colors.primary');
+  --adp-day-name-color                      : theme('colors.yellow');
+}
+
+.air-datepicker-global-container {
+  z-index: 1100;
+}
